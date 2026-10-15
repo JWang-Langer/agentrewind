@@ -1,0 +1,5 @@
+# 统一行尾，避免 Windows/macOS/Linux 协作时产生整文件级 diff
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.db binary
