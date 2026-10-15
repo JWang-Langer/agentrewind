@@ -16,6 +16,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -23,9 +24,25 @@ PY = str(ROOT / ".venv" / "Scripts" / "python.exe")
 if not Path(PY).exists():  # 非 Windows 或未建 venv 时退回当前解释器
     PY = sys.executable
 
+# 视频模式：屏幕录制时只保留结论性数字，避免刷满原始 JSON
+VIDEO = False
+
 
 def banner(title: str) -> None:
-    print(f"\n{'=' * 78}\n{title}\n{'=' * 78}")
+    if VIDEO:
+        print(f"\n\033[1;36m▶ {title}\033[0m")
+    else:
+        print(f"\n{'=' * 78}\n{title}\n{'=' * 78}")
+
+
+def say(text: str) -> None:
+    """结论行：视频模式下加粗放大感（终端里用颜色与缩进代替字号）。"""
+    print(f"\n\033[1;33m>>> {text}\033[0m" if VIDEO else f"\n>>> {text}")
+
+
+def pause(seconds: float) -> None:
+    if VIDEO and seconds > 0:
+        time.sleep(seconds)
 
 
 def _extract_last_json(text: str) -> dict:
@@ -45,7 +62,8 @@ def _extract_last_json(text: str) -> dict:
     return best
 
 
-def arw(*args: str, env: dict[str, str]) -> tuple[int, dict]:
+def arw(*args: str, env: dict[str, str], echo: bool | None = None) -> tuple[int, dict]:
+    """调用真实 CLI。echo=None 时：视频模式不回显原始 JSON（只保留叙述性结论）。"""
     proc = subprocess.run(
         [PY, "-m", "agentrewind", *args],
         capture_output=True,
@@ -54,13 +72,38 @@ def arw(*args: str, env: dict[str, str]) -> tuple[int, dict]:
         env=env,
         check=False,
     )
-    print(proc.stdout.rstrip())
+    if echo is None:
+        echo = not VIDEO
+    if echo:
+        print(proc.stdout.rstrip())
+    else:
+        shown, skip = [], False
+        for arg in args:
+            if skip:
+                skip = False
+                continue
+            if arg in ("--store", "--api-key"):
+                skip = True
+                continue
+            if arg == "--json":
+                continue
+            shown.append(arg if not arg.startswith("http") else "$STUB")
+        print(f"  $ arw {' '.join(shown)}")
     if proc.stderr.strip():
         print("[stderr] " + proc.stderr.strip())
     return proc.returncode, _extract_last_json(proc.stdout)
 
 
 def main() -> int:
+    global VIDEO
+    argv = sys.argv[1:]
+    VIDEO = "--video" in argv
+    pause_seconds = 1.5
+    if "--pause" in argv:
+        pause_seconds = float(argv[argv.index("--pause") + 1])
+    if VIDEO:
+        print("（视频模式：隐藏原始 JSON，仅保留结论数字与结构化报告）")
+
     workdir = tempfile.mkdtemp(prefix="arw-demo-")
     store = str(Path(workdir) / "demo.db")
     env = dict(os.environ)
@@ -111,7 +154,8 @@ def main() -> int:
             f"{state.calls - calls_before} 次"
         )
         print(f">>> 回放结果 = {replayed.get('result')!r}")
-        print(">>> 注意结论编号与录制时完全相同 —— 这就是'确定性回放'")
+        say("结论编号与录制时完全相同 —— 这就是'确定性回放'")
+        pause(pause_seconds)
 
         banner("2) 用它当 CI 门禁：verify（不一致就返回非 0）")
         code, _ = arw(
@@ -163,16 +207,17 @@ def main() -> int:
             f">>> 命中 {rewound.get('llm_hits')} 步后分叉，真实重跑 "
             f"{rewound.get('llm_live_calls')} 次"
         )
+        pause(pause_seconds)
 
         banner("4) 两个分支差在哪一步（diff）")
-        arw("--store", store, "diff", run_id, new_run, env=env)
+        arw("--store", store, "diff", run_id, new_run, env=env, echo=True)
 
         banner("5) 为什么差：请求级差异路径（why）")
-        arw("--store", store, "why", run_id, new_run, "--index", "1", env=env)
+        arw("--store", store, "why", run_id, new_run, "--index", "1", env=env, echo=True)
 
         banner("6) 全景：运行列表与谱系（list / show）")
-        arw("--store", store, "list", env=env)
-        arw("--store", store, "show", new_run, env=env)
+        arw("--store", store, "list", env=env, echo=True)
+        arw("--store", store, "show", new_run, env=env, echo=True)
 
         banner("演示结束")
         print(f"事件日志库: {store}")
