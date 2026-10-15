@@ -3,3 +3,9 @@
 *.png binary
 *.jpg binary
 *.db binary
+
+# 证据类文件必须逐字节保真（不做行尾归一化）：
+# 它们是"真实运行输出"的存档，用于核对文档里引用的数字与命令。
+# 注意：因为不做归一化，核验远端一致性时必须用 `git show HEAD:<path>` 取 blob 内容，
+# 或直接与工作区文件比对；用 `* text=auto eol=lf` 的默认策略会让两者天然不同。
+docs/competition/artifacts/* -text
