@@ -32,6 +32,8 @@ arw why    <run_a> <run_b> --index 1                  # 为什么差：请求级
 2. **事件日志**：SQLite（WAL）三张表 `runs / steps / effects`，每步写入即提交，Agent 崩溃不丢已发生步骤。
    payload **逐字节忠实往返**（不排序键）——这条是踩过坑才定下来的，见下文。
 3. **副作用幂等通道**：`session.effect(name, key, producer)`，回放命中则直接返回录制值、**不执行** producer。
+   另提供 **`intercept.instrument(session)`** 透明拦截层：把 `httpx` 客户端挂上拦截传输层，
+   HTTP 副作用自动登记（键含请求体哈希），无需手写 `session.effect`；设计与取舍见 `docs/design-notes.md` 决策 4。
 4. **分叉与差异**：回放时逐条比对指纹，**首个不一致即分叉点**；
    `diff` 输出分叉步号、工具调用变化、文本增量、token/耗时差；`why` 输出到 `messages[i].content` 级的差异路径。
 
@@ -97,8 +99,10 @@ python -m unittest discover -s tests -t .     # 35 passed
 
 ## 状态与路线图
 
-- [x] v0.1 确定性录制 / 回放 / 回退 / 差异定位 / CLI / 35 测试
-- [ ] 副作用自动拦截层（对 `httpx` / `open()` 的透明包装，免手写 `session.effect`）
+- [x] v0.1 确定性录制 / 回放 / 回退 / 差异定位 / CLI / 42 测试
+- [x] 副作用自动拦截层（HTTP）：`intercept.instrument()` 对 `httpx` 传输层的透明包装，
+      键为 `METHOD URL body-sha256`，支持 `passthrough_hosts` 白名单；7 个专项测试
+- [ ] 文件 I/O 的副作用拦截（`open()` / `Path.write_bytes` 包装）
 - [ ] `stream=True` 流式响应的分块录制与回放
 - [ ] 跨语言/跨进程的指纹兼容性测试夹具
 - [ ] `arw bisect`：在两条分支之间自动二分定位引入行为变化的最小改动

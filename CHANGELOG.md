@@ -5,9 +5,19 @@
 
 ## [未发布]
 
+### 新增
+
+- **副作用自动拦截层**（`intercept.py`）：`SideEffectTransport` 把 `httpx.AsyncClient` 的请求
+  透明登记为副作用，键为 `METHOD URL body-sha256`（**含请求体**，避免不同载荷误命中）；
+  回放命中时**不发出请求**，用录制值重建响应（状态码/头/body，体为 base64 往返）。
+  支持 `passthrough_hosts` 白名单（把上游 LLM 的 host 排除，避免与指纹通道重复登记）。
+  配套 7 个专项测试：录制真实发请求、回放零新增请求且响应逐字节一致、
+  请求体变化不误命中并报 `effect_miss`、passthrough 不入副作用通道。
+- `run_demo.py` 视频友好模式（`--video` / `--pause`）：隐藏原始 JSON、精简命令回显、关键结论后自动停顿。
+
 ### 计划
 
-- 副作用自动拦截层（对 `httpx` 传输层与 `open()` 的透明包装，免手写 `session.effect`）
+- 文件 I/O 的副作用拦截（`open()` / `Path.write_bytes` 包装）
 - `stream=True` 流式响应的分块录制与回放
 - 跨进程 / 跨语言指纹兼容性测试夹具
 - `arw bisect`：在两条分支间自动二分定位引入行为变化的最小改动

@@ -18,8 +18,9 @@
 """
 
 from agentrewind.branch import align_runs, diff_runs, fork_run
-from agentrewind.clients import OpenAICompatClient
+from agentrewind.clients import LLMClient, OpenAICompatClient
 from agentrewind.fingerprint import canonical_json, fingerprint_diff, request_fingerprint
+from agentrewind.intercept import SideEffectTransport, effect_key, instrument
 from agentrewind.models import Effect, LLMRequest, LLMResponse, Run, Step, ToolCall
 from agentrewind.recorder import Divergence, Recorder, Replayer, Session
 from agentrewind.store import Store
@@ -29,6 +30,7 @@ __version__ = "0.1.0"
 
 __all__ = [
     "Effect",
+    "LLMClient",
     "LLMRequest",
     "LLMResponse",
     "Run",
@@ -40,6 +42,9 @@ __all__ = [
     "Divergence",
     "Store",
     "OpenAICompatClient",
+    "SideEffectTransport",
+    "instrument",
+    "effect_key",
     "canonical_json",
     "request_fingerprint",
     "fingerprint_diff",
