@@ -1,0 +1,64 @@
+（视频模式：隐藏原始 JSON，仅保留结论数字与结构化报告）
+stub 上游已启动: http://127.0.0.1:58715/v1
+
+[1;36m▶ 0) 起点：让 Agent 跑一次真实上游，边跑边录[0m
+  $ arw record --agent examples.demo_agent:main --name demo-run --base-url $STUB
+
+>>> 录制 run_id = 01M4ZV9WAJ20K4DMP91WGXW7G5
+>>> 上游被真实调用了 2 次；结果 = 'SKU-1 价格 199.00 元。结论编号[652230507]'
+
+[1;36m▶ 1) 不改一行代码，回放：应 100% 命中且不碰网络[0m
+  $ arw replay 01M4ZV9WAJ20K4DMP91WGXW7G5 --agent examples.demo_agent:main
+
+>>> LLM 命中 2 次 / 上游新增调用 0 次
+>>> 回放结果 = 'SKU-1 价格 199.00 元。结论编号[652230507]'
+
+[1;33m>>> 结论编号与录制时完全相同 —— 这就是'确定性回放'[0m
+
+[1;36m▶ 2) 用它当 CI 门禁：verify（不一致就返回非 0）[0m
+  $ arw verify 01M4ZV9WAJ20K4DMP91WGXW7G5 --agent examples.demo_agent:main
+
+>>> verify 退出码 = 0（0 = 可与录制完全一致地重跑）
+  $ arw verify 01M4ZV9WAJ20K4DMP91WGXW7G5 --agent examples.demo_agent:main --set system_prompt=你现在只说'不告诉你'
+[stderr] [replay] 检测到分歧（这是分叉点）：第 1 步（第 1 次 LLM 调用）与录制不一致，共 1 处差异，这是本次分叉点
+
+>>> 改了 system prompt 后 verify 退出码 = 3（3 = 检测到分歧）
+
+[1;36m▶ 3) 回退到第 3 步、改一处、从那里真跑（rewind）[0m
+  $ arw rewind 01M4ZV9WAJ20K4DMP91WGXW7G5 --agent examples.demo_agent:main --at 3 --set second_note=  【回退分支：补充了差价说明】 --base-url $STUB
+
+>>> 新分支 run_id = 01M4ZV9ZJ728XGEV4BB03N4T9A
+>>> 命中 1 步后分叉，真实重跑 1 次
+
+[1;36m▶ 4) 两个分支差在哪一步（diff）[0m
+差异报告: 01M4ZV9WAJ20K4DMP91WGXW7G5  vs  01M4ZV9ZJ728XGEV4BB03N4T9A
+  步数 4 vs 4｜分叉点 seq=3｜不同步数 1
+  token 305 vs 305（Δ+0）｜耗时 48ms vs 69ms
+    seq 3   diverged   llm  工具 [] -> []
+        --- 
+        +++ 
+        @@ -1 +1 @@
+        -SKU-1 价格 199.00 元。结论编号[652230507]
+        +SKU-1 价格 199.00 元。结论编号[459222270]
+
+[1;36m▶ 5) 为什么差：请求级差异路径（why）[0m
+第 1 次 LLM 调用：a486eaf3c2c4 vs 51dffd246589
+  差异 1 处
+    changed  messages[3].content: '{"currency":"CNY","price":199.0,"sku":"SKU-1"}' -> '{"currency":"CNY","price":199.0,"sku":"SKU-1"}  【回退分支：补充了差价说明】'
+
+[1;36m▶ 6) 全景：运行列表与谱系（list / show）[0m
+id                          name                        mode    status    steps
+01M4ZV9ZJ728XGEV4BB03N4T9A  replay:demo-run             rewind  replayed  4
+01M4ZV9Z811W4DGHBGKNTNM7DW  verify:01M4ZV9WAJ20K4DMP9…  replay  diverged  1
+01M4ZV9YZ9V7EMRNH2EN2Y7WN2  verify:01M4ZV9WAJ20K4DMP9…  replay  replayed  4
+01M4ZV9WQT53C2RC1YCE2NRQXN  replay:demo-run             replay  replayed  4
+01M4ZV9WAJ20K4DMP91WGXW7G5  demo-run                    record  finished  4
+01M4ZV9ZJ728XGEV4BB03N4T9A（replay:demo-run） 谱系 01M4ZV9WAJ20K4DMP91WGXW7G5 <- 01M4ZV9ZJ728XGEV4BB03N4T9A
+  seq 0   note    fp=-             ''
+  seq 1   llm     fp=43555612fe5d  tools=['lookup_price'] text=''
+  seq 2   effect  fp=-             ['price_api', 'SKU-1']
+  seq 3   llm     fp=51dffd246589  tools=[] text='SKU-1 价格 199.00 元。结论编号[459222270]'
+
+[1;36m▶ 演示结束[0m
+事件日志库: C:\Users\ROG\AppData\Local\Temp\arw-demo-3cgf9tb9\demo.db
+上游总调用次数: 3（录制 2 次 + rewind 从分叉点起真实重跑的次数）
