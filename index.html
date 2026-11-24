@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#2c3a63">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="大森基地">
+<meta name="format-detection" content="telephone=no,address=no,email=no">
+<meta name="description" content="2027 年 3–5 月东京实习（大森基地）生活与旅游作战图；移动端按 iPhone 16 Pro / 17 Pro（402×874pt）优化。">
+<title>大森基地 · 2027 春｜东京实习 3 个月生活与旅游作战图</title>
+<style>
+  :root{
+    --ink:#1d222c; --ink-soft:#4a5162; --paper:#fbfaf6; --card:#ffffff;
+    --line:#e7e1d6; --accent:#bf3b28; --indigo:#2c3a63; --sakura:#d97b8c;
+    --leaf:#4a7657; --gold:#a9791f; --sky:#3f7395; --gray:#8a8f99;
+    --shadow:0 1px 2px rgba(29,34,44,.05),0 8px 24px rgba(29,34,44,.06);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Noto Sans SC","PingFang SC","Hiragino Sans","Yu Gothic UI","Microsoft YaHei",system-ui,sans-serif;
+    line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1180px;margin:0 auto;padding:0 22px 80px}
+  header.hero{
+    background:
+      radial-gradient(900px 300px at 88% -10%, rgba(255,255,255,.55), transparent 60%),
+      linear-gradient(120deg,#2c3a63 0%,#3d4f80 55%,#8c5a52 100%);
+    color:#fff; padding:46px 0 40px; margin-bottom:34px;
+  }
+  header.hero .wrap{padding-bottom:0}
+  .hero h1{margin:0 0 8px;font-size:clamp(24px,3.4vw,38px);letter-spacing:.02em;font-weight:800}
+  .hero .sub{opacity:.92;font-size:15px}
+  .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .badge{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);
+    padding:5px 12px;border-radius:999px;font-size:12.5px;letter-spacing:.02em}
+  h2{font-size:21px;margin:52px 0 6px;display:flex;align-items:center;gap:10px}
+  h2 .no{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;
+    border-radius:9px;background:var(--indigo);color:#fff;font-size:14px;font-weight:700}
+  .lead{color:var(--ink-soft);margin:0 0 20px;font-size:14.5px}
+  .grid{display:grid;gap:16px}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g4{grid-template-columns:repeat(4,1fr)}
+  @media (max-width:900px){.g2,.g3,.g4{grid-template-columns:1fr 1fr}}
+  @media (max-width:640px){.g2,.g3,.g4{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;box-shadow:var(--shadow)}
+  .card h3{margin:0 0 10px;font-size:15.5px}
+  .kv{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px dashed var(--line);font-size:13.5px}
+  .kv:last-child{border-bottom:0}
+  .kv .k{color:var(--ink-soft)}
+  .kv .v{font-weight:600;text-align:right}
+  .mapbox{position:relative;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+  .mapbox svg{display:block;width:100%;height:auto}
+  .mapnote{position:absolute;left:16px;bottom:12px;font-size:11.5px;color:var(--gray);background:rgba(251,250,246,.86);padding:4px 9px;border-radius:7px}
+  .legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:14px;font-size:12.5px;color:var(--ink-soft)}
+  .legend i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+  /* calendar */
+  .mon{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;box-shadow:var(--shadow)}
+  .mon h3{margin:0 0 12px;font-size:16px;display:flex;justify-content:space-between;align-items:baseline}
+  .mon h3 span{font-size:12px;color:var(--gray);font-weight:400}
+  .wk{display:grid;grid-template-columns:78px 1fr;gap:10px;padding:9px 0;border-top:1px solid var(--line);font-size:13.5px;align-items:start}
+  .wk:first-of-type{border-top:0}
+  .wk .d{color:var(--ink-soft);font-variant-numeric:tabular-nums;font-size:12.5px;padding-top:1px}
+  .wk .c b{font-weight:700}
+  .wk .c small{display:block;color:var(--gray);font-size:12px;margin-top:2px}
+  .tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:999px;margin-left:6px;vertical-align:1px;font-weight:600}
+  .t-sakura{background:#fbe6ea;color:#a83a51}
+  .t-hana{background:#f1e8fb;color:#6a3fa0}
+  .t-sea{background:#e3f1ea;color:#2f6b4a}
+  .t-trip{background:#fdeadf;color:#a2521f}
+  .t-rest{background:#eef0f3;color:#5d6470}
+  .t-gw{background:#fde2dc;color:#a92f1b}
+  .big{background:#fff;border:2px solid var(--accent);border-radius:16px;padding:18px 20px;box-shadow:var(--shadow)}
+  .big h3{margin:0 0 4px;font-size:16.5px;color:var(--accent)}
+  .big .when{font-size:12.5px;color:var(--ink-soft);margin-bottom:10px}
+  .big ol{margin:8px 0 0;padding-left:20px;font-size:13.5px}
+  .big ol li{margin:5px 0}
+  .big .money{margin-top:10px;font-weight:700;color:var(--indigo)}
+  /* routes */
+  .route{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:13px 14px;box-shadow:0 1px 2px rgba(29,34,44,.04);transition:.15s}
+  .route:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+  .route .r1{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+  .route .nm{font-weight:700;font-size:14px}
+  .route .no{font-size:11px;color:var(--gray);font-variant-numeric:tabular-nums}
+  .route .r2{display:flex;gap:14px;margin-top:8px;font-size:12.5px;color:var(--ink-soft)}
+  .route .r2 b{color:var(--ink);font-weight:700}
+  .route .r3{margin-top:8px;display:flex;justify-content:space-between;align-items:center;font-size:11.5px;color:var(--gray)}
+  .route a{color:var(--sky);text-decoration:none;font-weight:600}
+  .route a:hover{text-decoration:underline}
+  .dots{letter-spacing:1px;color:var(--gold);font-size:10px}
+  .flow{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .step{background:#f4f1ea;border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:12.5px}
+  .step b{color:var(--indigo)}
+  ul.tight{margin:6px 0 0;padding-left:20px;font-size:13.5px}
+  ul.tight li{margin:4px 0}
+  .barc{display:grid;gap:10px;margin-top:6px}
+  .bar{display:grid;grid-template-columns:112px 1fr 96px;gap:10px;align-items:center;font-size:13px}
+  .bar .track{height:12px;background:#f0ece4;border-radius:999px;overflow:hidden}
+  .bar .fill{height:100%;border-radius:999px;background:linear-gradient(90deg,#3d4f80,#6e7fae)}
+  .bar .fill.acc{background:linear-gradient(90deg,#bf3b28,#dd7a5e)}
+  .bar .fill.grn{background:linear-gradient(90deg,#4a7657,#7aa88a)}
+  .bar span{text-align:right;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+  .check li{list-style:none;margin:9px 0;font-size:13.8px}
+  .check{padding-left:0;margin:0}
+  .check input{margin-right:9px;transform:scale(1.15);accent-color:var(--accent)}
+  footer{margin-top:64px;padding-top:22px;border-top:1px solid var(--line);font-size:12.5px;color:var(--gray)}
+  .pill{display:inline-block;background:#f4f1ea;border:1px solid var(--line);border-radius:999px;padding:2px 9px;font-size:11.5px;color:var(--ink-soft);margin:2px 4px 2px 0}
+  .warn{background:#fff7f4;border:1px solid #f3d3c8;border-radius:12px;padding:12px 16px;font-size:13px;color:#7c2d1b;margin-top:14px}
+  @media print{
+    header.hero{background:#2c3a63 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    body{background:#fff}
+    .route:hover{transform:none;box-shadow:none}
+    h2{page-break-after:avoid}
+    .card,.mon,.big,.route{page-break-inside:avoid}
+  }
+  /* ================= 移动端适配：iPhone 16 Pro / 17 Pro（402×874pt, DPR3, 安全区） ================= */
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  body{overflow-x:clip}
+  a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+  h2{scroll-margin-top:70px}
+  .only-mobile{display:none}
+  /* 吸顶导航 */
+  .jump{position:sticky;top:0;z-index:50;display:flex;gap:8px;overflow-x:auto;
+    padding:8px max(12px,env(safe-area-inset-left)) 8px max(12px,env(safe-area-inset-right));
+    background:rgba(251,250,246,.94);-webkit-backdrop-filter:saturate(180%) blur(12px);
+    backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line);
+    scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .jump::-webkit-scrollbar{display:none}
+  .jump a{flex:0 0 auto;display:inline-flex;align-items:center;min-height:38px;padding:0 13px;
+    border-radius:999px;border:1px solid var(--line);background:#f4f1ea;color:var(--ink-soft);
+    font-size:12.5px;font-weight:700;text-decoration:none;white-space:nowrap;transition:.15s}
+  .jump a.on{background:var(--indigo);border-color:var(--indigo);color:#fff}
+  /* 一日游筛选 chips */
+  .chips{display:flex;gap:8px;overflow-x:auto;padding:4px 0 12px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .chips::-webkit-scrollbar{display:none}
+  .chips button{flex:0 0 auto;min-height:38px;padding:0 14px;border-radius:999px;border:1px solid var(--line);
+    background:#fff;color:var(--ink-soft);font-size:12.5px;font-weight:700;font-family:inherit;cursor:pointer}
+  .chips button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+  .route.hide{display:none}
+  /* 回到顶部 */
+  #toTop{position:fixed;right:14px;bottom:calc(16px + env(safe-area-inset-bottom));width:48px;height:48px;
+    border-radius:50%;border:0;background:var(--indigo);color:#fff;font-size:20px;line-height:1;
+    box-shadow:0 6px 20px rgba(44,58,99,.35);opacity:0;pointer-events:none;transition:.2s;z-index:60}
+  #toTop.show{opacity:.94;pointer-events:auto}
+  #toTop:active{transform:scale(.94)}
+  footer{padding-bottom:calc(28px + env(safe-area-inset-bottom))}
+  /* 手机版「距离条」替代 SVG 地图 */
+  .dist{display:grid;gap:10px;margin-top:12px}
+  .drow{display:grid;grid-template-columns:1fr auto;gap:3px 10px;font-size:13.5px;align-items:baseline}
+  .drow .dn{font-weight:700}
+  .drow .dv{color:var(--ink-soft);font-variant-numeric:tabular-nums;font-size:12.5px;text-align:right}
+  .drow .dt{grid-column:1/-1;height:9px;background:#f0ece4;border-radius:999px;overflow:hidden}
+  .drow .dt i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#3d4f80,#8fa2c9)}
+  .drow.hot .dt i{background:linear-gradient(90deg,#bf3b28,#dd7a5e)}
+  .drow.note .dn{font-weight:600;color:var(--ink-soft)}
+  @media (min-width:641px){
+    .jump{padding-left:22px;padding-right:22px}
+  }
+  @media (min-width:1181px){
+    .jump{padding-left:calc((100% - 1180px) / 2 + 22px);padding-right:calc((100% - 1180px) / 2 + 22px)}
+  }
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+  @media (max-width:640px){
+    .only-mobile{display:block}
+    .mapbox,.legend{display:none}
+    .wrap{padding:0 14px 56px}
+    header.hero{padding:30px 0 26px;margin-bottom:20px}
+    .hero h1{font-size:25px;line-height:1.36}
+    .hero .sub{font-size:13px}
+    .badges{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin-top:14px}
+    .badges::-webkit-scrollbar{display:none}
+    .badge{flex:0 0 auto;font-size:11px;padding:5px 10px}
+    h2{font-size:18.5px;margin:40px 0 6px;gap:8px;align-items:flex-start}
+    h2 .no{width:27px;height:27px;border-radius:8px;font-size:12.5px;flex:0 0 auto}
+    .lead{font-size:13.5px;line-height:1.7}
+    .grid{gap:12px}
+    .card{padding:14px 15px;border-radius:14px}
+    .card h3{font-size:15px}
+    .kv{font-size:14px;padding:8px 0;gap:10px;align-items:flex-start}
+    .kv .v{text-align:right;flex:0 0 auto;max-width:58%}
+    .mon{padding:14px 15px}
+    .mon h3{font-size:15px}
+    .wk{grid-template-columns:62px 1fr;gap:8px;font-size:13.5px;padding:10px 0}
+    .wk .d{font-size:12px}
+    .wk .c small{font-size:12px;line-height:1.55}
+    .big{padding:15px 16px}
+    .big h3{font-size:15.5px}
+    .big ol{font-size:13.5px;padding-left:18px}
+    .route{padding:13px 14px;border-radius:12px}
+    .route .nm{font-size:14.5px}
+    .route .r2{font-size:12.5px;gap:10px}
+    .route .r3{font-size:11.5px}
+    .route a{display:inline-block;padding:6px 0;font-size:12.5px}
+    .route:active{transform:scale(.985)}
+    .barc .bar{grid-template-columns:1fr auto;row-gap:5px}
+    .barc .bar span:first-child{grid-column:1;grid-row:1;font-size:13.5px}
+    .barc .bar span:last-child{grid-column:2;grid-row:1;text-align:right;font-size:13px}
+    .barc .bar .track{grid-column:1/-1;grid-row:2;height:11px}
+    ul.tight{font-size:13.5px}
+    .check li{font-size:14px;margin:12px 0}
+    .check input{transform:scale(1.3);margin-right:10px}
+    .warn{font-size:12.5px;line-height:1.65}
+    footer{margin-top:48px;font-size:12px}
+    .pill{font-size:11px}
+  }
+  @media (max-width:380px){
+    .hero h1{font-size:23px}
+    .wk{grid-template-columns:58px 1fr}
+  }
+  /* ================= 操作增强 v2（移动端优先） ================= */
+  .cnt{display:flex;align-items:center;gap:12px;margin-top:16px;padding:12px 14px;border-radius:14px;
+    background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.26)}
+  .cnt b{font-size:26px;line-height:1;font-variant-numeric:tabular-nums}
+  .cnt span{font-size:12px;opacity:.92;line-height:1.5}
+  .tools{display:flex;gap:8px;align-items:center;padding:2px 0 10px}
+  .tools input{flex:1 1 auto;min-width:0;min-height:44px;border-radius:12px;border:1px solid var(--line);
+    background:#fff;padding:0 12px;font-size:16px;font-family:inherit;color:var(--ink);-webkit-appearance:none}
+  .tools input:focus{outline:2px solid rgba(191,59,40,.35);outline-offset:1px}
+  .favbtn{flex:0 0 auto;min-height:44px;padding:0 12px;border-radius:12px;border:1px solid var(--line);
+    background:#fff;color:var(--ink-soft);font-size:12.5px;font-weight:700;font-family:inherit;cursor:pointer}
+  .favbtn.on{background:#fde8ee;border-color:#e7a7b6;color:#b3325a}
+  .route .r1 .nm{flex:1 1 auto;min-width:0}
+  .route .heart{flex:0 0 auto;border:0;background:transparent;color:#bfb8ab;font-size:17px;line-height:1;
+    padding:2px 4px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .route .heart.on{color:#d4436a}
+  .route.search-hide,.route.fav-hide,.route.hide{display:none}
+  .empty-tip{display:none;font-size:13.5px;color:var(--gray);padding:12px 4px}
+  .empty-tip.show{display:block}
+  .swipe-hint{display:none}
+  .tabbar{display:none}
+  @media (max-width:640px){
+    .jump{display:none}
+    body{padding-bottom:calc(70px + env(safe-area-inset-bottom))}
+    .tabbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:70;gap:2px;
+      background:rgba(251,250,246,.97);
+      -webkit-backdrop-filter:saturate(180%) blur(14px);backdrop-filter:saturate(180%) blur(14px);
+      border-top:1px solid var(--line);
+      padding:6px max(6px,env(safe-area-inset-left)) calc(6px + env(safe-area-inset-bottom)) max(6px,env(safe-area-inset-right))}
+    .tabbar a{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:7px 2px 5px;
+      text-decoration:none;color:var(--ink-soft);font-size:10.5px;font-weight:700;border-radius:11px}
+    .tabbar a .ic{font-size:18px;line-height:1}
+    .tabbar a.on{color:var(--accent);background:#f8efe9}
+    #toTop{bottom:calc(80px + env(safe-area-inset-bottom))}
+    .months{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;
+      scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:2px 2px 6px;margin:0 -2px}
+    .months::-webkit-scrollbar{display:none}
+    .months .mon{flex:0 0 88%;scroll-snap-align:center}
+    .swipe-hint{display:block;font-size:12px;color:var(--gray);margin:6px 0 0}
+  }
+  @media print{.tabbar{display:none}}
+  /* ================= 真机渲染后修正 v3 ================= */
+  body{font-family:-apple-system,BlinkMacSystemFont,"Noto Sans SC","PingFang SC","Hiragino Sans","Yu Gothic UI","Microsoft YaHei",system-ui,sans-serif}
+  .ttl2{display:inline}
+  .route .r1{align-items:center;gap:4px}
+  .route .heart{min-width:40px;min-height:40px;font-size:19px;display:inline-flex;align-items:center;justify-content:center;margin-left:2px}
+  .route .r1 .no{flex:0 0 auto}
+  @media (max-width:640px){
+    h2{scroll-margin-top:10px}
+    #toTop{display:none}
+    .ttl2{display:block}
+    .sep{display:none}
+    .hero h1{font-size:24px;letter-spacing:0}
+    .cnt b{font-size:24px}
+    .tools input{padding:0 10px}
+    .badges{margin-top:12px;-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent 100%);mask-image:linear-gradient(90deg,#000 82%,transparent 100%)}
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* SHOPLIB-CSS */
+  .shop-tools{margin-top:4px}
+  .shop-count{font-size:12px;color:var(--gray);margin:0 0 10px}
+  .shop-grid{display:grid;gap:10px;margin-bottom:6px}
+  @media (min-width:900px){.shop-grid{grid-template-columns:1fr 1fr}}
+  .shop-card{border:1px solid var(--line);background:#fff;border-radius:13px;padding:12px 13px;box-shadow:0 1px 2px rgba(29,34,44,.04)}
+  .shop-card .sc-top{display:flex;align-items:flex-start;gap:8px}
+  .shop-card .sc-name{font-weight:700;font-size:14px;line-height:1.35;flex:1 1 auto;min-width:0}
+  .shop-card .sc-heart{flex:0 0 auto;border:0;background:transparent;color:#c5beb2;font-size:17px;
+    min-width:36px;min-height:36px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
+  .shop-card .sc-heart.on{color:#d4436a}
+  .shop-card .sc-meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+  .shop-card .pill2{font-size:11px;padding:2px 8px;border-radius:999px;background:#f4f1ea;color:var(--ink-soft)}
+  .shop-card .pill2.cat{background:#eef1f8;color:#3d4f80;font-weight:700}
+  .shop-card .pill2.min{background:#e9f3ec;color:#2f6b4a;font-weight:700}
+  .shop-card .sc-line{font-size:12.5px;color:var(--ink-soft);margin-top:5px;line-height:1.55;word-break:break-word}
+  .shop-card .sc-line b{color:var(--ink);font-weight:600}
+  .shop-card .sc-src{margin-top:7px;font-size:10.5px;color:#a9a29a}
+  .shop-card{border-left:4px solid var(--catc,#e7e1d6)}
+  .sc-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}
+  .sc-links a{font-size:12px;font-weight:700;text-decoration:none;color:#2f5f7d;background:#eef5fa;
+    border:1px solid #d8e6f2;border-radius:999px;padding:5px 11px;min-height:32px;display:inline-flex;align-items:center;gap:4px}
+  .sc-links a:active{transform:scale(.97)}
+  .pr-strip{display:flex;gap:12px;flex-wrap:wrap;margin:8px 0 12px;font-size:12.5px;color:var(--ink-soft)}
+  .pr-strip span{white-space:nowrap;padding-right:12px;border-right:1px solid var(--line)}
+  .pr-strip span:last-child{border-right:0;padding-right:0}
+  .pill2.st-on{background:#e7f4ea;color:#2f7a46;font-weight:700}
+  .pill2.st-off{background:#f0f0f2;color:#8a8f99}
+  .pill2.st-hint{background:#fdf3e6;color:#a2521f;font-weight:400}
+  .pr-strip b{color:var(--accent);font-variant-numeric:tabular-nums}
+  .pill2.gen{background:#fdf1e6;color:#a2521f}
+  .shop-more{display:none;width:100%;margin:10px 0 2px}
+  .shop-more.show{display:block}
+  @media (max-width:640px){.shop-tools{flex-wrap:wrap}.shop-tools input{flex:1 1 100%}}
+  .map-wrap{display:flex;gap:14px;align-items:flex-start;margin:6px 0 8px;flex-wrap:wrap}
+  .shopmap{width:300px;height:300px;flex:0 0 auto;background:#fff;border:1px solid var(--line);border-radius:14px}
+  .map-side{flex:1 1 160px;font-size:12px;color:var(--ink-soft);line-height:1.6;min-width:0}
+  .subchips{margin-top:-2px;margin-bottom:6px}
+  @media (max-width:640px){
+    .map-wrap{gap:8px}
+    .shopmap{width:100%;max-width:360px;height:auto}
+    .map-side{flex:1 1 100%}
+  }
+  /* /SHOPLIB-CSS */
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>大森基地 · 2027 春<br>东京实习 3 个月<span class="sep">｜</span><span class="ttl2">周边生活 + 旅游作战图</span></h1>
+    <div class="sub">2027 年 3–5 月 ｜ 株式会社ソフトユージング（東京都品川区南大井 3-20-5 SU大森ビル）</div>
+    <div class="badges">
+      <span class="badge">📍 京急「大森海岸」徒步 3–4 分</span>
+      <span class="badge">🚉 JR「大森」徒步 10–11 分</span>
+      <span class="badge">🗓 13 个周末 + 6 天法定休日</span>
+      <span class="badge">🎒 两次过夜旅行 + 13 次一日游</span>
+      <span class="badge">💰 旅游预算 13–18 万円</span>
+      <span class="badge">🛒 31 家店铺多平台核对（2026-11-24）</span>
+    </div>
+  </div>
+</header>
+
+<nav class="jump" id="jump" aria-label="页面导航"><!-- JS 生成 --></nav>
+
+<div class="wrap">
+
+  <!-- ========== 1. 位置图 ========== -->
+  <h2><span class="no">1</span>基地位置：公司在哪、15 分钟能到哪</h2>
+  <p class="lead">按真实经纬度投影的示意图（不是商用地图）。圆心＝公司，虚线圆＝步行时间圈。精确步行分钟到日本后请用 Google マップ 实测一次。</p>
+
+  <div class="mapbox">
+    <svg viewBox="0 0 900 540" role="img" aria-label="大森基地周边示意图">
+      <defs>
+        <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+          <path d="M30 0H0V30" fill="none" stroke="#f2eee6" stroke-width="1"/>
+        </pattern>
+        <radialGradient id="fade" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#fffdf8"/><stop offset="100%" stop-color="#fbf8f1"/>
+        </radialGradient>
+        <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+          <feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-color="#1d222c" flood-opacity="0.18"/>
+        </filter>
+      </defs>
+      <rect width="900" height="540" fill="url(#fade)"/>
+      <rect width="900" height="540" fill="url(#grid)" opacity=".55"/>
+
+      <!-- 铁道线 -->
+      <line x1="189" y1="-10" x2="189" y2="550" stroke="#8fa2c9" stroke-width="7" opacity=".55"/>
+      <line x1="189" y1="-10" x2="189" y2="550" stroke="#2c3a63" stroke-width="2" opacity=".55"/>
+      <line x1="636" y1="-10" x2="636" y2="550" stroke="#d9a3a0" stroke-width="7" opacity=".5"/>
+      <line x1="636" y1="-10" x2="636" y2="550" stroke="#a9403a" stroke-width="2" opacity=".5"/>
+      <text x="178" y="26" transform="rotate(-90 178 26)" font-size="11.5" fill="#40527d" font-weight="700" letter-spacing="1">JR 京浜東北線</text>
+      <text x="712" y="30" transform="rotate(-90 712 30)" font-size="11.5" fill="#a9403a" font-weight="700" letter-spacing="1">京急本線</text>
+      <text x="150" y="516" font-size="10.5" fill="#7a8499">← 品川・東京</text>
+      <text x="600" y="516" font-size="10.5" fill="#a07a76">← 品川</text>
+      <text x="150" y="60" font-size="10.5" fill="#7a8499">横浜・大船 →</text>
+      <text x="600" y="60" font-size="10.5" fill="#a07a76">羽田・横浜 →</text>
+
+      <!-- 步行圈 -->
+      <circle cx="711" cy="205" r="221" fill="none" stroke="#bf3b28" stroke-width="1.4" stroke-dasharray="5 6" opacity=".45"/>
+      <circle cx="711" cy="205" r="441" fill="none" stroke="#bf3b28" stroke-width="1.4" stroke-dasharray="5 6" opacity=".28"/>
+      <text x="500" y="196" font-size="11" fill="#bf3b28" opacity=".75">─ 约 300 m / 步行 4 分</text>
+      <text x="300" y="176" font-size="11" fill="#bf3b28" opacity=".55">─ 约 600 m / 步行 8 分</text>
+
+      <!-- 站点 -->
+      <g filter="url(#soft)">
+        <circle cx="189" cy="235" r="9" fill="#fff" stroke="#2c3a63" stroke-width="3"/>
+        <circle cx="636" cy="345" r="9" fill="#fff" stroke="#a9403a" stroke-width="3"/>
+      </g>
+      <text x="189" y="216" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2c3a63">JR 大森駅</text>
+      <text x="189" y="261" text-anchor="middle" font-size="10.5" fill="#5b6478">步行 10–11 分 / 711 m</text>
+      <text x="636" y="326" text-anchor="middle" font-size="12.5" font-weight="700" fill="#a9403a">京急 大森海岸駅</text>
+      <text x="636" y="372" text-anchor="middle" font-size="10.5" fill="#5b6478">步行 3–4 分 / 216 m</text>
+
+      <!-- POI -->
+      <g font-size="11.5">
+        <circle cx="345" cy="278" r="5.5" fill="#4a7657"/>
+        <text x="345" y="297" text-anchor="middle" fill="#2f6b4a" font-weight="600">西友 大森店 · 8 分</text>
+        <circle cx="552" cy="23" r="5.5" fill="#3f7395"/>
+        <text x="552" y="44" text-anchor="middle" fill="#2f5f7d" font-weight="600">水神湯 600 円 · 5 分</text>
+        <circle cx="305" cy="490" r="5.5" fill="#a9791f"/>
+        <text x="305" y="509" text-anchor="middle" fill="#8a6216" font-weight="600">Milpa 商店街（110 店）</text>
+      </g>
+
+      <!-- 公司 -->
+      <g filter="url(#soft)">
+        <circle cx="711" cy="205" r="15" fill="#bf3b28"/>
+        <circle cx="711" cy="205" r="15" fill="none" stroke="#fff" stroke-width="2.5"/>
+        <path d="M711 196 l2.7 5.9 6.4 .7 -4.7 4.4 1.3 6.3 -5.7 -3.1 -5.7 3.1 1.3 -6.3 -4.7 -4.4 6.4 -.7z" fill="#fff"/>
+      </g>
+      <text x="711" y="180" text-anchor="middle" font-size="13.5" font-weight="800" fill="#bf3b28">公司 SU大森ビル</text>
+      <text x="711" y="233" text-anchor="middle" font-size="10.5" fill="#8a4a3f">南大井 3-20-5</text>
+
+      <!-- 比例尺 & 指北 -->
+      <g transform="translate(30,500)">
+        <line x1="0" y1="0" x2="147" y2="0" stroke="#5b6478" stroke-width="2"/>
+        <line x1="0" y1="-4" x2="0" y2="4" stroke="#5b6478" stroke-width="2"/>
+        <line x1="147" y1="-4" x2="147" y2="4" stroke="#5b6478" stroke-width="2"/>
+        <text x="73" y="-8" text-anchor="middle" font-size="10.5" fill="#5b6478">200 m</text>
+      </g>
+      <g transform="translate(852,40)">
+        <path d="M0 -14 L6 8 L0 3 L-6 8 Z" fill="#5b6478"/>
+        <text x="0" y="24" text-anchor="middle" font-size="11" fill="#5b6478" font-weight="700">N</text>
+      </g>
+    </svg>
+    <div class="mapnote">示意图 · 基于国土地理院住所検索 / OpenStreetMap 坐标投影（2026-11）</div>
+  </div>
+  <div class="legend">
+    <span><i style="background:#bf3b28"></i>公司</span>
+    <span><i style="background:#fff;border:2px solid #2c3a63"></i>JR 站</span>
+    <span><i style="background:#fff;border:2px solid #a9403a"></i>京急 站</span>
+    <span><i style="background:#4a7657"></i>超市</span>
+    <span><i style="background:#3f7395"></i>钱汤</span>
+    <span><i style="background:#a9791f"></i>商店街</span>
+  </div>
+
+  <!-- 手机版：距离条（替代 SVG 地图，桌面隐藏） -->
+  <div class="only-mobile">
+    <div class="card">
+      <h3>🚶 公司出发：10 分钟生活圈</h3>
+      <div class="dist">
+        <div class="drow hot"><span class="dn">京急 大森海岸駅</span><span class="dv">216 m · 3–4 分</span><div class="dt"><i style="width:24%"></i></div></div>
+        <div class="drow"><span class="dn">水神湯（钱汤）</span><span class="dv">329 m · 5 分</span><div class="dt"><i style="width:37%"></i></div></div>
+        <div class="drow"><span class="dn">イトーヨーカドー 大森店</span><span class="dv">约 370 m · 6 分</span><div class="dt"><i style="width:41%"></i></div></div>
+        <div class="drow"><span class="dn">西友 大森店（24h）</span><span class="dv">509 m · 8 分</span><div class="dt"><i style="width:57%"></i></div></div>
+        <div class="drow"><span class="dn">Milpa 商店街</span><span class="dv">约 675 m · 9–11 分</span><div class="dt"><i style="width:75%"></i></div></div>
+        <div class="drow"><span class="dn">JR 大森駅</span><span class="dv">711 m · 10–11 分</span><div class="dt"><i style="width:79%"></i></div></div>
+        <div class="drow note"><span class="dn">しながわ水族館</span><span class="dv">大森海岸駅から 8 分</span><div class="dt"><i style="width:72%"></i></div></div>
+      </div>
+      <p style="font-size:12px;color:var(--gray);margin:12px 0 0">按 80 m/分 估算，实际以 Google マップ 为准；桌面版有带方位的地图。</p>
+    </div>
+  </div>
+
+  <div class="grid g4" style="margin-top:18px">
+    <div class="card"><h3>🚉 通勤</h3>
+      <div class="kv"><span class="k">京急 大森海岸</span><span class="v">3–4 分</span></div>
+      <div class="kv"><span class="k">JR 大森</span><span class="v">10–11 分</span></div>
+      <div class="kv"><span class="k">到品川</span><span class="v">6 分 / 199 円</span></div>
+      <div class="kv"><span class="k">到東京</span><span class="v">21 分 / 253 円</span></div>
+    </div>
+    <div class="card"><h3>✈️ 机场 / 近郊</h3>
+      <div class="kv"><span class="k">羽田空港</span><span class="v">约 20–25 分 / 278 円</span></div>
+      <div class="kv"><span class="k">横浜</span><span class="v">26 分 / 313 円</span></div>
+      <div class="kv"><span class="k">鎌倉</span><span class="v">51 分 / 715 円</span></div>
+      <div class="kv"><span class="k">三崎口（三浦）</span><span class="v">1h15 / 740 円</span></div>
+    </div>
+    <div class="card"><h3>🍚 生活</h3>
+      <div class="kv"><span class="k">午饭主战场</span><span class="v">Milpa 110 店</span></div>
+      <div class="kv"><span class="k">便宜买菜</span><span class="v">西友 8 分</span></div>
+      <div class="kv"><span class="k">钱汤</span><span class="v">水神湯 600 円</span></div>
+      <div class="kv"><span class="k">理发</span><span class="v">1,400 円（不预约）</span></div>
+    </div>
+    <div class="card"><h3>🧭 出门原则</h3>
+      <div class="kv"><span class="k">去市中心</span><span class="v">JR 大森</span></div>
+      <div class="kv"><span class="k">去羽田/横浜/三浦</span><span class="v">京急 大森海岸</span></div>
+      <div class="kv"><span class="k">下雨天</span><span class="v">京急 3 分</span></div>
+      <div class="kv"><span class="k">末班车</span><span class="v">约 0 点前后，实时查</span></div>
+    </div>
+  </div>
+
+  <!-- ========== 2. 三个月排期 ========== -->
+  <h2><span class="no">2</span>三个月怎么过：周末与长假排期</h2>
+  <p class="lead">2027 年 3–5 月＝13 个周末 + 6 天法定休日。<b>主方案只有两个过夜旅行</b>（3/20–22 箱根+伊豆、5/1–5/5 京都+大阪），其余周末按季节排一日游，每两周留一个"纯休息"周末。<b>不需要动用有给</b>（除非 4/30 请假把黄金周拼成 7 天）。</p>
+
+  <div class="warn">
+    <b>花期提醒：</b>东京樱平年 3/24 开花、3/31 满开；2027 年官方预测要到 <b>2027 年 1 月</b>才发布。花见与近郊樱路线按 <b>3/20–4/5</b> 留活口，届时把"樱花"和"非樱花"两条路线对调即可，不影响整体结构。
+  </div>
+
+  <div class="grid g3" style="margin-top:20px">
+    <div class="mon">
+      <h3>3 月 <span>到日安顿 → 花见前哨</span></h3>
+      <div class="wk"><div class="d">3/6–7</div><div class="c"><b>横浜</b> 热身 <span class="tag t-sea">海·城市</span><small>43 分 / 565 円；顺手把 Milpa、西友、水神湯踩一遍</small></div></div>
+      <div class="wk"><div class="d">3/13–14</div><div class="c"><b>三浦半島</b> + <b>高尾山</b> <span class="tag t-sea">海</span><span class="tag t-hana">户外</span><small>3/13 三崎まぐろ · 3/14 高尾山或吉祥寺半日</small></div></div>
+      <div class="wk"><div class="d">3/20–22</div><div class="c"><b>★ 箱根 + 伊豆</b> 3 天 2 晚 <span class="tag t-trip">过夜</span><small>三连休（3/21 春分・3/22 振替）· 约 3.5–4 万円</small></div></div>
+      <div class="wk"><div class="d">3/27–28</div><div class="c"><b>都内花见</b> + <b>鎌倉・江の島</b> <span class="tag t-sakura">樱</span><small>上野/千鳥ヶ淵/目黒川免费花见；3/28 江ノ電一日</small></div></div>
+    </div>
+
+    <div class="mon">
+      <h3>4 月 <span>花海月：ネモフィラ・藤・芝桜</span></h3>
+      <div class="wk"><div class="d">4/3–4</div><div class="c"><b>吉祥寺・井の頭公園</b> + <b>川越</b> <span class="tag t-sakura">樱</span><small>新河岸川樱并木；雨天改お台場</small></div></div>
+      <div class="wk"><div class="d">4/10–11</div><div class="c"><b>高尾山</b> + <b>横須賀</b> <span class="tag t-hana">山樱</span><span class="tag t-sea">海</span><small>三笠公園樱 + 軍港クルーズ（建议预约）</small></div></div>
+      <div class="wk"><div class="d">4/17–18</div><div class="c"><b>国営ひたち海浜公園</b> ネモフィラ <span class="tag t-hana">花海</span><small>530 万株蓝色花田；务必避开 4/29–5/5</small></div></div>
+      <div class="wk"><div class="d">4/24–25</div><div class="c"><b>日光東照宮</b> + <b>足利フラワーパーク</b> 藤 <span class="tag t-trip">硬核</span><span class="tag t-hana">藤</span><small>体力吃紧就二选一，另一天休整</small></div></div>
+      <div class="wk"><div class="d">4/29</div><div class="c">单休：<b>鋸山</b> 或市内 <span class="tag t-rest">轻量</span><small>GW 前一天，别跑远，收拾行李</small></div></div>
+    </div>
+
+    <div class="mon">
+      <h3>5 月 <span>黄金周远行 → 新绿收尾</span></h3>
+      <div class="wk"><div class="d">5/1–5/5</div><div class="c"><b>★ 京都 + 大阪</b> 5 天 4 晚 <span class="tag t-gw">GW</span><small>五连休（5/3–5/5 祝日）· 约 5.5–7.5 万円</small></div></div>
+      <div class="wk"><div class="d">5/8–9</div><div class="c">恢复周：<b>横浜/三浦</b> 半日 <span class="tag t-rest">休息</span><small>GW 后人最少的一周，补觉、洗衣、自习</small></div></div>
+      <div class="wk"><div class="d">5/15–16</div><div class="c"><b>箱根日归</b> 或 <b>河口湖</b> <span class="tag t-sea">新绿</span><small>看天气二选一：大涌谷 or 富士山</small></div></div>
+      <div class="wk"><div class="d">5/22–23</div><div class="c"><b>三社祭</b>（浅草） <span class="tag t-sakura">祭</span><small>推定 5/21–23，以浅草神社官网为准；人多注意末班车</small></div></div>
+      <div class="wk"><div class="d">5/29–30</div><div class="c">收尾：<b>お台場/豊洲</b> + 打包 <span class="tag t-rest">收工</span><small>留一天办退寮、告别会、买伴手礼</small></div></div>
+    </div>
+  </div>
+
+  <div class="grid g2" style="margin-top:18px">
+    <div class="big">
+      <h3>★ 主战役一：箱根 + 伊豆（3 天 2 晚）</h3>
+      <div class="when">3/20（土）–3/22（月・振替休日）｜不请假</div>
+      <ol>
+        <li>D1 大森 → 横浜/小田原 → 箱根湯本 → 強羅 → 大涌谷 → 芦ノ湖海賊船 → 元箱根・箱根神社</li>
+        <li>D2 箱根 → 三島 → 伊豆箱根鉄道 → 修善寺（竹林の小径・独鈷の湯）→ 伊豆高原/河津方向</li>
+        <li>D3 河津/伊豆高原 → 伊東 → 東海道線 → 品川 → 大森</li>
+      </ol>
+      <div class="money">约 35,500 円（箱根フリーパス 3 日 7,500 円 + 宿 2 晚 + 食）</div>
+      <div class="step" style="margin-top:10px">⚠️ 河津桜 2027 花季 2/6–3/7，3 月已谢 —— 伊豆这段改看海景/温泉/新绿</div>
+    </div>
+    <div class="big">
+      <h3>★ 主战役二：京都 + 大阪（5 天 4 晚）</h3>
+      <div class="when">5/1（土）–5/5（水・祝）｜不请假；能请 4/30 则变 7 连休</div>
+      <ol>
+        <li>D1 品川 → のぞみ 2h15 → 京都 → 伏見稲荷（千本鳥居）</li>
+        <li>D2 清水寺 → 二三年坂 → 八坂神社 → 祇園 → 錦市場</li>
+        <li>D3 嵐山 → 金閣寺 → 京都御苑</li>
+        <li>D4 新快速 28 分 → 大阪城 → 道頓堀・黒門市場 → 通天閣</li>
+        <li>D5 海遊館或大阪城补漏 → 新大阪 → 品川 → 大森</li>
+      </ol>
+      <div class="money">约 5.5–7.5 万円（夜行巴士版约 4.0–4.5 万円，省 1.8 万）</div>
+      <div class="step" style="margin-top:10px">⏰ GW 住宿 <b>1 月下旬–2 月</b>订、新干线指定席 <b>1 个月前同日 10:00</b> 开售</div>
+    </div>
+  </div>
+
+  <!-- ========== 3. 17 条路线 ========== -->
+  <h2><span class="no">3</span>周末一日游 17 条（大森出发）</h2>
+  <p class="lead">单程时间与 IC 票价＝2026-11-23 用 Yahoo!路線情報 按 2027 年出发日查询的结果（2027 年 3 月ダイヤ改正与运赁改定后请复核）。体力 1＝坐车散步，5＝登山/长途。点"路线"跳 Google マップ。</p>
+
+  <div class="grid g3" id="routes"></div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>🎯 排期优先级（学生视角性价比）</h3>
+    <p style="margin:0;font-size:13.5px;color:var(--ink-soft)">
+      横浜 → 吉祥寺 → お台場 → 高尾山 → 川越 → 鎌倉・江の島 → 横須賀 → 三浦 → 長瀞 → 足利藤 → ひたち → 鋸山 → 河口湖 → 箱根 → 伊豆 → 日光 → TDR<br>
+      <b>雨天/低体力三大保底：</b>横浜、お台場・豊洲、吉祥寺（随时能撤）。<b>"错过再等一年"务必去：</b>花见、ひたちネモフィラ、足利藤。
+    </p>
+  </div>
+
+  <!-- ========== 4. 预算 ========== -->
+  <h2><span class="no">4</span>钱：旅游预算与省钱顺序</h2>
+  <p class="lead">估算口径：2026 年 11 月价格水平，100 日元 ≈ 4.8 元。住宿按"公司提供寮"与"自行租房"两档并列。</p>
+
+  <div class="grid g2">
+    <div class="card">
+      <h3>旅游花费（主方案）</h3>
+      <div class="barc">
+        <div class="bar"><span>箱根+伊豆 3 天</span><div class="track"><div class="fill" style="width:30%"></div></div><span>3.5–4.0 万</span></div>
+        <div class="bar"><span>京都+大阪 5 天</span><div class="track"><div class="fill acc" style="width:60%"></div></div><span>5.5–7.5 万</span></div>
+        <div class="bar"><span>13 次一日游</span><div class="track"><div class="fill grn" style="width:50%"></div></div><span>5–8 万</span></div>
+        <div class="bar"><span>合计</span><div class="track"><div class="fill" style="width:100%"></div></div><span>13–18 万</span></div>
+      </div>
+      <p style="font-size:12.5px;color:var(--gray);margin:12px 0 0">压缩版 9 万円：京都改夜行巴士（−1.8 万）+ 一日游减到 8 次（−2~3 万）。</p>
+    </div>
+    <div class="card">
+      <h3>三个月在日总预算</h3>
+      <div class="kv"><span class="k">住宿（公司寮 3–5 万/月）</span><span class="v">9–15 万</span></div>
+      <div class="kv"><span class="k">住宿（自行租 4.5–12 万/月）</span><span class="v">13.5–36 万</span></div>
+      <div class="kv"><span class="k">饮食（自炊+便利店）</span><span class="v">7.5–13.5 万</span></div>
+      <div class="kv"><span class="k">交通（通勤+周末）</span><span class="v">1.8–3.6 万</span></div>
+      <div class="kv"><span class="k">通信 + 杂费</span><span class="v">2.1–4.2 万</span></div>
+      <div class="kv"><span class="k">旅游</span><span class="v">13–18 万</span></div>
+      <div class="kv"><span class="k">在日合计</span><span class="v">约 34–54 万（寮）/ 38–75 万（自租）</span></div>
+      <div class="kv"><span class="k">另计</span><span class="v">机票 3.5–8.5 万 + 签证 0.8–1.8 万</span></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>💡 省钱硬招（按性价比）</h3>
+    <ul class="tight">
+      <li><b>青春18きっぷ</b>：2026 年度 3 日 10,000 円 / 5 日 12,050 円，跑 JR 长线（伊豆 JR 段、镰仓）最省；2027 春版价格/发售期待核实</li>
+      <li><b>箱根フリーパス 3 日</b>：比单买省一半；不坐浪漫特快再省 2,400 円</li>
+      <li><b>日光</b>：东武数字フリーパス 3,000 円 + 铁道放题 500 円，是最省的交通组合</li>
+      <li><b>吃</b>：超市 20:00 后半价便当、牛丼 500 円、定食 800–1,000 円；自炊日均可压到 1,500–2,000 円</li>
+      <li><b>住</b>：ドミトリー/ゲストハウス；非 GW 比 GW 低 3–5 成；只订可免费取消的</li>
+      <li><b>温泉</b>：不住温泉旅馆，改日归温泉 1,000–1,500 円</li>
+    </ul>
+  </div>
+
+  <!-- ========== 5. 待确认 ========== -->
+  <h2><span class="no">5</span>出发前必须敲定的 6 件事</h2>
+  <p class="lead">这几件事决定预算与能不能成行，请优先向 HR 书面确认（勾选后状态会存在本页，刷新不丢）。</p>
+  <div class="grid g2">
+    <div class="card">
+      <h3>⚠️ 风险最高：90 天红线</h3>
+      <p style="font-size:13.5px;margin:0 0 8px;color:var(--ink-soft)">2027-03-01 入境 → 2027-05-31 出境 = <b>92 天</b>，超过<b>短期滞在 90 天</b>上限。</p>
+      <ul class="tight">
+        <li>有报酬 → <b>特定活動（告示 9 号）</b>；无报酬 &gt;90 天 → <b>文化活動</b>；无报酬 ≤90 天 → 短期滞在</li>
+        <li>走短期滞在＝没有在留カード、不能住民登録、无マイナンバー、不能加国保</li>
+        <li>中国公民签证须经<b>指定代办机构</b>递交，预留 2–3 周</li>
+      </ul>
+      <div class="warn">让 HR 书面回答：①是否支付报酬/津贴 ②出入境是否 ≤90 天 ③公司走哪条资格、谁办 COE。以上以公司/入管答复为准。</div>
+    </div>
+    <div class="card">
+      <h3>✅ 确认清单</h3>
+      <ul class="check">
+        <li><input type="checkbox"> 公司寮能否给实习生住（位置/寮费/家具/男女寮）</li>
+        <li><input type="checkbox"> 在留资格路径 + 谁办 COE + 出入境日是否 ≤90 天</li>
+        <li><input type="checkbox"> 有给/调休规则（决定能否把 GW 拼成 7 天）</li>
+        <li><input type="checkbox"> 通勤定期券是否报销</li>
+        <li><input type="checkbox"> 箱根温泉セミナーハウス 实习生可用吗</li>
+        <li><input type="checkbox"> 机票已订（提前 6–10 周，避开 3 月下旬樱花季涨价）</li>
+        <li><input type="checkbox"> GW（5/1–5/5）住宿 + 3/20–22 住宿已订（1 月下旬–2 月）</li>
+        <li><input type="checkbox"> 境外旅行险（医疗+意外+行李，覆盖实习期间）</li>
+        <li><input type="checkbox"> 手机是否支持 eSIM（国行多不支持 → 备实体 SIM）</li>
+        <li><input type="checkbox"> 落地 72h：Suica、通勤试走、区役所（中長期者 14 日内転入届）</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ========== 6. 工具箱 ========== -->
+  <h2><span class="no">6</span>工具箱：天气、礼仪、日语</h2>
+  <div class="grid g3">
+    <div class="card">
+      <h3>🌡 3–5 月东京（気象庁 平年値）</h3>
+      <div class="kv"><span class="k">3 月</span><span class="v">9.4℃ / 大衣+薄羽绒</span></div>
+      <div class="kv"><span class="k">4 月</span><span class="v">14.3℃ / 风衣+薄毛衣</span></div>
+      <div class="kv"><span class="k">5 月</span><span class="v">18.8℃ / 薄外套+长袖</span></div>
+      <div class="kv"><span class="k">3 月花粉</span><span class="v">スギ峰值 → 口罩+眼镜</span></div>
+      <div class="kv"><span class="k">降水</span><span class="v">每月 116–140 mm，带折叠伞</span></div>
+    </div>
+    <div class="card">
+      <h3>🎌 礼仪与安全（高频）</h3>
+      <ul class="tight">
+        <li>电车手机静音、不打电话、背包抱胸前</li>
+        <li>お通し收费 300–500 円；<b>没有小费</b>；可 AA</li>
+        <li>路上不吸烟、不边走边吃；垃圾随身带走</li>
+        <li>地震：装 NERV 防災，确认最近避难所；"伏せて・頭を守る・動かない"</li>
+        <li>警察 110 / 急救 119 / 非紧急 #7119</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🗣 日语速用</h3>
+      <div class="kv"><span class="k">これでお願いします</span><span class="v">就要这个</span></div>
+      <div class="kv"><span class="k">お会計をお願いします</span><span class="v">请结账</span></div>
+      <div class="kv"><span class="k">別々でお願いします</span><span class="v">分开付</span></div>
+      <div class="kv"><span class="k">終電は何時ですか</span><span class="v">末班车几点</span></div>
+      <div class="kv"><span class="k">大森駅はどちらですか</span><span class="v">大森站在哪边</span></div>
+      <div class="kv"><span class="k">花粉症です</span><span class="v">我有花粉症</span></div>
+    </div>
+  </div>
+
+  <!-- ========== 7. 店铺速查（多平台核对） ========== -->
+    <!-- SHOPLIB -->
+  <h2><span class="no">7</span>店铺卡片库（可搜索）</h2>
+  <p class="lead">研究/05–10 八份核对底稿 + 食べログ 列表补充，共 <b id="shopTotal">0</b> 家店 / 设施，全部可搜索。每家标了<b>吃什么 / 类型</b>、<b>从公司（南大井3-20-5 SU大森ビル）出发的大致距离</b>（步行/电车分钟 + 直线距离估算），并带 <b>Google 地图 / 路线</b>。选「<b>餐饮</b>」会出现 <b>午餐 / 晚餐 / 咖啡 / 居酒屋</b> 二级筛选；下面的<b>范围圈</b>（≤5 / 5–10 / 10–15 分）可直接点选。</p>
+  <div class="pr-strip" id="shopStats"></div>
+  <div class="tools shop-tools">
+    <input type="search" id="shopQ" placeholder="搜店名 / 地址 / 类别（西友、24h、歯科…）" aria-label="搜索店铺">
+    <button type="button" class="favbtn" id="shopFavBtn">♥ 收藏</button>
+    <button type="button" class="favbtn" id="shopCsvBtn">⬇ CSV</button>
+  </div>
+  <div class="chips" id="shopChips"></div>
+  <div class="map-wrap">
+    <svg id="shopMap" class="shopmap" viewBox="0 0 320 320" role="img" aria-label="各车站真实方位与距离（按经纬度投影，点站点筛选）"></svg>
+    <div class="map-side">
+      <b>方位图</b>（真实经纬度投影 · 点站点只看该站）<br>
+      圆点越大＝该站店越多；圈＝1/2/4 km。
+      <div class="chips" id="shopStChips" style="margin-top:6px"></div>
+    </div>
+  </div>
+  <div class="chips" id="shopRings"></div>
+  <div class="chips subchips" id="shopMeal" style="display:none"></div>
+  <div class="chips subchips" id="shopBudget" style="display:none"></div>
+  <p class="shop-count" id="shopCount"></p>
+  <div class="shop-grid" id="shopList"></div>
+  <button type="button" class="favbtn shop-more" id="shopMore">显示更多</button>
+  <p class="empty-tip" id="shopEmpty">没有匹配的店：换个关键词，或点「全部」。</p>
+  <div class="warn" style="margin-top:16px">两个"别按旧资料去"的坑：①<b>梅の湯（大森西 6-12-12）已废业</b>；②<b>蒲田温泉 2026-10-19～2027-04 装修停业</b>。另：MEGAドンキ不是 24 小时（8:00–3:00），イトーヨーカドー 22:00 关门。</div>
+  <!-- /SHOPLIB -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer>
+    <p><b>数据来源：</b>株式会社ソフトユージング官网会社案内（地址/设立/员工数）｜国土地理院 住所検索（公司坐标）｜OpenStreetMap（车站/地标坐标）｜Yahoo!路線情報（车程/票价，2026-11-23 查询）｜内閣府 国民の祝日 CSV（2027 年祝日与星期）｜気象庁（樱花平年值与气温平年值）｜各景点官网（门票）｜<b>食べログ / ホットペッパー / 各官方店舗页 / 東京銭湯協会 / OSM（店铺多平台核对，2026-11-24）</b>｜Milpa/品川区/入管官网（生活与手续）。</p>
+    <p><b>移动端适配：</b>按 iPhone 16 Pro / 17 Pro（402×874 pt，含安全区）优化——<b>底部 5 个拇指 tab</b>（基地/排期/路线/预算/店铺，滚动自动高亮）、<b>出发倒计时</b>（自动算）、3–5 月<b>横滑</b>、一日游<b>关键词搜索 + ♥想去（本地保存）+ 分类筛选</b>、<b>点卡片直接开 Google 路线</b>、<b>§7 122 家店铺卡片库（搜索/类别/≤10 分/♥收藏/分页）</b>、方位地图换成距离条；桌面版保留完整地图与吸顶目录。单文件离线可用（微信/邮件发到手机，用 Safari 打开；也可"添加到主屏幕"当 App 用）。**已开启 service worker：首次联网打开后，断网 / 地铁无信号也能打开（显示上次缓存版本）。**</p>
+    <p><b>免责：</b>本文为行前规划参考。价格与时刻为 2026 年 11 月口径，2027 年可能变动；签证/在留/税务以公司 HR 与日本入管书面答复为准；2027 年樱花与花海花期预测将在 2027 年 1 月陆续发布，届时请按最新预报微调。<br>
+    配套文档：<span class="pill">00-总攻略.md</span><span class="pill">研究/01-周边生活.md</span><span class="pill">研究/02-周末一日游.md</span><span class="pill">研究/03-节假日多日游.md</span><span class="pill">研究/04-行前与实用.md</span></p>
+  </footer>
+</div>
+
+<script>
+const ROUTES = [
+  [1,"鎌倉＋江の島","51 分","715 円",3,"3 下–4 上 樱","大森駅","鎌倉駅"],
+  [2,"横浜（みなとみらい・中華街）","43 分","565 円",2,"通年・雨天王牌","大森駅","元町・中華街駅"],
+  [3,"川越（蔵造り・喜多院）","1h20","822 円",2,"3 下–4 上 新河岸川樱","大森駅","川越市駅"],
+  [4,"日光東照宮","3h04","2,396 円",4,"4 下–5 新绿/杜鹃","大森海岸駅","日光東照宮"],
+  [5,"高尾山","1h28","683 円",3,"4 上 山樱","大森駅","高尾山口駅"],
+  [6,"箱根日归（大涌谷・芦ノ湖）","1h53","1,768 円",4,"5 月新绿","大森駅","箱根湯本駅"],
+  [7,"三浦半島（三崎マグロ・城ヶ島）","1h15","740 円",2,"3–5 海景/菜の花","大森海岸駅","三崎口駅"],
+  [8,"房総・鋸山","2h30","2,090 円",4,"4 樱/5 新绿","大森駅","浜金谷駅"],
+  [9,"国営ひたち海浜公園","2h31","2,420 円",2,"4 中–5 上 ネモフィラ","大森駅","国営ひたち海浜公園"],
+  [10,"河口湖・富士五湖","3h14","2,943 円",3,"4 中 湖畔樱","大森駅","河口湖駅"],
+  [11,"秩父・長瀞","2h32","1,803 円",3,"4 中–5 上 芝桜","大森駅","長瀞駅"],
+  [12,"お台場・豊洲","23 分","427 円",1,"通年・雨天王牌","大森駅","東京テレポート駅"],
+  [13,"東京ディズニーリゾート","51 分","440 円",3,"通年・挑淡季","大森駅","舞浜駅"],
+  [14,"横須賀（軍港・三笠）","52 分","620 円",2,"通年・3 下–4 上樱","大森海岸駅","横須賀中央駅"],
+  [15,"伊豆・河津桜","3h07","3,669 円",5,"2 下–3 上（2027:2/6–3/7）","大森駅","河津駅"],
+  [16,"足利フラワーパーク（藤）","2h35","2,420 円",2,"4 下–5 中 藤","大森駅","あしかがフラワーパーク駅"],
+  [17,"吉祥寺・井の頭公園","50 分","483 円",2,"3 下–4 上 樱","大森駅","吉祥寺駅"]
+];
+const host = document.getElementById("routes");
+host.innerHTML = ROUTES.map(r=>{
+  const [no,name,time,fare,phys,season,from,to] = r;
+  const dots = "●".repeat(phys) + "○".repeat(5-phys);
+  const map = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(from)}&destination=${encodeURIComponent(to)}&travelmode=transit`;
+  return `<div class="route">
+    <div class="r1"><span class="nm">${name}</span><span class="no">${String(no).padStart(2,"0")}</span></div>
+    <div class="r2"><span>单程 <b>${time}</b></span><span>IC <b>${fare}</b></span></div>
+    <div class="r2" style="margin-top:4px"><span class="dots" title="体力 ${phys}/5">${dots}</span><span style="font-size:11.5px">${season}</span></div>
+    <div class="r3"><span>${from} 出发</span><a href="${map}" target="_blank" rel="noopener">Google 路线 →</a></div>
+  </div>`;
+}).join("");
+
+// 确认清单 localStorage 持久化
+document.querySelectorAll('.check input[type=checkbox]').forEach((el,i)=>{
+  const key = "omori-check-"+i;
+  el.checked = localStorage.getItem(key)==="1";
+  el.addEventListener("change",()=>localStorage.setItem(key, el.checked?"1":"0"));
+});
+</script>
+
+<button id="toTop" aria-label="回到顶部">↑</button>
+
+<script>
+(function () {
+  /* ---------- 1. 吸顶导航：从 h2 自动生成 ---------- */
+  var nav = document.getElementById("jump");
+  var heads = [].slice.call(document.querySelectorAll("h2"));
+  heads.forEach(function (h, i) {
+    if (!h.id) h.id = "sec-" + (i + 1);
+    var label = h.textContent.replace(/^\d+/, "").split(/[：（【]/)[0].trim();
+    if (label.length > 14) label = label.slice(0, 14) + "…";
+    var a = document.createElement("a");
+    a.href = "#" + h.id;
+    a.textContent = label;
+    a.dataset.target = h.id;
+    nav.appendChild(a);
+  });
+  var links = [].slice.call(nav.querySelectorAll("a"));
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        links.forEach(function (l) {
+          l.classList.toggle("on", l.dataset.target === e.target.id);
+        });
+      });
+    }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
+    heads.forEach(function (h) { io.observe(h); });
+  }
+
+  /* ---------- 2. 一日游筛选 chips（手机上也少滚一点） ---------- */
+  var CAT = ["sakura", "rain", "sakura", "trip", "mountain", "trip", "sea", "trip",
+             "flower", "trip", "flower", "rain", "city", "sea", "sakura", "flower", "city"];
+  var LABEL = { all: "全部", sakura: "樱花", flower: "花海", sea: "海边",
+                city: "城市", trip: "长线", rain: "雨天备选", mountain: "登山" };
+  var host = document.getElementById("routes");
+  if (host) {
+    var cards = [].slice.call(host.children);
+    cards.forEach(function (c, i) { c.dataset.cat = CAT[i] || "all"; });
+    var bar = document.createElement("div");
+    bar.className = "chips";
+    bar.setAttribute("role", "tablist");
+    bar.innerHTML = Object.keys(LABEL).map(function (k, i) {
+      return '<button data-cat="' + k + '" class="' + (i === 0 ? "on" : "") + '">' + LABEL[k] + "</button>";
+    }).join("");
+    host.parentNode.insertBefore(bar, host);
+    bar.addEventListener("click", function (e) {
+      var b = e.target.closest("button");
+      if (!b) return;
+      [].forEach.call(bar.querySelectorAll("button"), function (x) {
+        x.classList.toggle("on", x === b);
+      });
+      var k = b.dataset.cat;
+      cards.forEach(function (c) {
+        c.classList.toggle("hide", k !== "all" && c.dataset.cat !== k);
+      });
+    });
+  }
+
+  /* ---------- 3. 回到顶部 ---------- */
+  var btn = document.getElementById("toTop");
+  window.addEventListener("scroll", function () {
+    btn.classList.toggle("show", window.scrollY > 600);
+  }, { passive: true });
+  btn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+})();
+</script>
+
+<script>
+/* ================= 操作增强 v2：倒计时 / 底部 tab / 月份横滑 / 路线搜索 / 想去收藏 ================= */
+(function () {
+  var heads = [].slice.call(document.querySelectorAll("h2"));
+  heads.forEach(function (h, i) { if (!h.id) h.id = "sec-" + (i + 1); });
+
+  /* ---- 1. 出发倒计时（自动计算，不用手改） ---- */
+  var hero = document.querySelector("header .wrap");
+  if (hero) {
+    var start = new Date("2027-03-01T00:00:00+09:00");
+    var days = Math.ceil((start - new Date()) / 86400000);
+    var box = document.createElement("div");
+    box.className = "cnt";
+    if (days > 0) {
+      box.innerHTML = "<b>" + days + "</b><span>天后出发 · 2027-03-01<br>实习 3 个月（3–5 月，92 天）</span>";
+    } else if (days > -92) {
+      box.innerHTML = "<b>实习中</b><span>2027 春 · 大森基地<br>祝你顺利</span>";
+    } else {
+      box.innerHTML = "<b>已结束</b><span>2027 春实习<br>回顾这份作战图</span>";
+    }
+    hero.appendChild(box);
+  }
+
+  /* ---- 2. 底部拇指导航（手机固定） ---- */
+  var TABS = [[0, "🗺️", "基地"], [1, "🗓", "排期"], [2, "🚃", "路线"], [3, "💰", "预算"], [6, "🛒", "店铺"]];
+  var bar = document.createElement("nav");
+  bar.className = "tabbar";
+  bar.setAttribute("aria-label", "快捷导航");
+  TABS.forEach(function (t) {
+    var h = heads[t[0]];
+    if (!h) return;
+    var a = document.createElement("a");
+    a.href = "#" + h.id;
+    a.dataset.target = h.id;
+    a.innerHTML = '<span class="ic">' + t[1] + "</span>" + t[2];
+    bar.appendChild(a);
+  });
+  document.body.appendChild(bar);
+
+  function syncTab() {
+    var y = window.scrollY + 150, idx = 0;
+    heads.forEach(function (h, i) { if (h.offsetTop <= y) idx = i; });
+    var tabIdx = 0;
+    for (var j = TABS.length - 1; j >= 0; j--) {
+      if (TABS[j][0] <= idx) { tabIdx = TABS[j][0]; break; }
+    }
+    var activeId = heads[tabIdx] ? heads[tabIdx].id : null;
+    [].forEach.call(bar.querySelectorAll("a"), function (a) {
+      a.classList.toggle("on", a.dataset.target === activeId);
+    });
+  }
+  var tick = false;
+  window.addEventListener("scroll", function () {
+    if (tick) return;
+    tick = true;
+    requestAnimationFrame(function () { syncTab(); tick = false; });
+  }, { passive: true });
+  syncTab();
+
+  /* ---- 3. 三个月排期：手机横滑（scroll-snap） ---- */
+  var mon = document.querySelector(".mon");
+  if (mon) {
+    var grid = mon.parentElement;
+    grid.classList.add("months");
+    var hint = document.createElement("p");
+    hint.className = "swipe-hint";
+    hint.textContent = "← 左右滑动看 3 / 4 / 5 月 →";
+    grid.parentNode.insertBefore(hint, grid.nextSibling);
+  }
+
+  /* ---- 4. 路线：搜索 + 想去收藏（本地保存） ---- */
+  var host = document.getElementById("routes");
+  if (host) {
+    var cards = [].slice.call(host.children);
+    var KEY = "omori-fav-v1";
+    var favs = {};
+    try { JSON.parse(localStorage.getItem(KEY) || "[]").forEach(function (i) { favs[String(i)] = 1; }); } catch (e) {}
+    var persist = function () {
+      try { localStorage.setItem(KEY, JSON.stringify(Object.keys(favs))); } catch (e) {}
+    };
+
+    cards.forEach(function (card, i) {
+      var r1 = card.querySelector(".r1");
+      if (r1) {
+        var hb = document.createElement("button");
+        hb.type = "button";
+        hb.className = "heart" + (favs[String(i)] ? " on" : "");
+        hb.setAttribute("aria-label", "标记想去");
+        hb.textContent = favs[String(i)] ? "♥" : "♡";
+        hb.addEventListener("click", function (ev) {
+          ev.stopPropagation();
+          if (favs[String(i)]) { delete favs[String(i)]; } else { favs[String(i)] = 1; }
+          hb.classList.toggle("on", !!favs[String(i)]);
+          hb.textContent = favs[String(i)] ? "♥" : "♡";
+          persist(); apply();
+        });
+        r1.appendChild(hb);
+      }
+      var link = card.querySelector("a[href]");
+      if (link) {
+        card.addEventListener("click", function (ev) {
+          if (ev.target.closest(".heart")) return;
+          if (ev.target.closest("a")) return;
+          window.open(link.href, "_blank", "noopener");
+        });
+      }
+    });
+
+    var wrap = host.parentNode;
+    var tools = document.createElement("div");
+    tools.className = "tools";
+    tools.innerHTML = '<input type="search" inputmode="search" placeholder="搜路线（鎌倉・海・藤…）" aria-label="搜索路线">';
+    var favBtn = document.createElement("button");
+    favBtn.type = "button";
+    favBtn.className = "favbtn";
+    favBtn.textContent = "♥ 只看想去";
+    tools.appendChild(favBtn);
+    var chips = wrap.querySelector(".chips");
+    wrap.insertBefore(tools, chips || host);
+
+    var tip = document.createElement("p");
+    tip.className = "empty-tip";
+    tip.textContent = "没有匹配的路线：换个关键词，或点「全部」。";
+    host.parentNode.insertBefore(tip, host.nextSibling);
+
+    var q = "", favOnly = false;
+    function apply() {
+      var shown = 0;
+      cards.forEach(function (card, i) {
+        var nm = card.querySelector(".nm");
+        var name = nm ? nm.textContent : "";
+        var okQ = !q || name.indexOf(q) >= 0;
+        var okF = !favOnly || !!favs[String(i)];
+        card.classList.toggle("search-hide", !okQ);
+        card.classList.toggle("fav-hide", !okF);
+        if (okQ && okF) shown++;
+      });
+      tip.classList.toggle("show", shown === 0 && (q !== "" || favOnly));
+      favBtn.classList.toggle("on", favOnly);
+    }
+    tools.querySelector("input").addEventListener("input", function (e) {
+      q = e.target.value.trim();
+      apply();
+    });
+    favBtn.addEventListener("click", function () {
+      favOnly = !favOnly;
+      apply();
+    });
+    apply();
+  }
+})();
+</script>
+<script id="SW-REG">
+if ('serviceWorker' in navigator) {
+  addEventListener('load', function () {
+    navigator.serviceWorker.register('/sw.js').catch(function () {});
+  });
+}
+</script>
+<script>
+/* SHOPLIB-JS */
+(function () {
+  var D = [{"n": "Les Joues de BéBé 大井町店", "c": "餐饮", "a": "", "d": "大井町駅 63m", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.50(423)", "m": 4, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13318782/", "g": "パン、カフェ、コーヒースタンド", "k": "パン、カフェ、コーヒースタンド", "kz": "咖啡、面包", "mode": "transit", "mt": ["咖啡"], "dm": 2663, "q": "Les Joues de BéBé 大井町店 大森駅 東京", "st": "大井町駅", "pb": "2000-2999"}, {"n": "大井町 立食い中華蕎麦 いりこ屋", "c": "餐饮", "a": "", "d": "大井町駅 84m", "h": "", "p": "-", "x": "", "r": "3.72(1196)", "m": 4, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13292645/", "g": "ラーメン", "k": "ラーメン", "kz": "拉面", "mode": "transit", "mt": ["午餐"], "dm": 2684, "q": "大井町 立食い中華蕎麦 いりこ屋 大森駅 東京", "st": "大井町駅", "pb": ""}, {"n": "楓 平和島店", "c": "餐饮", "a": "", "d": "平和島駅 28m", "h": "", "p": "-", "x": "", "r": "3.40(167)", "m": 4, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13095446/", "g": "ラーメン", "k": "ラーメン", "kz": "拉面", "mode": "transit", "mt": ["午餐"], "dm": 1528, "q": "楓 平和島店 大森駅 東京", "st": "平和島駅", "pb": ""}, {"n": "永楽", "c": "餐饮", "a": "", "d": "大井町駅 102m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.68(3055)", "m": 4, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13001868/", "g": "ラーメン、餃子、中華料理", "k": "ラーメン、餃子、中華料理", "kz": "拉面、中餐、饺子", "mode": "transit", "mt": ["午餐"], "dm": 2702, "q": "永楽 大森駅 東京", "st": "大井町駅", "pb": "1000-1999"}, {"n": "甲斐そば", "c": "餐饮", "a": "", "d": "大森海岸 74 m / 约 4 分", "h": "月–金 08:30–14:30 / 17:30–20:45；土 09:15–14:45 ｜休 日・祝", "p": "～999 円", "x": "✅ A=B（HP 同）；HP 补充：10 席、IC 可、卡不可", "r": "3.47（267）", "m": 4, "s": "08 餐饮", "k": "そば・カレー・かつ丼", "kz": "荞麦面、咖喱、盖饭", "mode": "transit", "dm": 0, "mt": ["午餐", "晚餐"], "q": "甲斐そば 大森駅 東京", "u": "", "g": "", "st": "", "pb": "~999"}, {"n": "越後つけ麺 維新 大井町店", "c": "餐饮", "a": "", "d": "大井町駅 72m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.50(409)", "m": 4, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13141630/", "g": "つけ麺", "k": "つけ麺", "kz": "蘸面", "mode": "transit", "mt": ["午餐"], "dm": 2672, "q": "越後つけ麺 維新 大井町店 大森駅 東京", "st": "大井町駅", "pb": "1000-1999"}, {"n": "とんかつ檍 大井町トラックス店", "c": "餐饮", "a": "", "d": "大井町駅 147m", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.52(127)", "m": 5, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13317927/", "g": "とんかつ", "k": "とんかつ", "kz": "炸猪排", "mode": "transit", "mt": ["午餐"], "dm": 2747, "q": "とんかつ檍 大井町トラックス店 大森駅 東京", "st": "大井町駅", "pb": "2000-2999"}, {"n": "ふじ池", "c": "餐饮", "a": "", "d": "平和島駅 104m", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.32(39)", "m": 5, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13078065/", "g": "居酒屋、鳥料理", "k": "居酒屋、鳥料理", "kz": "居酒屋", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 1604, "q": "ふじ池 大森駅 東京", "st": "平和島駅", "pb": "2000-2999"}, {"n": "ザ・ラーメン スモールアックス", "c": "餐饮", "a": "", "d": "大井町駅 127m", "h": "", "p": "-", "x": "", "r": "3.58(499)", "m": 5, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13138821/", "g": "ラーメン", "k": "ラーメン", "kz": "拉面", "mode": "transit", "mt": ["午餐"], "dm": 2727, "q": "ザ・ラーメン スモールアックス 大森駅 東京", "st": "大井町駅", "pb": ""}, {"n": "タイの食卓 クルン・サイアム 大井町店", "c": "餐饮", "a": "", "d": "大井町駅 170m", "h": "", "p": "￥3,000～￥3,999", "x": "", "r": "3.52(674)", "m": 5, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13159837/", "g": "タイ料理、カレー", "k": "タイ料理、カレー", "kz": "咖喱、泰餐", "mode": "transit", "mt": ["午餐"], "dm": 2770, "q": "タイの食卓 クルン・サイアム 大井町店 大森駅 東京", "st": "大井町駅", "pb": "3000+"}, {"n": "大井町銭場精肉店", "c": "餐饮", "a": "", "d": "大井町駅 197m", "h": "", "p": "￥5,000～￥5,999", "x": "", "r": "3.49(962)", "m": 5, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13125061/", "g": "焼肉、ハンバーグ、ステーキ", "k": "焼肉、ハンバーグ、ステーキ", "kz": "烤肉", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 2797, "q": "大井町銭場精肉店 大森駅 東京", "st": "大井町駅", "pb": "3000+"}, {"n": "大衆ホルモン 肉力屋 大井町西口裏はなれ", "c": "餐饮", "a": "", "d": "大井町駅 133m", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.31(72)", "m": 5, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13259099/", "g": "ホルモン、焼肉、 居酒屋", "k": "ホルモン、焼肉、 居酒屋", "kz": "居酒屋、烤肉、内脏烧肉", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 2733, "q": "大衆ホルモン 肉力屋 大井町西口裏はなれ 大森駅 東京", "st": "大井町駅", "pb": "2000-2999"}, {"n": "大衆ホルモン肉力屋 大井町東口店", "c": "餐饮", "a": "", "d": "大井町駅 154m", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.31(118)", "m": 5, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13251043/", "g": "焼肉、ホルモン、 居酒屋", "k": "焼肉、ホルモン、 居酒屋", "kz": "居酒屋、烤肉、内脏烧肉", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 2754, "q": "大衆ホルモン肉力屋 大井町東口店 大森駅 東京", "st": "大井町駅", "pb": "2000-2999"}, {"n": "武蔵家 大井町店", "c": "餐饮", "a": "", "d": "大井町駅 173m", "h": "", "p": "-", "x": "", "r": "3.58(1324)", "m": 5, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13090508/", "g": "ラーメン", "k": "ラーメン", "kz": "拉面", "mode": "transit", "mt": ["午餐"], "dm": 2773, "q": "武蔵家 大井町店 大森駅 東京", "st": "大井町駅", "pb": ""}, {"n": "油そばの店 蜻蛉", "c": "餐饮", "a": "", "d": "平和島駅 53m", "h": "", "p": "-", "x": "", "r": "3.37(178)", "m": 5, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13200727/", "g": "油そば・まぜそば", "k": "油そば・まぜそば", "kz": "油拌面、荞麦面", "mode": "transit", "mt": ["午餐"], "dm": 1553, "q": "油そばの店 蜻蛉 大森駅 東京", "st": "平和島駅", "pb": ""}, {"n": "炭火と酒 竹蔵 大井町店", "c": "餐饮", "a": "", "d": "大井町駅 138m", "h": "", "p": "￥6,000～￥7,999", "x": "", "r": "3.30(188)", "m": 5, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13256343/", "g": "居酒屋 、鳥料理、日本料理", "k": "居酒屋 、鳥料理、日本料理", "kz": "居酒屋、日料", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 2738, "q": "炭火と酒 竹蔵 大井町店 大森駅 東京", "st": "大井町駅", "pb": "3000+"}, {"n": "鶏焼肉東京 本店", "c": "餐饮", "a": "", "d": "平和島駅 110m", "h": "", "p": "￥4,000～￥4,999", "x": "", "r": "3.38(140)", "m": 5, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13136016/", "g": "焼肉、居酒屋", "k": "焼肉、居酒屋", "kz": "居酒屋、烤肉", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 1610, "q": "鶏焼肉東京 本店 大森駅 東京", "st": "平和島駅", "pb": "3000+"}, {"n": "麺屋 喜々", "c": "餐饮", "a": "", "d": "平和島駅 74m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.51(101)", "m": 5, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13320401/", "g": "ラーメン", "k": "ラーメン", "kz": "拉面", "mode": "transit", "mt": ["午餐"], "dm": 1574, "q": "麺屋 喜々 大森駅 東京", "st": "平和島駅", "pb": "1000-1999"}, {"n": "にはち", "c": "餐饮", "a": "", "d": "平和島駅 121m", "h": "", "p": "-", "x": "", "r": "3.47(192)", "m": 6, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13301314/", "g": "立ち食いそば", "k": "立ち食いそば", "kz": "荞麦面、立食", "mode": "transit", "mt": ["午餐"], "dm": 1621, "q": "にはち 大森駅 東京", "st": "平和島駅", "pb": ""}, {"n": "のりや食堂", "c": "餐饮", "a": "", "d": "大井町駅 249m", "h": "", "p": "-", "x": "", "r": "3.58(762)", "m": 6, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13001885/", "g": "ラーメン、つけ麺、中華料理", "k": "ラーメン、つけ麺、中華料理", "kz": "拉面、蘸面、中餐", "mode": "transit", "mt": ["午餐"], "dm": 2849, "q": "のりや食堂 大森駅 東京", "st": "大井町駅", "pb": ""}, {"n": "らぁ麺屋 ひたむき", "c": "餐饮", "a": "", "d": "大森海岸 257 m / 约 6 分", "h": "11:00–15:00 ｜休 不定休", "p": "1,000–1,999", "x": "✅ A", "r": "3.61（176）", "m": 6, "s": "08 餐饮", "k": "ラーメン", "kz": "拉面", "mode": "transit", "dm": 0, "mt": ["午餐"], "q": "らぁ麺屋 ひたむき 大森駅 東京", "u": "", "g": "", "st": "", "pb": "1000-1999"}, {"n": "アンプラグド", "c": "餐饮", "a": "", "d": "大井町駅 231m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.50(145)", "m": 6, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13276257/", "g": "カフェ", "k": "カフェ", "kz": "咖啡", "mode": "transit", "mt": ["咖啡"], "dm": 2831, "q": "アンプラグド 大森駅 東京", "st": "大井町駅", "pb": "1000-1999"}, {"n": "キュリードシゲール", "c": "餐饮", "a": "", "d": "平和島駅 148m", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.32(68)", "m": 6, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13037412/", "g": "とんかつ、カレー", "k": "とんかつ、カレー", "kz": "炸猪排、咖喱", "mode": "transit", "mt": ["午餐"], "dm": 1648, "q": "キュリードシゲール 大森駅 東京", "st": "平和島駅", "pb": "2000-2999"}, {"n": "ラポール", "c": "餐饮", "a": "", "d": "平和島駅 179m", "h": "", "p": "￥3,000～￥3,999", "x": "", "r": "3.32(57)", "m": 6, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13292437/", "g": "洋食", "k": "洋食", "kz": "西餐", "mode": "transit", "mt": ["午餐"], "dm": 1679, "q": "ラポール 大森駅 東京", "st": "平和島駅", "pb": "3000+"}, {"n": "布恒更科", "c": "餐饮", "a": "", "d": "大森海岸 257 m / 约 6 分", "h": "火–土 11:30–15:00 / 17:00–20:15 ｜休 月・日", "p": "1,000–1,999", "x": "✅ A=C（観光協会：駅から徒歩5分）；A 记 257 m", "r": "3.55（890）", "m": 6, "s": "08 餐饮", "k": "そば（老铺）", "kz": "荞麦面", "mode": "transit", "dm": 0, "mt": ["午餐", "晚餐"], "q": "布恒更科 大森駅 東京", "u": "", "g": "", "st": "", "pb": "1000-1999"}, {"n": "微吟飯店", "c": "餐饮", "a": "", "d": "大井町駅 213m", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.30(134)", "m": 6, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13256142/", "g": "韓国料理、 居酒屋", "k": "韓国料理、 居酒屋", "kz": "居酒屋", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 2813, "q": "微吟飯店 大森駅 東京", "st": "大井町駅", "pb": "2000-2999"}, {"n": "昭和浪漫", "c": "餐饮", "a": "", "d": "大井町駅 237m", "h": "", "p": "￥3,000～￥3,999", "x": "", "r": "3.31(151)", "m": 6, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13033344/", "g": "居酒屋 、焼き鳥、串焼き", "k": "居酒屋 、焼き鳥、串焼き", "kz": "居酒屋、烤鸡串、串烧", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 2837, "q": "昭和浪漫 大森駅 東京", "st": "大井町駅", "pb": "3000+"}, {"n": "焼肉 OGAWA 大森店", "c": "餐饮", "a": "", "d": "大森海岸 251 m / 约 6 分", "h": "未查到 ｜休 未查到", "p": "1,000–1,999", "x": "A のみ", "r": "3.46（267）", "m": 6, "s": "08 餐饮", "k": "焼肉", "kz": "烤肉", "mode": "transit", "dm": 0, "mt": ["居酒屋", "晚餐"], "q": "焼肉 OGAWA 大森店 大森駅 東京", "u": "", "g": "", "st": "", "pb": "1000-1999"}, {"n": "立呑み8 OIMACHI TRACKS店", "c": "餐饮", "a": "", "d": "大井町駅 254m", "h": "", "p": "￥3,000～￥3,999", "x": "", "r": "3.51(159)", "m": 6, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13318802/", "g": "居酒屋 (立ち飲み)、 居酒屋 、創作料理", "k": "居酒屋 (立ち飲み)、 居酒屋 、創作料理", "kz": "居酒屋", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 2854, "q": "立呑み8 OIMACHI TRACKS店 大森駅 東京", "st": "大井町駅", "pb": "3000+"}, {"n": "萬来園", "c": "餐饮", "a": "", "d": "大井町駅 223m", "h": "", "p": "￥30,000～￥39,999", "x": "", "r": "3.71(1039)", "m": 6, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13001657/", "g": "中華料理", "k": "中華料理", "kz": "中餐", "mode": "transit", "mt": ["午餐"], "dm": 2823, "q": "萬来園 大森駅 東京", "st": "大井町駅", "pb": "3000+"}, {"n": "貝・刺身専門店 しらはら 大井町", "c": "餐饮", "a": "", "d": "大井町駅 240m", "h": "", "p": "￥3,000～￥3,999", "x": "", "r": "3.45(364)", "m": 6, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13282539/", "g": "居酒屋 、海鮮", "k": "居酒屋 、海鮮", "kz": "居酒屋、海鲜", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 2840, "q": "貝・刺身専門店 しらはら 大井町 大森駅 東京", "st": "大井町駅", "pb": "3000+"}, {"n": "麺壱 吉兆", "c": "餐饮", "a": "", "d": "大井町駅 243m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.74(1675)", "m": 6, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13134691/", "g": "ラーメン、つけ麺、餃子", "k": "ラーメン、つけ麺、餃子", "kz": "拉面、蘸面、饺子", "mode": "transit", "mt": ["午餐"], "dm": 2843, "q": "麺壱 吉兆 大森駅 東京", "st": "大井町駅", "pb": "1000-1999"}, {"n": "BASARA", "c": "餐饮", "a": "", "d": "大井町駅 322m", "h": "", "p": "￥4,000～￥4,999", "x": "", "r": "3.35(150)", "m": 7, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13261561/", "g": "イタリアン、 居酒屋 (ダイニングバー)、 居酒屋 (肉バル)", "k": "イタリアン、 居酒屋 (ダイニングバー)、 居酒屋 (肉バル)", "kz": "居酒屋、意餐、酒吧、餐吧", "mode": "transit", "mt": ["居酒屋", "午餐", "晚餐"], "dm": 2922, "q": "BASARA 大森駅 東京", "st": "大井町駅", "pb": "3000+"}, {"n": "and parfait", "c": "餐饮", "a": "", "d": "约 7 分", "h": "未查到 ｜休 未查到", "p": "", "x": "", "r": "3.45（141）", "m": 7, "s": "08 餐饮", "k": "甜品", "kz": "甜品", "mode": "transit", "dm": 0, "mt": ["正餐"], "q": "and parfait 大森駅 東京", "u": "", "g": "", "st": "", "pb": ""}, {"n": "さつまっこ  平和島店", "c": "餐饮", "a": "", "d": "平和島駅 231m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.46(493)", "m": 7, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13090829/", "g": "ラーメン、中華料理、つけ麺", "k": "ラーメン、中華料理、つけ麺", "kz": "拉面、蘸面、中餐", "mode": "transit", "mt": ["午餐"], "dm": 1731, "q": "さつまっこ  平和島店 大森駅 東京", "st": "平和島駅", "pb": "1000-1999"}, {"n": "クレセント＆モーリー", "c": "餐饮", "a": "", "d": "平和島駅 235m", "h": "", "p": "-", "x": "", "r": "3.39(81)", "m": 7, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13209722/", "g": "パン、サンドイッチ、カフェ", "k": "パン、サンドイッチ、カフェ", "kz": "咖啡、面包", "mode": "transit", "mt": ["咖啡"], "dm": 1735, "q": "クレセント＆モーリー 大森駅 東京", "st": "平和島駅", "pb": ""}, {"n": "マサラ", "c": "餐饮", "a": "", "d": "大森海岸 344 m / 约 7 分", "h": "未查到 ｜休 未查到", "p": "1,000–1,999", "x": "A のみ", "r": "3.42（199）", "m": 7, "s": "08 餐饮", "k": "印度咖喱", "kz": "印度咖喱", "mode": "transit", "dm": 0, "mt": ["正餐"], "q": "マサラ 大森駅 東京", "u": "", "g": "", "st": "", "pb": "1000-1999"}, {"n": "横浜家系らーめん 武術家", "c": "餐饮", "a": "", "d": "大井町駅 285m", "h": "", "p": "-", "x": "", "r": "3.56(806)", "m": 7, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13124496/", "g": "ラーメン、つけ麺", "k": "ラーメン、つけ麺", "kz": "拉面、蘸面", "mode": "transit", "mt": ["午餐"], "dm": 2885, "q": "横浜家系らーめん 武術家 大森駅 東京", "st": "大井町駅", "pb": ""}, {"n": "満福", "c": "餐饮", "a": "", "d": "大森海岸 334 m / 约 7 分", "h": "未查到 ｜休 未查到", "p": "—", "x": "A のみ", "r": "3.46（222）", "m": 7, "s": "08 餐饮", "k": "中華・餃子", "kz": "中餐、饺子", "mode": "transit", "dm": 0, "mt": ["午餐"], "q": "満福 大森駅 東京", "u": "", "g": "", "st": "", "pb": ""}, {"n": "茶豆珈琲", "c": "餐饮", "a": "", "d": "大井町駅 294m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.57(206)", "m": 7, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13104391/", "g": "喫茶店、カフェ", "k": "喫茶店、カフェ", "kz": "咖啡、咖啡店", "mode": "transit", "mt": ["咖啡"], "dm": 2894, "q": "茶豆珈琲 大森駅 東京", "st": "大井町駅", "pb": "1000-1999"}, {"n": "Homemade Ramen 麦苗", "c": "餐饮", "a": "", "d": "大森海岸 419 m / 约 8 分", "h": "月火金土日 11:00–15:00 ｜休 水・木", "p": "1,000–1,999", "x": "✅ A=C（官方 muginae.com 同时段）；记帐/预约制", "r": "3.94（2,937）", "m": 8, "s": "08 餐饮", "k": "ラーメン（高分）", "kz": "拉面", "mode": "transit", "dm": 0, "mt": ["午餐"], "q": "Homemade Ramen 麦苗 大森駅 東京", "u": "", "g": "", "st": "", "pb": "1000-1999"}, {"n": "とんかつ 鉄", "c": "餐饮", "a": "", "d": "大森海岸 433 m / 约 8 分", "h": "火–日 11:00–14:00 / 17:00–21:00 ｜休 月", "p": "1,000–1,999", "x": "⚠️ B（HP）页面混入别店 access，地址以 A 为准", "r": "3.58（1,361）", "m": 8, "s": "08 餐饮", "k": "とんかつ", "kz": "炸猪排", "mode": "transit", "dm": 0, "mt": ["午餐", "晚餐"], "q": "とんかつ 鉄 大森駅 東京", "u": "", "g": "", "st": "", "pb": "1000-1999"}, {"n": "ふわり", "c": "餐饮", "a": "", "d": "大井町駅 438m", "h": "", "p": "￥3,000～￥3,999", "x": "", "r": "3.33(133)", "m": 8, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13150902/", "g": "お好み焼き、鉄板焼き、 居酒屋", "k": "お好み焼き、鉄板焼き、 居酒屋", "kz": "居酒屋", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 3038, "q": "ふわり 大森駅 東京", "st": "大井町駅", "pb": "3000+"}, {"n": "中国料理 あさの", "c": "餐饮", "a": "", "d": "立会川駅 122m", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.33(50)", "m": 8, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13230629/", "g": "中華料理", "k": "中華料理", "kz": "中餐", "mode": "transit", "mt": ["午餐"], "dm": 1222, "q": "中国料理 あさの 大森駅 東京", "st": "立会川駅", "pb": "2000-2999"}, {"n": "丸 中華そば", "c": "餐饮", "a": "", "d": "大井町駅 372m", "h": "", "p": "-", "x": "", "r": "3.69(976)", "m": 8, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13198225/", "g": "ラーメン", "k": "ラーメン", "kz": "拉面", "mode": "transit", "mt": ["午餐"], "dm": 2972, "q": "丸 中華そば 大森駅 東京", "st": "大井町駅", "pb": ""}, {"n": "羊と狼", "c": "餐饮", "a": "", "d": "平和島駅 313m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.31(134)", "m": 8, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13167507/", "g": "ラーメン", "k": "ラーメン", "kz": "拉面", "mode": "transit", "mt": ["午餐"], "dm": 1813, "q": "羊と狼 大森駅 東京", "st": "平和島駅", "pb": "1000-1999"}, {"n": "もつ焼 信", "c": "餐饮", "a": "", "d": "立会川駅 221m", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.53(246)", "m": 9, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13059126/", "g": "もつ焼き、居酒屋", "k": "もつ焼き、居酒屋", "kz": "居酒屋", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 1321, "q": "もつ焼 信 大森駅 東京", "st": "立会川駅", "pb": "2000-2999"}, {"n": "ヤミー ベーカリー", "c": "餐饮", "a": "", "d": "立会川駅 250m", "h": "", "p": "-", "x": "", "r": "3.45(128)", "m": 9, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13190862/", "g": "パン、サンドイッチ、カフェ", "k": "パン、サンドイッチ、カフェ", "kz": "咖啡、面包", "mode": "transit", "mt": ["咖啡"], "dm": 1350, "q": "ヤミー ベーカリー 大森駅 東京", "st": "立会川駅", "pb": ""}, {"n": "燻製キッチン", "c": "餐饮", "a": "", "d": "大井町駅 520m", "h": "", "p": "￥5,000～￥5,999", "x": "", "r": "3.48(624)", "m": 9, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13060616/", "g": "居酒屋 (ダイニングバー)、 居酒屋 、ワインバー", "k": "居酒屋 (ダイニングバー)、 居酒屋 、ワインバー", "kz": "居酒屋、餐吧", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 3120, "q": "燻製キッチン 大森駅 東京", "st": "大井町駅", "pb": "3000+"}, {"n": "藍の家 大井町店", "c": "餐饮", "a": "", "d": "大井町駅 477m (下神明駅 286m)", "h": "", "p": "￥5,000～￥5,999", "x": "", "r": "3.56(115)", "m": 9, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1317/A131712/13059181/", "g": "うなぎ、どじょう、鳥料理", "k": "うなぎ、どじょう、鳥料理", "kz": "鳗鱼", "mode": "transit", "mt": ["午餐"], "dm": 3077, "q": "藍の家 大井町店 大森駅 東京", "st": "大井町駅", "pb": "3000+"}, {"n": "麺や ぱんだ", "c": "餐饮", "a": "", "d": "大森海岸 471 m / 约 9 分", "h": "11:00–22:00 ｜休 无休", "p": "1,000–1,999", "x": "A のみ", "r": "3.56（334）", "m": 9, "s": "08 餐饮", "k": "つけ麺", "kz": "蘸面", "mode": "transit", "dm": 0, "mt": ["午餐"], "q": "麺や ぱんだ 大森駅 東京", "u": "", "g": "", "st": "", "pb": "1000-1999"}, {"n": "のスた 本店", "c": "餐饮", "a": "", "d": "大井町駅 605m (下神明駅 261m)", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.73(654)", "m": 11, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1317/A131712/13296505/", "g": "ラーメン", "k": "ラーメン", "kz": "拉面", "mode": "transit", "mt": ["午餐"], "dm": 3205, "q": "のスた 本店 大森駅 東京", "st": "大井町駅", "pb": "1000-1999"}, {"n": "シビタス", "c": "餐饮", "a": "", "d": "蒲田駅 92m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.72(1354)", "m": 11, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13045798/", "g": "喫茶店、パンケーキ、カフェ", "k": "喫茶店、パンケーキ、カフェ", "kz": "咖啡、咖啡店、面包、蛋糕", "mode": "transit", "mt": ["咖啡"], "dm": 4592, "q": "シビタス 大森駅 東京", "st": "蒲田駅", "pb": "1000-1999"}, {"n": "ヒノミ薬局（ヒノミドラッグ）", "c": "餐饮", "a": "大田区大森北（OSM 坐标 35.58677,139.72793）", "d": "公司步行约11分 / 大森駅 徒步约6分", "h": "未查到", "p": "未查到", "x": "仅 1 平台；时间未查到", "r": "", "m": 11, "s": "10 药妆", "k": "药局", "kz": "药局", "mode": "walk", "dm": 880, "mt": ["正餐"], "q": "ヒノミ薬局（ヒノミドラッグ） 大田区大森北（OSM 坐标 35.58677,139.72793）", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "中華 ラーメン けいこ", "c": "餐饮", "a": "", "d": "平和島駅 559m (大森海岸駅 502m)", "h": "", "p": "-", "x": "", "r": "3.43(106)", "m": 11, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13090882/", "g": "中華料理、餃子", "k": "中華料理、餃子", "kz": "中餐、饺子", "mode": "transit", "mt": ["午餐"], "dm": 2059, "q": "中華 ラーメン けいこ 大森駅 東京", "st": "平和島駅", "pb": ""}, {"n": "牡丹江飯店", "c": "餐饮", "a": "", "d": "平和島駅 559m (大森町駅 291m)", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.32(40)", "m": 11, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13073472/", "g": "中華料理", "k": "中華料理", "kz": "中餐", "mode": "transit", "mt": ["午餐"], "dm": 2059, "q": "牡丹江飯店 大森駅 東京", "st": "平和島駅", "pb": "1000-1999"}, {"n": "藤つぼ 大森", "c": "餐饮", "a": "", "d": "大森駅 31m", "h": "", "p": "￥3,000～￥3,999", "x": "", "r": "3.45(181)", "m": 11, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13226142/", "g": "居酒屋、焼き鳥", "k": "居酒屋、焼き鳥", "kz": "居酒屋、烤鸡串", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 741, "q": "藤つぼ 大森 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "ぐりる スズコウ", "c": "餐饮", "a": "", "d": "蒲田駅 120m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.70(1012)", "m": 12, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13031132/", "g": "洋食、ステーキ", "k": "洋食、ステーキ", "kz": "西餐", "mode": "transit", "mt": ["午餐"], "dm": 4620, "q": "ぐりる スズコウ 大森駅 東京", "st": "蒲田駅", "pb": "1000-1999"}, {"n": "たぐい食堂", "c": "餐饮", "a": "", "d": "平和島駅 653m (大森町駅 122m)", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.33(54)", "m": 12, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13183964/", "g": "日本料理、食堂", "k": "日本料理、食堂", "kz": "食堂、日料", "mode": "transit", "mt": ["午餐"], "dm": 2153, "q": "たぐい食堂 大森駅 東京", "st": "平和島駅", "pb": "1000-1999"}, {"n": "なぎちゃんラーメン", "c": "餐饮", "a": "", "d": "85 m / 约 12 分", "h": "24 小时 ｜休 无", "p": "1,000–1,999", "x": "", "r": "3.55（356）", "m": 12, "s": "08 餐饮", "k": "ラーメン", "kz": "拉面", "mode": "transit", "dm": 0, "mt": ["午餐"], "q": "なぎちゃんラーメン 大森駅 東京", "u": "", "g": "", "st": "", "pb": "1000-1999"}, {"n": "なぎちゃんラーメン 大森駅前店", "c": "餐饮", "a": "", "d": "大森駅 85m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.55(356)", "m": 12, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13310022/", "g": "ラーメン", "k": "ラーメン", "kz": "拉面", "mode": "transit", "mt": ["午餐"], "dm": 795, "q": "なぎちゃんラーメン 大森駅前店 大森駅 東京", "st": "大森駅", "pb": "1000-1999"}, {"n": "ココカラファイン（大森・2 店）", "c": "餐饮", "a": "大田区山王2丁目・大森北1丁目（OSM 坐标 35.59043,139.72810 / 35.58915,139.72788）", "d": "公司步行约11-12分 / 大森駅 徒步约2-3分", "h": "未查到", "p": "未查到（官网 403，不可抓）", "x": "存在性仅 OSM；营业时间未查到", "r": "", "m": 12, "s": "10 药妆", "k": "药妆", "kz": "药妆", "mode": "walk", "dm": 960, "mt": ["正餐"], "q": "ココカラファイン（大森・2 店） 大田区山王2丁目・大森北1丁目（OSM 坐标 35.59043,139.72810 / 35.58915,139.72788）", "u": "", "g": "", "st": "步行圈", "pb": "~999"}, {"n": "シンガポールバル Misakiya", "c": "餐饮", "a": "", "d": "大森駅 108m", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.41(107)", "m": 12, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13207269/", "g": "シンガポール料理、バル、アジア・エスニック", "k": "シンガポール料理、バル、アジア・エスニック", "kz": "异国料理、酒吧", "mode": "transit", "mt": ["居酒屋", "午餐", "晚餐"], "dm": 818, "q": "シンガポールバル Misakiya 大森駅 東京", "st": "大森駅", "pb": "2000-2999"}, {"n": "ハチロー", "c": "餐饮", "a": "", "d": "大森駅 115m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.44(130)", "m": 12, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13088350/", "g": "洋食、カレー、居酒屋", "k": "洋食、カレー、居酒屋", "kz": "咖喱、居酒屋、西餐", "mode": "transit", "mt": ["居酒屋", "午餐", "晚餐"], "dm": 825, "q": "ハチロー 大森駅 東京", "st": "大森駅", "pb": "1000-1999"}, {"n": "ホルモン焼千歳 大森駅前店", "c": "餐饮", "a": "", "d": "大森駅 73m", "h": "", "p": "￥3,000～￥3,999", "x": "", "r": "3.32(87)", "m": 12, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13308887/", "g": "ホルモン、居酒屋、焼肉", "k": "ホルモン、居酒屋、焼肉", "kz": "居酒屋、烤肉、内脏烧肉", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 783, "q": "ホルモン焼千歳 大森駅前店 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "ラーメン タロー 大森の陣", "c": "餐饮", "a": "", "d": "104 m / 约 12 分", "h": "11:00–15:30 / 16:30–23:00 ｜休 无", "p": "1,000–1,999", "x": "", "r": "3.48（397）", "m": 12, "s": "08 餐饮", "k": "ラーメン・油そば", "kz": "拉面、油拌面、荞麦面", "mode": "transit", "dm": 0, "mt": ["午餐"], "q": "ラーメン タロー 大森の陣 大森駅 東京", "u": "", "g": "", "st": "", "pb": "1000-1999"}, {"n": "ラーメン タロー 大森の陣", "c": "餐饮", "a": "", "d": "大森駅 104m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.48(397)", "m": 12, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13138158/", "g": "ラーメン、油そば・まぜそば、つけ麺", "k": "ラーメン、油そば・まぜそば、つけ麺", "kz": "拉面、蘸面、油拌面、荞麦面", "mode": "transit", "mt": ["午餐"], "dm": 814, "q": "ラーメン タロー 大森の陣 大森駅 東京", "st": "大森駅", "pb": "1000-1999"}, {"n": "ラーメン 環2家 蒲田店", "c": "餐饮", "a": "", "d": "蒲田駅 136m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.71(1380)", "m": 12, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13257702/", "g": "ラーメン", "k": "ラーメン", "kz": "拉面", "mode": "transit", "mt": ["午餐"], "dm": 4636, "q": "ラーメン 環2家 蒲田店 大森駅 東京", "st": "蒲田駅", "pb": "1000-1999"}, {"n": "三三七 大森店", "c": "餐饮", "a": "", "d": "55 m / 约 12 分", "h": "11:00–23:00（日到 22:00） ｜休 无", "p": "1,000–1,999", "x": "", "r": "3.58（791）", "m": 12, "s": "08 餐饮", "k": "つけ麺", "kz": "蘸面", "mode": "transit", "dm": 0, "mt": ["午餐"], "q": "三三七 大森店 大森駅 東京", "u": "", "g": "", "st": "", "pb": "1000-1999"}, {"n": "三三七 大森店", "c": "餐饮", "a": "", "d": "大森駅 55m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.58(791)", "m": 12, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13133355/", "g": "つけ麺、ラーメン", "k": "つけ麺、ラーメン", "kz": "拉面、蘸面", "mode": "transit", "mt": ["午餐"], "dm": 765, "q": "三三七 大森店 大森駅 東京", "st": "大森駅", "pb": "1000-1999"}, {"n": "三代目　むら上 大森山王店", "c": "餐饮", "a": "", "d": "大森駅 59m", "h": "", "p": "￥3,000～￥3,999", "x": "", "r": "3.45(217)", "m": 12, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13157350/", "g": "うなぎ、焼き鳥", "k": "うなぎ、焼き鳥", "kz": "烤鸡串、鳗鱼", "mode": "transit", "mt": ["居酒屋", "午餐", "晚餐"], "dm": 769, "q": "三代目　むら上 大森山王店 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "五郎のとんかつ", "c": "餐饮", "a": "", "d": "大森駅 88m", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.39(146)", "m": 12, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13076693/", "g": "とんかつ", "k": "とんかつ", "kz": "炸猪排", "mode": "transit", "mt": ["午餐"], "dm": 798, "q": "五郎のとんかつ 大森駅 東京", "st": "大森駅", "pb": "2000-2999"}, {"n": "你好 大森駅前店", "c": "餐饮", "a": "", "d": "大森駅 100m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.34(171)", "m": 12, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13203412/", "g": "中華料理、餃子、飲茶・点心", "k": "中華料理、餃子、飲茶・点心", "kz": "中餐、饺子", "mode": "transit", "mt": ["午餐"], "dm": 810, "q": "你好 大森駅前店 大森駅 東京", "st": "大森駅", "pb": "1000-1999"}, {"n": "横浜ラーメン 響家", "c": "餐饮", "a": "", "d": "大森駅 72m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.50(279)", "m": 12, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13285565/", "g": "ラーメン", "k": "ラーメン", "kz": "拉面", "mode": "transit", "mt": ["午餐"], "dm": 782, "q": "横浜ラーメン 響家 大森駅 東京", "st": "大森駅", "pb": "1000-1999"}, {"n": "焼肉 乙ちゃん 本店", "c": "餐饮", "a": "", "d": "立会川駅 499m (鮫洲駅 317m)", "h": "", "p": "￥6,000～￥7,999", "x": "", "r": "3.38(402)", "m": 12, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13154344/", "g": "焼肉、韓国料理、居酒屋", "k": "焼肉、韓国料理、居酒屋", "kz": "居酒屋、烤肉", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 1599, "q": "焼肉 乙ちゃん 本店 大森駅 東京", "st": "立会川駅", "pb": "3000+"}, {"n": "BISTRO COMFY", "c": "餐饮", "a": "", "d": "大森駅 188m", "h": "", "p": "￥3,000～￥3,999", "x": "", "r": "3.34(88)", "m": 13, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13282685/", "g": "ビストロ", "k": "ビストロ", "kz": "法式小馆", "mode": "transit", "mt": ["午餐"], "dm": 898, "q": "BISTRO COMFY 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "NIBOSHI MANIA", "c": "餐饮", "a": "", "d": "蒲田駅 250m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.75(1456)", "m": 13, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13276323/", "g": "ラーメン", "k": "ラーメン", "kz": "拉面", "mode": "transit", "mt": ["午餐"], "dm": 4750, "q": "NIBOSHI MANIA 大森駅 東京", "st": "蒲田駅", "pb": "1000-1999"}, {"n": "Pizzeria SALUTE", "c": "餐饮", "a": "", "d": "大森駅 158m", "h": "", "p": "￥4,000～￥4,999", "x": "", "r": "3.32(115)", "m": 13, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13312627/", "g": "ピザ、バル、ワインバー", "k": "ピザ、バル、ワインバー", "kz": "酒吧、披萨", "mode": "transit", "mt": ["居酒屋", "午餐", "晚餐"], "dm": 868, "q": "Pizzeria SALUTE 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "Restaurant Cuisine SANNO", "c": "餐饮", "a": "", "d": "大森駅 178m", "h": "", "p": "￥4,000～￥4,999", "x": "", "r": "3.36(106)", "m": 13, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13008330/", "g": "フレンチ、ヨーロッパ料理、イタリアン", "k": "フレンチ、ヨーロッパ料理、イタリアン", "kz": "意餐、法餐", "mode": "transit", "mt": ["午餐"], "dm": 888, "q": "Restaurant Cuisine SANNO 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "いかり亭 大森店", "c": "餐饮", "a": "", "d": "大森駅 159m", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.38(203)", "m": 13, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13085660/", "g": "居酒屋", "k": "居酒屋", "kz": "居酒屋", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 869, "q": "いかり亭 大森店 大森駅 東京", "st": "大森駅", "pb": "2000-2999"}, {"n": "お茶とお菓子まやんち", "c": "餐饮", "a": "", "d": "蒲田駅 249m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.67(416)", "m": 13, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13085237/", "g": "カフェ、喫茶店", "k": "カフェ、喫茶店", "kz": "咖啡、咖啡店", "mode": "transit", "mt": ["咖啡"], "dm": 4749, "q": "お茶とお菓子まやんち 大森駅 東京", "st": "蒲田駅", "pb": "1000-1999"}, {"n": "そば処 笑庵", "c": "餐饮", "a": "", "d": "大森駅 157m", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.34(100)", "m": 13, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13030012/", "g": "そば、丼、天ぷら", "k": "そば、丼、天ぷら", "kz": "荞麦面、天妇罗、盖饭", "mode": "transit", "mt": ["午餐"], "dm": 867, "q": "そば処 笑庵 大森駅 東京", "st": "大森駅", "pb": "2000-2999"}, {"n": "そば吟 大森店", "c": "餐饮", "a": "", "d": "194 m / 约 13 分", "h": "11:00–23:30 ｜休 无", "p": "3,000–3,999", "x": "", "r": "3.47（347）", "m": 13, "s": "08 餐饮", "k": "そば・居酒屋", "kz": "荞麦面、居酒屋", "mode": "transit", "dm": 0, "mt": ["居酒屋", "午餐", "晚餐"], "q": "そば吟 大森店 大森駅 東京", "u": "", "g": "", "st": "", "pb": "3000+"}, {"n": "そば吟 大森店", "c": "餐饮", "a": "", "d": "大森駅 194m", "h": "", "p": "￥3,000～￥3,999", "x": "", "r": "3.47(347)", "m": 13, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13241505/", "g": "そば、居酒屋、鍋", "k": "そば、居酒屋、鍋", "kz": "荞麦面、居酒屋", "mode": "transit", "mt": ["居酒屋", "午餐", "晚餐"], "dm": 904, "q": "そば吟 大森店 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "だら毛", "c": "餐饮", "a": "", "d": "大森駅 176m", "h": "", "p": "￥6,000～￥7,999", "x": "", "r": "3.35(118)", "m": 13, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13017815/", "g": "居酒屋、日本料理、しゃぶしゃぶ", "k": "居酒屋、日本料理、しゃぶしゃぶ", "kz": "居酒屋、日料", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 886, "q": "だら毛 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "とんかつ檍 蒲田本店", "c": "餐饮", "a": "", "d": "蒲田駅 245m", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.72(2788)", "m": 13, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13114843/", "g": "とんかつ", "k": "とんかつ", "kz": "炸猪排", "mode": "transit", "mt": ["午餐"], "dm": 4745, "q": "とんかつ檍 蒲田本店 大森駅 東京", "st": "蒲田駅", "pb": "2000-2999"}, {"n": "とんかつ檍のカレー屋 いっぺこっぺ 蒲田本店", "c": "餐饮", "a": "", "d": "蒲田駅 244m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.74(2194)", "m": 13, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13178494/", "g": "カレー、とんかつ", "k": "カレー、とんかつ", "kz": "炸猪排、咖喱", "mode": "transit", "mt": ["午餐"], "dm": 4744, "q": "とんかつ檍のカレー屋 いっぺこっぺ 蒲田本店 大森駅 東京", "st": "蒲田駅", "pb": "1000-1999"}, {"n": "らーめん 潤 蒲田店", "c": "餐饮", "a": "", "d": "蒲田駅 274m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.69(2280)", "m": 13, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13022796/", "g": "ラーメン、つけ麺", "k": "ラーメン、つけ麺", "kz": "拉面、蘸面", "mode": "transit", "mt": ["午餐"], "dm": 4774, "q": "らーめん 潤 蒲田店 大森駅 東京", "st": "蒲田駅", "pb": "1000-1999"}, {"n": "らーめん飛粋", "c": "餐饮", "a": "", "d": "蒲田駅 206m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.78(3900)", "m": 13, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13217922/", "g": "ラーメン", "k": "ラーメン", "kz": "拉面", "mode": "transit", "mt": ["午餐"], "dm": 4706, "q": "らーめん飛粋 大森駅 東京", "st": "蒲田駅", "pb": "1000-1999"}, {"n": "イタメシ＆ステーキ リフランド", "c": "餐饮", "a": "", "d": "大森駅 192m", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.44(227)", "m": 13, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13256454/", "g": "イタリアン、ハンバーグ、ワインバー", "k": "イタリアン、ハンバーグ、ワインバー", "kz": "意餐", "mode": "transit", "mt": ["午餐"], "dm": 902, "q": "イタメシ＆ステーキ リフランド 大森駅 東京", "st": "大森駅", "pb": "2000-2999"}, {"n": "中華そば きくたに", "c": "餐饮", "a": "", "d": "蒲田駅 231m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.67(873)", "m": 13, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13300772/", "g": "ラーメン", "k": "ラーメン", "kz": "拉面", "mode": "transit", "mt": ["午餐"], "dm": 4731, "q": "中華そば きくたに 大森駅 東京", "st": "蒲田駅", "pb": "1000-1999"}, {"n": "中華そば やま福", "c": "餐饮", "a": "", "d": "蒲田駅 250m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.64(765)", "m": 13, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13255856/", "g": "ラーメン", "k": "ラーメン", "kz": "拉面", "mode": "transit", "mt": ["午餐"], "dm": 4750, "q": "中華そば やま福 大森駅 東京", "st": "蒲田駅", "pb": "1000-1999"}, {"n": "中華そば 円月", "c": "餐饮", "a": "", "d": "159 m / 约 13 分", "h": "11:30–01:00（日祝到 23:00） ｜休 无", "p": "—", "x": "", "r": "3.54（418）", "m": 13, "s": "08 餐饮", "k": "ラーメン", "kz": "拉面", "mode": "transit", "dm": 0, "mt": ["午餐"], "q": "中華そば 円月 大森駅 東京", "u": "", "g": "", "st": "", "pb": ""}, {"n": "中華そば 円月", "c": "餐饮", "a": "", "d": "大森駅 159m", "h": "", "p": "-", "x": "", "r": "3.54(418)", "m": 13, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13275657/", "g": "ラーメン", "k": "ラーメン", "kz": "拉面", "mode": "transit", "mt": ["午餐"], "dm": 869, "q": "中華そば 円月 大森駅 東京", "st": "大森駅", "pb": ""}, {"n": "中華そば 天辺月", "c": "餐饮", "a": "", "d": "大森駅 164m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.48(229)", "m": 13, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13277982/", "g": "ラーメン、つけ麺", "k": "ラーメン、つけ麺", "kz": "拉面、蘸面", "mode": "transit", "mt": ["午餐"], "dm": 874, "q": "中華そば 天辺月 大森駅 東京", "st": "大森駅", "pb": "1000-1999"}, {"n": "四季の味 丹", "c": "餐饮", "a": "", "d": "大森駅 180m", "h": "", "p": "￥8,000～￥9,999", "x": "", "r": "3.52(58)", "m": 13, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13082510/", "g": "日本料理、居酒屋", "k": "日本料理、居酒屋", "kz": "居酒屋、日料", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 890, "q": "四季の味 丹 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "家系ラーメン まこと家", "c": "餐饮", "a": "", "d": "大井町駅 763m (青物横丁駅 49m)", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.67(1914)", "m": 13, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13018507/", "g": "ラーメン", "k": "ラーメン", "kz": "拉面", "mode": "transit", "mt": ["午餐"], "dm": 3363, "q": "家系ラーメン まこと家 大森駅 東京", "st": "大井町駅", "pb": "1000-1999"}, {"n": "横浜家系ラーメン 裏大輝家 青物横丁店", "c": "餐饮", "a": "", "d": "大井町駅 768m (青物横丁駅 193m)", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.66(1040)", "m": 13, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13289489/", "g": "ラーメン", "k": "ラーメン", "kz": "拉面", "mode": "transit", "mt": ["午餐"], "dm": 3368, "q": "横浜家系ラーメン 裏大輝家 青物横丁店 大森駅 東京", "st": "大井町駅", "pb": "1000-1999"}, {"n": "CAFE＆BAKERY MIYABI 大森店", "c": "餐饮", "a": "", "d": "约 14 分", "h": "07:00–20:00 ｜休 全年无休", "p": "", "x": "", "r": "3.50（270）", "m": 14, "s": "08 餐饮", "k": "咖啡・面包", "kz": "咖啡・面包", "mode": "transit", "dm": 0, "mt": ["正餐"], "q": "CAFE＆BAKERY MIYABI 大森店 大森駅 東京", "u": "", "g": "", "st": "", "pb": ""}, {"n": "CAFE＆BAKERY MIYABI 大森店", "c": "餐饮", "a": "", "d": "大森駅 201m", "h": "", "p": "-", "x": "", "r": "3.50(270)", "m": 14, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13190466/", "g": "カフェ、パン", "k": "カフェ、パン", "kz": "咖啡、面包", "mode": "transit", "mt": ["咖啡"], "dm": 911, "q": "CAFE＆BAKERY MIYABI 大森店 大森駅 東京", "st": "大森駅", "pb": ""}, {"n": "Indie 大森店", "c": "餐饮", "a": "", "d": "大森駅 268m", "h": "", "p": "-", "x": "", "r": "3.40(141)", "m": 14, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13163212/", "g": "カレー、パスタ、スープカレー", "k": "カレー、パスタ、スープカレー", "kz": "咖喱、意面", "mode": "transit", "mt": ["午餐"], "dm": 978, "q": "Indie 大森店 大森駅 東京", "st": "大森駅", "pb": ""}, {"n": "VECTOR BEER 大森店", "c": "餐饮", "a": "", "d": "大森駅 201m", "h": "", "p": "￥4,000～￥4,999", "x": "", "r": "3.40(138)", "m": 14, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13213002/", "g": "イタリアン、バル、ビアバー", "k": "イタリアン、バル、ビアバー", "kz": "意餐、酒吧、啤酒吧", "mode": "transit", "mt": ["居酒屋", "午餐", "晚餐"], "dm": 911, "q": "VECTOR BEER 大森店 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "god dog", "c": "餐饮", "a": "", "d": "大森駅 256m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.34(70)", "m": 14, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13294226/", "g": "ホットドッグ、日本酒バー、カフェ", "k": "ホットドッグ、日本酒バー、カフェ", "kz": "咖啡、日本酒", "mode": "transit", "mt": ["咖啡", "居酒屋", "晚餐"], "dm": 966, "q": "god dog 大森駅 東京", "st": "大森駅", "pb": "1000-1999"}, {"n": "さめず 鈴乃家", "c": "餐饮", "a": "", "d": "立会川駅 631m (鮫洲駅 194m)", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.30(68)", "m": 14, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13024256/", "g": "天ぷら、そば、うなぎ", "k": "天ぷら、そば、うなぎ", "kz": "荞麦面、鳗鱼、天妇罗", "mode": "transit", "mt": ["午餐"], "dm": 1731, "q": "さめず 鈴乃家 大森駅 東京", "st": "立会川駅", "pb": "1000-1999"}, {"n": "すし処 関根", "c": "餐饮", "a": "", "d": "大森駅 239m", "h": "", "p": "￥15,000～￥19,999", "x": "", "r": "3.39(65)", "m": 14, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13203647/", "g": "寿司", "k": "寿司", "kz": "寿司", "mode": "transit", "mt": ["午餐"], "dm": 949, "q": "すし処 関根 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "とんかつ 檍 京急蒲田店", "c": "餐饮", "a": "", "d": "京急蒲田駅 200m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.51(457)", "m": 14, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13264081/", "g": "とんかつ", "k": "とんかつ", "kz": "炸猪排", "mode": "transit", "mt": ["午餐"], "dm": 3800, "q": "とんかつ 檍 京急蒲田店 大森駅 東京", "st": "京急蒲田駅", "pb": "1000-1999"}, {"n": "らぁ麺 才色兼備", "c": "餐饮", "a": "", "d": "平和島駅 777m (大森町駅 33m)", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.41(140)", "m": 14, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13289153/", "g": "ラーメン、つけ麺", "k": "ラーメン、つけ麺", "kz": "拉面、蘸面", "mode": "transit", "mt": ["午餐"], "dm": 2277, "q": "らぁ麺 才色兼備 大森駅 東京", "st": "平和島駅", "pb": "1000-1999"}, {"n": "らーめん蓮 蒲田本店", "c": "餐饮", "a": "", "d": "蒲田駅 313m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.64(708)", "m": 14, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13202023/", "g": "ラーメン、つけ麺", "k": "ラーメン、つけ麺", "kz": "拉面、蘸面", "mode": "transit", "mt": ["午餐"], "dm": 4813, "q": "らーめん蓮 蒲田本店 大森駅 東京", "st": "蒲田駅", "pb": "1000-1999"}, {"n": "インド宮廷料理 Mashal", "c": "餐饮", "a": "", "d": "217 m / 约 14 分", "h": "11:00–15:00 / 17:00–22:00 ｜休 无", "p": "1,000–1,999", "x": "", "r": "3.52（531）", "m": 14, "s": "08 餐饮", "k": "印度", "kz": "印度", "mode": "transit", "dm": 0, "mt": ["午餐", "晚餐"], "q": "インド宮廷料理 Mashal 大森駅 東京", "u": "", "g": "", "st": "", "pb": "1000-1999"}, {"n": "インド宮廷料理 Mashal", "c": "餐饮", "a": "", "d": "大森駅 217m", "h": "", "p": "￥3,000～￥3,999", "x": "", "r": "3.52(531)", "m": 14, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13273658/", "g": "インド料理、インドカレー", "k": "インド料理、インドカレー", "kz": "咖喱、印度菜", "mode": "transit", "mt": ["午餐"], "dm": 927, "q": "インド宮廷料理 Mashal 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "ジョイヤ", "c": "餐饮", "a": "", "d": "大森駅 236m", "h": "", "p": "￥3,000～￥3,999", "x": "", "r": "3.42(204)", "m": 14, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13009695/", "g": "イタリアン、ピザ、パスタ", "k": "イタリアン、ピザ、パスタ", "kz": "意餐、披萨、意面", "mode": "transit", "mt": ["午餐"], "dm": 946, "q": "ジョイヤ 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "トラットリア カワナベ", "c": "餐饮", "a": "", "d": "大森駅 272m", "h": "", "p": "-", "x": "", "r": "3.52(145)", "m": 14, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13161206/", "g": "イタリアン", "k": "イタリアン", "kz": "意餐", "mode": "transit", "mt": ["午餐"], "dm": 982, "q": "トラットリア カワナベ 大森駅 東京", "st": "大森駅", "pb": ""}, {"n": "ドンピノキオ 大森店", "c": "餐饮", "a": "", "d": "大森駅 216m", "h": "", "p": "￥3,000～￥3,999", "x": "", "r": "3.44(317)", "m": 14, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13212447/", "g": "パスタ、ピザ、イタリアン", "k": "パスタ、ピザ、イタリアン", "kz": "意餐、披萨、意面", "mode": "transit", "mt": ["午餐"], "dm": 926, "q": "ドンピノキオ 大森店 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "ラーメン 宮郎", "c": "餐饮", "a": "", "d": "蒲田駅 327m", "h": "", "p": "-", "x": "", "r": "3.65(739)", "m": 14, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13209616/", "g": "ラーメン、油そば・まぜそば", "k": "ラーメン、油そば・まぜそば", "kz": "拉面、油拌面、荞麦面", "mode": "transit", "mt": ["午餐"], "dm": 4827, "q": "ラーメン 宮郎 大森駅 東京", "st": "蒲田駅", "pb": ""}, {"n": "レストラン　おづ", "c": "餐饮", "a": "", "d": "大森駅 212m", "h": "", "p": "￥3,000～￥3,999", "x": "", "r": "3.42(145)", "m": 14, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13104748/", "g": "洋食、カレー、食堂", "k": "洋食、カレー、食堂", "kz": "咖喱、西餐、食堂", "mode": "transit", "mt": ["午餐"], "dm": 922, "q": "レストラン　おづ 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "三代目 らーめん谷瀬家", "c": "餐饮", "a": "", "d": "大森駅 242m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.35(108)", "m": 14, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13319602/", "g": "ラーメン", "k": "ラーメン", "kz": "拉面", "mode": "transit", "mt": ["午餐"], "dm": 952, "q": "三代目 らーめん谷瀬家 大森駅 東京", "st": "大森駅", "pb": "1000-1999"}, {"n": "寿司肴地酒 天晴", "c": "餐饮", "a": "", "d": "大森駅 271m", "h": "", "p": "￥5,000～￥5,999", "x": "", "r": "3.36(106)", "m": 14, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13290260/", "g": "寿司、海鮮", "k": "寿司、海鮮", "kz": "寿司、海鲜", "mode": "transit", "mt": ["午餐"], "dm": 981, "q": "寿司肴地酒 天晴 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "小料理屋こはる", "c": "餐饮", "a": "", "d": "大森駅 255m", "h": "", "p": "￥3,000～￥3,999", "x": "", "r": "3.34(25)", "m": 14, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13300872/", "g": "居酒屋", "k": "居酒屋", "kz": "居酒屋", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 965, "q": "小料理屋こはる 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "帽子とめがね", "c": "餐饮", "a": "", "d": "大森駅 239m", "h": "", "p": "￥3,000～￥3,999", "x": "", "r": "3.43(115)", "m": 14, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13293089/", "g": "ハンバーガー、ダイニングバー", "k": "ハンバーガー、ダイニングバー", "kz": "餐吧、汉堡", "mode": "transit", "mt": ["居酒屋", "午餐", "晚餐"], "dm": 949, "q": "帽子とめがね 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "旨辛タンメン 荒木屋", "c": "餐饮", "a": "", "d": "蒲田駅 326m", "h": "", "p": "-", "x": "", "r": "3.64(585)", "m": 14, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13180932/", "g": "ラーメン、つけ麺", "k": "ラーメン、つけ麺", "kz": "拉面、蘸面", "mode": "transit", "mt": ["午餐"], "dm": 4826, "q": "旨辛タンメン 荒木屋 大森駅 東京", "st": "蒲田駅", "pb": ""}, {"n": "柏庵", "c": "餐饮", "a": "", "d": "大森駅 274m", "h": "", "p": "￥3,000～￥3,999", "x": "", "r": "3.43(229)", "m": 14, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13011661/", "g": "そば、日本料理、日本酒バー", "k": "そば、日本料理、日本酒バー", "kz": "荞麦面、日料、日本酒", "mode": "transit", "mt": ["居酒屋", "午餐", "晚餐"], "dm": 984, "q": "柏庵 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "炭火焼肉食道園 大森店", "c": "餐饮", "a": "", "d": "大森駅 250m", "h": "", "p": "￥4,000～￥4,999", "x": "", "r": "3.35(83)", "m": 14, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13017816/", "g": "焼肉、ホルモン、冷麺", "k": "焼肉、ホルモン、冷麺", "kz": "烤肉、内脏烧肉", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 960, "q": "炭火焼肉食道園 大森店 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "煮干しつけ麺 宮元", "c": "餐饮", "a": "", "d": "蒲田駅 304m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.78(3104)", "m": 14, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13180862/", "g": "つけ麺、ラーメン", "k": "つけ麺、ラーメン", "kz": "拉面、蘸面", "mode": "transit", "mt": ["午餐"], "dm": 4804, "q": "煮干しつけ麺 宮元 大森駅 東京", "st": "蒲田駅", "pb": "1000-1999"}, {"n": "王道家 カズ家", "c": "餐饮", "a": "", "d": "226 m / 约 14 分", "h": "平日 11:00–03:30；周末 11:00–22:00 ｜休 无", "p": "1,000–1,999", "x": "", "r": "3.57（609）", "m": 14, "s": "08 餐饮", "k": "家系ラーメン", "kz": "拉面", "mode": "transit", "dm": 0, "mt": ["午餐"], "q": "王道家 カズ家 大森駅 東京", "u": "", "g": "", "st": "", "pb": "1000-1999"}, {"n": "王道家味の継承店 カズ家", "c": "餐饮", "a": "", "d": "大森駅 226m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.57(609)", "m": 14, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13308312/", "g": "ラーメン", "k": "ラーメン", "kz": "拉面", "mode": "transit", "mt": ["午餐"], "dm": 936, "q": "王道家味の継承店 カズ家 大森駅 東京", "st": "大森駅", "pb": "1000-1999"}, {"n": "珈琲亭 ルアン", "c": "餐饮", "a": "", "d": "大森駅 276m", "h": "", "p": "-", "x": "", "r": "3.70(1107)", "m": 14, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13008294/", "g": "喫茶店、カフェ、ケーキ", "k": "喫茶店、カフェ、ケーキ", "kz": "咖啡、咖啡店、蛋糕", "mode": "transit", "mt": ["咖啡"], "dm": 986, "q": "珈琲亭 ルアン 大森駅 東京", "st": "大森駅", "pb": ""}, {"n": "鉄板串 燻製 MOKU 大森店", "c": "餐饮", "a": "", "d": "大森駅 233m", "h": "", "p": "￥4,000～￥4,999", "x": "", "r": "3.43(239)", "m": 14, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13202710/", "g": "居酒屋、ダイニングバー、バル", "k": "居酒屋、ダイニングバー、バル", "kz": "居酒屋、酒吧、餐吧", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 943, "q": "鉄板串 燻製 MOKU 大森店 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "GOOD BREAK COFFEE", "c": "餐饮", "a": "", "d": "大森駅 316m", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.33(40)", "m": 15, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13292417/", "g": "カフェ", "k": "カフェ", "kz": "咖啡", "mode": "transit", "mt": ["咖啡"], "dm": 1026, "q": "GOOD BREAK COFFEE 大森駅 東京", "st": "大森駅", "pb": "2000-2999"}, {"n": "GROVE Cafe＆Green", "c": "餐饮", "a": "", "d": "立会川駅 720m (鮫洲駅 332m)", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.44(222)", "m": 15, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13200681/", "g": "ハンバーガー、ビストロ、バーベキュー", "k": "ハンバーガー、ビストロ、バーベキュー", "kz": "法式小馆、汉堡", "mode": "transit", "mt": ["午餐"], "dm": 1820, "q": "GROVE Cafe＆Green 大森駅 東京", "st": "立会川駅", "pb": "2000-2999"}, {"n": "Hamburg diner maru", "c": "餐饮", "a": "", "d": "立会川駅 719m (大井町駅 415m)", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.45(187)", "m": 15, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13056640/", "g": "ハンバーグ、ステーキ、洋食", "k": "ハンバーグ、ステーキ、洋食", "kz": "西餐", "mode": "transit", "mt": ["午餐"], "dm": 1819, "q": "Hamburg diner maru 大森駅 東京", "st": "立会川駅", "pb": "1000-1999"}, {"n": "ONORI", "c": "餐饮", "a": "", "d": "梅屋敷駅 74m", "h": "", "p": "-", "x": "", "r": "3.46(150)", "m": 15, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13283182/", "g": "ラーメン、油そば・まぜそば", "k": "ラーメン、油そば・まぜそば", "kz": "拉面、油拌面、荞麦面", "mode": "transit", "mt": ["午餐"], "dm": 3274, "q": "ONORI 大森駅 東京", "st": "梅屋敷駅", "pb": ""}, {"n": "うどん屋 こはく 大森店", "c": "餐饮", "a": "", "d": "大森駅 351m", "h": "", "p": "￥3,000～￥3,999", "x": "", "r": "3.42(106)", "m": 15, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13279063/", "g": "うどん、豚しゃぶ、居酒屋", "k": "うどん、豚しゃぶ、居酒屋", "kz": "乌冬、居酒屋", "mode": "transit", "mt": ["居酒屋", "午餐", "晚餐"], "dm": 1061, "q": "うどん屋 こはく 大森店 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "お食事 まるやま", "c": "餐饮", "a": "", "d": "316 m / 约 15 分", "h": "11:00–14:00 / 17:00–20:00 ｜休 日", "p": "1,000–1,999", "x": "", "r": "3.71（994）", "m": 15, "s": "08 餐饮", "k": "とんかつ・食堂", "kz": "炸猪排、食堂", "mode": "transit", "dm": 0, "mt": ["午餐", "晚餐"], "q": "お食事 まるやま 大森駅 東京", "u": "", "g": "", "st": "", "pb": "1000-1999"}, {"n": "お食事 まるやま", "c": "餐饮", "a": "", "d": "大森駅 316m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.71(994)", "m": 15, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13116024/", "g": "とんかつ、食堂", "k": "とんかつ、食堂", "kz": "炸猪排、食堂", "mode": "transit", "mt": ["午餐"], "dm": 1026, "q": "お食事 まるやま 大森駅 東京", "st": "大森駅", "pb": "1000-1999"}, {"n": "ほうせいどう", "c": "餐饮", "a": "", "d": "大森駅 357m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.58(70)", "m": 15, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13283577/", "g": "居酒屋", "k": "居酒屋", "kz": "居酒屋", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 1067, "q": "ほうせいどう 大森駅 東京", "st": "大森駅", "pb": "1000-1999"}, {"n": "ラーメン道楽 鮫洲店", "c": "餐饮", "a": "", "d": "立会川駅 694m (鮫洲駅 102m)", "h": "", "p": "-", "x": "", "r": "3.32(346)", "m": 15, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13001872/", "g": "ラーメン、つけ麺、油そば・まぜそば", "k": "ラーメン、つけ麺、油そば・まぜそば", "kz": "拉面、蘸面、油拌面、荞麦面", "mode": "transit", "mt": ["午餐"], "dm": 1794, "q": "ラーメン道楽 鮫洲店 大森駅 東京", "st": "立会川駅", "pb": ""}, {"n": "丸一", "c": "餐饮", "a": "", "d": "蒲田駅 397m (京急蒲田駅 332m)", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.77(2626)", "m": 15, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13017765/", "g": "とんかつ", "k": "とんかつ", "kz": "炸猪排", "mode": "transit", "mt": ["午餐"], "dm": 4897, "q": "丸一 大森駅 東京", "st": "蒲田駅", "pb": "2000-2999"}, {"n": "大森 野田岩", "c": "餐饮", "a": "", "d": "大森駅 328m", "h": "", "p": "￥5,000～￥5,999", "x": "", "r": "3.35(166)", "m": 15, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13008291/", "g": "うなぎ", "k": "うなぎ", "kz": "鳗鱼", "mode": "transit", "mt": ["午餐"], "dm": 1038, "q": "大森 野田岩 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "焼鳥まつ宵 大森本店", "c": "餐饮", "a": "", "d": "大森駅 281m", "h": "", "p": "￥4,000～￥4,999", "x": "", "r": "3.40(159)", "m": 15, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13282084/", "g": "焼き鳥、串焼き、 居酒屋", "k": "焼き鳥、串焼き、 居酒屋", "kz": "居酒屋、烤鸡串、串烧", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 991, "q": "焼鳥まつ宵 大森本店 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "珈琲亭 ルアン", "c": "餐饮", "a": "", "d": "约 15 分", "h": "月火金 07:00–18:30；土日 07:30–17:30 ｜休 水・木", "p": "", "x": "", "r": "3.70（1,107）", "m": 15, "s": "08 餐饮", "k": "喫茶・ケーキ", "kz": "咖啡店、蛋糕", "mode": "transit", "dm": 0, "mt": ["咖啡"], "q": "珈琲亭 ルアン 大森駅 東京", "u": "", "g": "", "st": "", "pb": ""}, {"n": "麺屋 まほろ芭", "c": "餐饮", "a": "", "d": "蒲田駅 373m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.73(1563)", "m": 15, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13221764/", "g": "ラーメン", "k": "ラーメン", "kz": "拉面", "mode": "transit", "mt": ["午餐"], "dm": 4873, "q": "麺屋 まほろ芭 大森駅 東京", "st": "蒲田駅", "pb": "1000-1999"}, {"n": "Fooler Fooler", "c": "餐饮", "a": "", "d": "立会川駅 791m (鮫洲駅 54m)", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.42(116)", "m": 16, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13261640/", "g": "ハンバーガー、イタリアン、ビストロ", "k": "ハンバーガー、イタリアン、ビストロ", "kz": "意餐、法式小馆、汉堡", "mode": "transit", "mt": ["午餐"], "dm": 1891, "q": "Fooler Fooler 大森駅 東京", "st": "立会川駅", "pb": "1000-1999"}, {"n": "いさ美庵", "c": "餐饮", "a": "", "d": "大森駅 414m", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.42(136)", "m": 16, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13026167/", "g": "そば、天丼、親子丼", "k": "そば、天丼、親子丼", "kz": "荞麦面、盖饭", "mode": "transit", "mt": ["午餐"], "dm": 1124, "q": "いさ美庵 大森駅 東京", "st": "大森駅", "pb": "2000-2999"}, {"n": "中華そば 結。", "c": "餐饮", "a": "", "d": "418 m / 约 16 分", "h": "平日 11:00–14:30 / 17:30–21:30 ｜休 无（日曜到 21:00）", "p": "1,000–1,999", "x": "", "r": "3.66（791）", "m": 16, "s": "08 餐饮", "k": "ラーメン", "kz": "拉面", "mode": "transit", "dm": 0, "mt": ["午餐", "晚餐"], "q": "中華そば 結。 大森駅 東京", "u": "", "g": "", "st": "", "pb": "1000-1999"}, {"n": "中華そば 結。", "c": "餐饮", "a": "", "d": "大森駅 418m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.66(791)", "m": 16, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13251216/", "g": "ラーメン", "k": "ラーメン", "kz": "拉面", "mode": "transit", "mt": ["午餐"], "dm": 1128, "q": "中華そば 結。 大森駅 東京", "st": "大森駅", "pb": "1000-1999"}, {"n": "入新井 愛知家", "c": "餐饮", "a": "", "d": "大森駅 374m", "h": "", "p": "￥3,000～￥3,999", "x": "", "r": "3.32(99)", "m": 16, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13017811/", "g": "そば、日本料理", "k": "そば、日本料理", "kz": "荞麦面、日料", "mode": "transit", "mt": ["午餐"], "dm": 1084, "q": "入新井 愛知家 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "焼肉OGAWA 大森店", "c": "餐饮", "a": "", "d": "大森駅 435m (大森海岸駅 251m)", "h": "", "p": "￥5,000～￥5,999", "x": "", "r": "3.46(267)", "m": 16, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13008315/", "g": "焼肉、韓国料理", "k": "焼肉、韓国料理", "kz": "烤肉", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 1145, "q": "焼肉OGAWA 大森店 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "絹のとんかつ 舞花食堂", "c": "餐饮", "a": "", "d": "梅屋敷駅 137m", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.42(120)", "m": 16, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13256547/", "g": "とんかつ、居酒屋", "k": "とんかつ、居酒屋", "kz": "炸猪排、居酒屋", "mode": "transit", "mt": ["居酒屋", "午餐", "晚餐"], "dm": 3337, "q": "絹のとんかつ 舞花食堂 大森駅 東京", "st": "梅屋敷駅", "pb": "2000-2999"}, {"n": "鶏串割烹 和", "c": "餐饮", "a": "", "d": "大森駅 428m", "h": "", "p": "￥4,000～￥4,999", "x": "", "r": "3.34(80)", "m": 16, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13266244/", "g": "日本料理、居酒屋、焼き鳥", "k": "日本料理、居酒屋、焼き鳥", "kz": "居酒屋、烤鸡串、日料", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 1138, "q": "鶏串割烹 和 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "龍 刀削麵", "c": "餐饮", "a": "", "d": "立会川駅 803m (大井町駅 430m)", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.32(141)", "m": 16, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131501/13048050/", "g": "刀削麺、四川料理、中華料理", "k": "刀削麺、四川料理、中華料理", "kz": "中餐", "mode": "transit", "mt": ["午餐"], "dm": 1903, "q": "龍 刀削麵 大森駅 東京", "st": "立会川駅", "pb": "2000-2999"}, {"n": "2198", "c": "餐饮", "a": "", "d": "大森駅 511m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.38(73)", "m": 17, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13240214/", "g": "カフェ", "k": "カフェ", "kz": "咖啡", "mode": "transit", "mt": ["咖啡"], "dm": 1221, "q": "2198 大森駅 東京", "st": "大森駅", "pb": "1000-1999"}, {"n": "Faifo", "c": "餐饮", "a": "", "d": "大森駅 482m (大森海岸駅 382m)", "h": "", "p": "￥4,000～￥4,999", "x": "", "r": "3.32(85)", "m": 17, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13112656/", "g": "ベトナム料理、アジア・エスニック、居酒屋", "k": "ベトナム料理、アジア・エスニック、居酒屋", "kz": "居酒屋、异国料理", "mode": "transit", "mt": ["居酒屋", "午餐", "晚餐"], "dm": 1192, "q": "Faifo 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "Homemade Ramen 麦苗", "c": "餐饮", "a": "", "d": "大森駅 515m (大森海岸駅 419m)", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.94(2937)", "m": 17, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13194812/", "g": "ラーメン、つけ麺", "k": "ラーメン、つけ麺", "kz": "拉面、蘸面", "mode": "transit", "mt": ["午餐"], "dm": 1225, "q": "Homemade Ramen 麦苗 大森駅 東京", "st": "大森駅", "pb": "1000-1999"}, {"n": "THI THI", "c": "餐饮", "a": "", "d": "京急蒲田駅 377m (蒲田駅 377m)", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.52(520)", "m": 17, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13038849/", "g": "ベトナム料理、カレー、居酒屋", "k": "ベトナム料理、カレー、居酒屋", "kz": "咖喱、居酒屋", "mode": "transit", "mt": ["居酒屋", "午餐", "晚餐"], "dm": 3977, "q": "THI THI 大森駅 東京", "st": "京急蒲田駅", "pb": "1000-1999"}, {"n": "and parfait", "c": "餐饮", "a": "", "d": "大森駅 519m (大森海岸駅 165m)", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.45(141)", "m": 17, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13281511/", "g": "カフェ", "k": "カフェ", "kz": "咖啡", "mode": "transit", "mt": ["咖啡"], "dm": 1229, "q": "and parfait 大森駅 東京", "st": "大森駅", "pb": "2000-2999"}, {"n": "うどん すだち屋", "c": "餐饮", "a": "", "d": "大森駅 513m (大森海岸駅 220m)", "h": "", "p": "-", "x": "", "r": "3.33(78)", "m": 17, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13225520/", "g": "うどん", "k": "うどん", "kz": "乌冬", "mode": "transit", "mt": ["午餐"], "dm": 1223, "q": "うどん すだち屋 大森駅 東京", "st": "大森駅", "pb": ""}, {"n": "つるや", "c": "餐饮", "a": "", "d": "大森駅 453m", "h": "", "p": "￥3,000～￥3,999", "x": "", "r": "3.35(64)", "m": 17, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13080474/", "g": "食堂、日本料理、居酒屋", "k": "食堂、日本料理、居酒屋", "kz": "居酒屋、食堂、日料", "mode": "transit", "mt": ["居酒屋", "午餐", "晚餐"], "dm": 1163, "q": "つるや 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "とんかつ 鉄", "c": "餐饮", "a": "", "d": "大森駅 440m (大森海岸駅 433m)", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.58(1361)", "m": 17, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13178524/", "g": "とんかつ", "k": "とんかつ", "kz": "炸猪排", "mode": "transit", "mt": ["午餐"], "dm": 1150, "q": "とんかつ 鉄 大森駅 東京", "st": "大森駅", "pb": "2000-2999"}, {"n": "トーチドットベーカリー大森", "c": "餐饮", "a": "", "d": "约 17 分", "h": "9:00–20:10（周末到 18:30） ｜休 月", "p": "", "x": "", "r": "3.54（182）", "m": 17, "s": "08 餐饮", "k": "面包", "kz": "面包", "mode": "transit", "dm": 0, "mt": ["午餐"], "q": "トーチドットベーカリー大森 大森駅 東京", "u": "", "g": "", "st": "", "pb": ""}, {"n": "麺や ぱんだ", "c": "餐饮", "a": "", "d": "大森駅 488m (大森海岸駅 471m)", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.56(334)", "m": 17, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13286595/", "g": "つけ麺、寿司、ラーメン", "k": "つけ麺、寿司、ラーメン", "kz": "拉面、蘸面、寿司", "mode": "transit", "mt": ["午餐"], "dm": 1198, "q": "麺や ぱんだ 大森駅 東京", "st": "大森駅", "pb": "1000-1999"}, {"n": "アウテンティコ", "c": "餐饮", "a": "", "d": "京急蒲田駅 462m (蒲田駅 268m)", "h": "", "p": "￥8,000～￥9,999", "x": "", "r": "3.50(135)", "m": 18, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13227803/", "g": "イタリアン、パスタ、肉料理", "k": "イタリアン、パスタ、肉料理", "kz": "意餐、意面", "mode": "transit", "mt": ["午餐"], "dm": 4062, "q": "アウテンティコ 大森駅 東京", "st": "京急蒲田駅", "pb": "3000+"}, {"n": "インド・ネパール料理 ロードブッダ 梅屋敷", "c": "餐饮", "a": "", "d": "梅屋敷駅 297m", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.35(100)", "m": 18, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13047494/", "g": "インド料理、ネパール料理、インドカレー", "k": "インド料理、ネパール料理、インドカレー", "kz": "咖喱、印度菜", "mode": "transit", "mt": ["午餐"], "dm": 3497, "q": "インド・ネパール料理 ロードブッダ 梅屋敷 大森駅 東京", "st": "梅屋敷駅", "pb": "2000-2999"}, {"n": "中華そば 春夏◯冬", "c": "餐饮", "a": "", "d": "京急蒲田駅 518m (蒲田駅 215m)", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.50(230)", "m": 18, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13281267/", "g": "ラーメン、丼", "k": "ラーメン、丼", "kz": "拉面、盖饭", "mode": "transit", "mt": ["午餐"], "dm": 4118, "q": "中華そば 春夏◯冬 大森駅 東京", "st": "京急蒲田駅", "pb": "2000-2999"}, {"n": "大連", "c": "餐饮", "a": "", "d": "578 m / 约 18 分", "h": "11:30–14:00 / 17:00–22:00 ｜休 火", "p": "3,000–3,999", "x": "", "r": "3.52（573）", "m": 18, "s": "08 餐饮", "k": "中華", "kz": "中餐", "mode": "transit", "dm": 0, "mt": ["午餐", "晚餐"], "q": "大連 大森駅 東京", "u": "", "g": "", "st": "", "pb": "3000+"}, {"n": "春香園 蒲田店", "c": "餐饮", "a": "", "d": "京急蒲田駅 472m (蒲田駅 263m)", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.49(1279)", "m": 18, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13057671/", "g": "餃子、中華料理、飲茶・点心", "k": "餃子、中華料理、飲茶・点心", "kz": "中餐、饺子", "mode": "transit", "mt": ["午餐"], "dm": 4072, "q": "春香園 蒲田店 大森駅 東京", "st": "京急蒲田駅", "pb": "2000-2999"}, {"n": "横浜家系ラーメン 大輝家", "c": "餐饮", "a": "", "d": "蒲田駅 612m (京急蒲田駅 122m)", "h": "", "p": "-", "x": "", "r": "3.64(847)", "m": 18, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13272589/", "g": "ラーメン", "k": "ラーメン", "kz": "拉面", "mode": "transit", "mt": ["午餐"], "dm": 5112, "q": "横浜家系ラーメン 大輝家 大森駅 東京", "st": "蒲田駅", "pb": ""}, {"n": "焼肉とみひさ 大森海岸", "c": "餐饮", "a": "", "d": "大森駅 523m (大森海岸駅 157m)", "h": "", "p": "￥5,000～￥5,999", "x": "", "r": "3.35(94)", "m": 18, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13284017/", "g": "焼肉、居酒屋、日本酒バー", "k": "焼肉、居酒屋、日本酒バー", "kz": "居酒屋、烤肉、日本酒", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 1233, "q": "焼肉とみひさ 大森海岸 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "琵琶湖", "c": "餐饮", "a": "", "d": "梅屋敷駅 293m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.48(175)", "m": 18, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13076485/", "g": "喫茶店", "k": "喫茶店", "kz": "咖啡店", "mode": "transit", "mt": ["咖啡"], "dm": 3493, "q": "琵琶湖 大森駅 東京", "st": "梅屋敷駅", "pb": "1000-1999"}, {"n": "酒肴旬彩 たくみや", "c": "餐饮", "a": "", "d": "大森駅 597m (大森海岸駅 122m)", "h": "", "p": "￥4,000～￥4,999", "x": "", "r": "3.33(79)", "m": 18, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13181603/", "g": "居酒屋、日本料理、海鮮", "k": "居酒屋、日本料理、海鮮", "kz": "居酒屋、海鲜、日料", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 1307, "q": "酒肴旬彩 たくみや 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "開華楼", "c": "餐饮", "a": "", "d": "大森駅 594m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.46(179)", "m": 18, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13008335/", "g": "中華料理、食堂", "k": "中華料理、食堂", "kz": "中餐、食堂", "mode": "transit", "mt": ["午餐"], "dm": 1304, "q": "開華楼 大森駅 東京", "st": "大森駅", "pb": "1000-1999"}, {"n": "Little Mitten BAKE SHOP", "c": "餐饮", "a": "", "d": "京急蒲田駅 548m (蒲田駅 421m)", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.56(218)", "m": 19, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13283013/", "g": "カフェ、洋菓子", "k": "カフェ、洋菓子", "kz": "咖啡", "mode": "transit", "mt": ["咖啡"], "dm": 4148, "q": "Little Mitten BAKE SHOP 大森駅 東京", "st": "京急蒲田駅", "pb": "1000-1999"}, {"n": "RAMONEBURGER", "c": "餐饮", "a": "", "d": "大森駅 627m (大森海岸駅 493m)", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.38(76)", "m": 19, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13282499/", "g": "ハンバーガー", "k": "ハンバーガー", "kz": "汉堡", "mode": "transit", "mt": ["午餐"], "dm": 1337, "q": "RAMONEBURGER 大森駅 東京", "st": "大森駅", "pb": "1000-1999"}, {"n": "Rita.", "c": "餐饮", "a": "", "d": "京急蒲田駅 580m (蒲田駅 204m)", "h": "", "p": "￥4,000～￥4,999", "x": "", "r": "3.50(473)", "m": 19, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13273998/", "g": "イタリアン、パスタ、ピザ", "k": "イタリアン、パスタ、ピザ", "kz": "意餐、披萨、意面", "mode": "transit", "mt": ["午餐"], "dm": 4180, "q": "Rita. 大森駅 東京", "st": "京急蒲田駅", "pb": "3000+"}, {"n": "くろさわ東京菜", "c": "餐饮", "a": "", "d": "大森駅 620m", "h": "", "p": "￥10,000～￥14,999", "x": "", "r": "3.37(68)", "m": 19, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13125975/", "g": "中華料理", "k": "中華料理", "kz": "中餐", "mode": "transit", "mt": ["午餐"], "dm": 1330, "q": "くろさわ東京菜 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "インディアン 本店", "c": "餐饮", "a": "", "d": "蒲田駅 690m (蓮沼駅 113m)", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.63(640)", "m": 19, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1317/A131714/13003311/", "g": "ラーメン、カレー", "k": "ラーメン、カレー", "kz": "拉面、咖喱", "mode": "transit", "mt": ["午餐"], "dm": 5190, "q": "インディアン 本店 大森駅 東京", "st": "蒲田駅", "pb": "1000-1999"}, {"n": "ル ガリュウＭ", "c": "餐饮", "a": "", "d": "大森駅 643m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.64(372)", "m": 19, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13049633/", "g": "ケーキ、パン、カフェ", "k": "ケーキ、パン、カフェ", "kz": "咖啡、面包、蛋糕", "mode": "transit", "mt": ["咖啡"], "dm": 1353, "q": "ル ガリュウＭ 大森駅 東京", "st": "大森駅", "pb": "1000-1999"}, {"n": "中華そば 梟", "c": "餐饮", "a": "", "d": "蒲田駅 719m (蓮沼駅 13m)", "h": "", "p": "-", "x": "", "r": "3.66(501)", "m": 19, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1317/A131714/13222486/", "g": "ラーメン", "k": "ラーメン", "kz": "拉面", "mode": "transit", "mt": ["午餐"], "dm": 5219, "q": "中華そば 梟 大森駅 東京", "st": "蒲田駅", "pb": ""}, {"n": "鶏ポタラーメン THANK 蒲田店", "c": "餐饮", "a": "", "d": "京急蒲田駅 586m (蒲田駅 256m)", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.51(268)", "m": 19, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13291692/", "g": "ラーメン", "k": "ラーメン", "kz": "拉面", "mode": "transit", "mt": ["午餐"], "dm": 4186, "q": "鶏ポタラーメン THANK 蒲田店 大森駅 東京", "st": "京急蒲田駅", "pb": "1000-1999"}, {"n": "bistro tetete", "c": "餐饮", "a": "", "d": "大森駅 748m", "h": "", "p": "￥6,000～￥7,999", "x": "", "r": "3.54(99)", "m": 20, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13268478/", "g": "ビストロ、フレンチ、イタリアン", "k": "ビストロ、フレンチ、イタリアン", "kz": "意餐、法餐、法式小馆", "mode": "transit", "mt": ["午餐"], "dm": 1458, "q": "bistro tetete 大森駅 東京", "st": "大森駅", "pb": "3000+"}, {"n": "ヤグマ", "c": "餐饮", "a": "", "d": "大森駅 707m (平和島駅 658m)", "h": "", "p": "-", "x": "", "r": "3.36(44)", "m": 20, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13088810/", "g": "喫茶店、食堂、おにぎり", "k": "喫茶店、食堂、おにぎり", "kz": "咖啡店、食堂", "mode": "transit", "mt": ["咖啡", "午餐"], "dm": 1417, "q": "ヤグマ 大森駅 東京", "st": "大森駅", "pb": ""}, {"n": "ル ガリュウＭ", "c": "餐饮", "a": "", "d": "约 20 分", "h": "10:00–19:00（2F cafe 11:00–18:00） ｜休 火・水", "p": "", "x": "", "r": "3.64（372）", "m": 20, "s": "08 餐饮", "k": "蛋糕・面包", "kz": "蛋糕・面包", "mode": "transit", "dm": 0, "mt": ["午餐"], "q": "ル ガリュウＭ 大森駅 東京", "u": "", "g": "", "st": "", "pb": ""}, {"n": "喰い切り 初味", "c": "餐饮", "a": "", "d": "京急蒲田駅 630m (蒲田駅 262m)", "h": "", "p": "￥5,000～￥5,999", "x": "", "r": "3.55(142)", "m": 20, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13299057/", "g": "日本料理、居酒屋、かに", "k": "日本料理、居酒屋、かに", "kz": "居酒屋、日料", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 4230, "q": "喰い切り 初味 大森駅 東京", "st": "京急蒲田駅", "pb": "3000+"}, {"n": "福来食堂", "c": "餐饮", "a": "", "d": "大森駅 692m (大森海岸駅 528m)", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.40(103)", "m": 20, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13045830/", "g": "食堂、コロッケ、海鮮", "k": "食堂、コロッケ、海鮮", "kz": "食堂、海鲜", "mode": "transit", "mt": ["午餐"], "dm": 1402, "q": "福来食堂 大森駅 東京", "st": "大森駅", "pb": "1000-1999"}, {"n": "蒲田鳥久 東口店", "c": "餐饮", "a": "", "d": "京急蒲田駅 617m (蒲田駅 113m)", "h": "", "p": "-", "x": "", "r": "3.54(621)", "m": 20, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13072792/", "g": "弁当、からあげ、鳥料理", "k": "弁当、からあげ、鳥料理", "kz": "弁当、からあげ、鳥料理", "mode": "transit", "mt": ["正餐"], "dm": 4217, "q": "蒲田鳥久 東口店 大森駅 東京", "st": "京急蒲田駅", "pb": ""}, {"n": "蕎肆 浅野屋", "c": "餐饮", "a": "", "d": "京急蒲田駅 644m (糀谷駅 360m)", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.51(165)", "m": 20, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13043636/", "g": "そば、うどん、天ぷら", "k": "そば、うどん、天ぷら", "kz": "荞麦面、乌冬、天妇罗", "mode": "transit", "mt": ["午餐"], "dm": 4244, "q": "蕎肆 浅野屋 大森駅 東京", "st": "京急蒲田駅", "pb": "2000-2999"}, {"n": "thy coffee Atelier", "c": "餐饮", "a": "", "d": "梅屋敷駅 552m (京急蒲田駅 480m)", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.40(74)", "m": 21, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13284057/", "g": "カフェ", "k": "カフェ", "kz": "咖啡", "mode": "transit", "mt": ["咖啡"], "dm": 3752, "q": "thy coffee Atelier 大森駅 東京", "st": "梅屋敷駅", "pb": "1000-1999"}, {"n": "きりん珈琲", "c": "餐饮", "a": "", "d": "梅屋敷駅 591m", "h": "", "p": "-", "x": "", "r": "3.48(144)", "m": 21, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13240069/", "g": "喫茶店", "k": "喫茶店", "kz": "咖啡店", "mode": "transit", "mt": ["咖啡"], "dm": 3791, "q": "きりん珈琲 大森駅 東京", "st": "梅屋敷駅", "pb": ""}, {"n": "だし・創作 志もじ", "c": "餐饮", "a": "", "d": "京急蒲田駅 691m (蒲田駅 206m)", "h": "", "p": "￥6,000～￥7,999", "x": "", "r": "3.50(61)", "m": 21, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13282983/", "g": "日本料理、海鮮、創作料理", "k": "日本料理、海鮮、創作料理", "kz": "海鲜、日料", "mode": "transit", "mt": ["正餐"], "dm": 4291, "q": "だし・創作 志もじ 大森駅 東京", "st": "京急蒲田駅", "pb": "3000+"}, {"n": "まぐま", "c": "餐饮", "a": "", "d": "大森駅 772m (大森海岸駅 274m)", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.36(94)", "m": 21, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13080962/", "g": "居酒屋、日本料理、食堂", "k": "居酒屋、日本料理、食堂", "kz": "居酒屋、食堂、日料", "mode": "transit", "mt": ["居酒屋", "午餐", "晚餐"], "dm": 1482, "q": "まぐま 大森駅 東京", "st": "大森駅", "pb": "2000-2999"}, {"n": "らぁ麺屋 ひたむき", "c": "餐饮", "a": "", "d": "大森駅 783m (大森海岸駅 257m)", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.61(176)", "m": 21, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13322835/", "g": "ラーメン", "k": "ラーメン", "kz": "拉面", "mode": "transit", "mt": ["午餐"], "dm": 1493, "q": "らぁ麺屋 ひたむき 大森駅 東京", "st": "大森駅", "pb": "1000-1999"}, {"n": "ラーメン 大 蒲田店", "c": "餐饮", "a": "", "d": "京急蒲田駅 710m (蒲田駅 194m)", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.53(509)", "m": 21, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13040594/", "g": "ラーメン、つけ麺", "k": "ラーメン、つけ麺", "kz": "拉面、蘸面", "mode": "transit", "mt": ["午餐"], "dm": 4310, "q": "ラーメン 大 蒲田店 大森駅 東京", "st": "京急蒲田駅", "pb": "1000-1999"}, {"n": "京華飯店", "c": "餐饮", "a": "", "d": "大森駅 797m", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.34(54)", "m": 21, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13003373/", "g": "中華料理", "k": "中華料理", "kz": "中餐", "mode": "transit", "mt": ["午餐"], "dm": 1507, "q": "京華飯店 大森駅 東京", "st": "大森駅", "pb": "2000-2999"}, {"n": "寳華園", "c": "餐饮", "a": "", "d": "京急蒲田駅 682m (蒲田駅 172m)", "h": "", "p": "-", "x": "", "r": "3.49(482)", "m": 21, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13062151/", "g": "中華料理、焼きそば、食堂", "k": "中華料理、焼きそば、食堂", "kz": "荞麦面、中餐、食堂", "mode": "transit", "mt": ["午餐"], "dm": 4282, "q": "寳華園 大森駅 東京", "st": "京急蒲田駅", "pb": ""}, {"n": "蒲田鳥久 本店", "c": "餐饮", "a": "", "d": "梅屋敷駅 540m", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.53(720)", "m": 21, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13003306/", "g": "からあげ、焼き鳥、弁当", "k": "からあげ、焼き鳥、弁当", "kz": "烤鸡串", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 3740, "q": "蒲田鳥久 本店 大森駅 東京", "st": "梅屋敷駅", "pb": "1000-1999"}, {"n": "麺屋にぼじ", "c": "餐饮", "a": "", "d": "京急蒲田駅 751m (蒲田駅 114m)", "h": "", "p": "-", "x": "", "r": "3.50(148)", "m": 21, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13308446/", "g": "ラーメン", "k": "ラーメン", "kz": "拉面", "mode": "transit", "mt": ["午餐"], "dm": 4351, "q": "麺屋にぼじ 大森駅 東京", "st": "京急蒲田駅", "pb": ""}, {"n": "うどん038", "c": "餐饮", "a": "", "d": "京急蒲田駅 763m (蒲田駅 129m)", "h": "", "p": "-", "x": "", "r": "3.55(488)", "m": 22, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13188999/", "g": "うどん", "k": "うどん", "kz": "乌冬", "mode": "transit", "mt": ["午餐"], "dm": 4363, "q": "うどん038 大森駅 東京", "st": "京急蒲田駅", "pb": ""}, {"n": "うどん屋 大作", "c": "餐饮", "a": "", "d": "梅屋敷駅 604m (京急蒲田駅 506m)", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.53(205)", "m": 22, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13212106/", "g": "うどん、天ぷら", "k": "うどん、天ぷら", "kz": "乌冬、天妇罗", "mode": "transit", "mt": ["午餐"], "dm": 3804, "q": "うどん屋 大作 大森駅 東京", "st": "梅屋敷駅", "pb": "1000-1999"}, {"n": "もりいろ", "c": "餐饮", "a": "", "d": "梅屋敷駅 626m (大森町駅 74m)", "h": "", "p": "￥5,000～￥5,999", "x": "", "r": "3.70(562)", "m": 22, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131502/13176833/", "g": "そば", "k": "そば", "kz": "荞麦面", "mode": "transit", "mt": ["午餐"], "dm": 3826, "q": "もりいろ 大森駅 東京", "st": "梅屋敷駅", "pb": "3000+"}, {"n": "らーめん亭 ひなり竜王", "c": "餐饮", "a": "", "d": "梅屋敷駅 668m (大森町駅 640m)", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.78(1336)", "m": 22, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13276299/", "g": "ラーメン", "k": "ラーメン", "kz": "拉面", "mode": "transit", "mt": ["午餐"], "dm": 3868, "q": "らーめん亭 ひなり竜王 大森駅 東京", "st": "梅屋敷駅", "pb": "1000-1999"}, {"n": "ホクエツ", "c": "餐饮", "a": "", "d": "梅屋敷駅 657m (大森町駅 579m)", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.47(224)", "m": 22, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13056923/", "g": "洋食", "k": "洋食", "kz": "西餐", "mode": "transit", "mt": ["午餐"], "dm": 3857, "q": "ホクエツ 大森駅 東京", "st": "梅屋敷駅", "pb": "1000-1999"}, {"n": "だし 和食 福もと", "c": "餐饮", "a": "", "d": "梅屋敷駅 743m (京急蒲田駅 123m)", "h": "", "p": "￥6,000～￥7,999", "x": "", "r": "3.40(128)", "m": 23, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13232085/", "g": "日本料理、居酒屋", "k": "日本料理、居酒屋", "kz": "居酒屋、日料", "mode": "transit", "mt": ["居酒屋", "晚餐"], "dm": 3943, "q": "だし 和食 福もと 大森駅 東京", "st": "梅屋敷駅", "pb": "3000+"}, {"n": "とんかつ 大希 蒲田", "c": "餐饮", "a": "", "d": "梅屋敷駅 757m (京急蒲田駅 48m)", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.58(800)", "m": 23, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13263034/", "g": "とんかつ、串揚げ、居酒屋", "k": "とんかつ、串揚げ、居酒屋", "kz": "炸猪排、居酒屋、串烧", "mode": "transit", "mt": ["居酒屋", "午餐", "晚餐"], "dm": 3957, "q": "とんかつ 大希 蒲田 大森駅 東京", "st": "梅屋敷駅", "pb": "2000-2999"}, {"n": "とん汁と玄米の店 檍食堂", "c": "餐饮", "a": "", "d": "梅屋敷駅 747m (京急蒲田駅 104m)", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.59(359)", "m": 23, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13276433/", "g": "食堂", "k": "食堂", "kz": "食堂", "mode": "transit", "mt": ["午餐"], "dm": 3947, "q": "とん汁と玄米の店 檍食堂 大森駅 東京", "st": "梅屋敷駅", "pb": "1000-1999"}, {"n": "ラーメン酒場 轍", "c": "餐饮", "a": "", "d": "梅屋敷駅 753m (京急蒲田駅 119m)", "h": "", "p": "￥1,000～￥1,999", "x": "", "r": "3.42(82)", "m": 23, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13271044/", "g": "ラーメン", "k": "ラーメン", "kz": "拉面", "mode": "transit", "mt": ["午餐"], "dm": 3953, "q": "ラーメン酒場 轍 大森駅 東京", "st": "梅屋敷駅", "pb": "1000-1999"}, {"n": "キッチン直樹", "c": "餐饮", "a": "", "d": "梅屋敷駅 791m (京急蒲田駅 170m)", "h": "", "p": "￥8,000～￥9,999", "x": "", "r": "3.51(244)", "m": 24, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13157931/", "g": "イタリアン、ステーキ、洋食", "k": "イタリアン、ステーキ、洋食", "kz": "意餐、西餐", "mode": "transit", "mt": ["午餐"], "dm": 3991, "q": "キッチン直樹 大森駅 東京", "st": "梅屋敷駅", "pb": "3000+"}, {"n": "金春 本館", "c": "餐饮", "a": "", "d": "梅屋敷駅 789m (京急蒲田駅 130m)", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.49(1872)", "m": 24, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13008262/", "g": "餃子、中華料理、飲茶・点心", "k": "餃子、中華料理、飲茶・点心", "kz": "中餐、饺子", "mode": "transit", "mt": ["午餐"], "dm": 3989, "q": "金春 本館 大森駅 東京", "st": "梅屋敷駅", "pb": "2000-2999"}, {"n": "食事処井戸屋", "c": "餐饮", "a": "", "d": "梅屋敷駅 792m (京急蒲田駅 145m)", "h": "", "p": "-", "x": "", "r": "3.47(289)", "m": 24, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13046697/", "g": "食堂、カレー", "k": "食堂、カレー", "kz": "咖喱、食堂", "mode": "transit", "mt": ["午餐"], "dm": 3992, "q": "食事処井戸屋 大森駅 東京", "st": "梅屋敷駅", "pb": ""}, {"n": "食堂 サビーズ", "c": "餐饮", "a": "", "d": "梅屋敷駅 781m (京急蒲田駅 134m)", "h": "", "p": "￥2,000～￥2,999", "x": "", "r": "3.48(283)", "m": 24, "s": "08 餐饮（食べログ列表补充）", "u": "https://tabelog.com/tokyo/A1315/A131503/13276722/", "g": "洋食、ステーキ、ハンバーグ", "k": "洋食、ステーキ、ハンバーグ", "kz": "西餐", "mode": "transit", "mt": ["午餐"], "dm": 3981, "q": "食堂 サビーズ 大森駅 東京", "st": "梅屋敷駅", "pb": "2000-2999"}, {"n": "VECTOR BEER 大森店", "c": "餐饮", "a": "", "d": "201 m", "h": "", "p": "4,000–4,999", "x": "啤酒/聚会", "r": "3.40（138）", "m": 99, "s": "08 餐饮", "k": "バル・ビアバー", "kz": "酒吧、啤酒吧", "mode": "transit", "dm": 0, "mt": ["居酒屋", "晚餐"], "q": "VECTOR BEER 大森店 大森駅 東京", "u": "", "g": "", "st": "", "pb": "3000+"}, {"n": "ホルモン焼千歳 大森駅前店", "c": "餐饮", "a": "", "d": "73 m", "h": "", "p": "3,000–3,999", "x": "站前便宜", "r": "3.32（87）", "m": 99, "s": "08 餐饮", "k": "ホルモン", "kz": "内脏烧肉", "mode": "transit", "dm": 0, "mt": ["居酒屋", "晚餐"], "q": "ホルモン焼千歳 大森駅前店 大森駅 東京", "u": "", "g": "", "st": "", "pb": "3000+"}, {"n": "焼肉 乙ちゃん 大森ベルポート店", "c": "餐饮", "a": "", "d": "329 m", "h": "", "p": "6,000–7,999", "x": "公司→ベルポート 3 分，约同事方便", "r": "3.22（198）", "m": 99, "s": "08 餐饮", "k": "焼肉", "kz": "烤肉", "mode": "transit", "dm": 0, "mt": ["居酒屋", "晚餐"], "q": "焼肉 乙ちゃん 大森ベルポート店 大森駅 東京", "u": "", "g": "", "st": "", "pb": "3000+"}, {"n": "焼肉白ひげ", "c": "餐饮", "a": "", "d": "233 m", "h": "", "p": "4,000–4,999", "x": "烤肉", "r": "3.39（168）", "m": 99, "s": "08 餐饮", "k": "焼肉", "kz": "烤肉", "mode": "transit", "dm": 0, "mt": ["居酒屋", "晚餐"], "q": "焼肉白ひげ 大森駅 東京", "u": "", "g": "", "st": "", "pb": "3000+"}, {"n": "焼鳥まつ宵 大森本店", "c": "餐饮", "a": "", "d": "281 m", "h": "", "p": "4,000–4,999", "x": "热门，周末建议预约", "r": "3.40（159）", "m": 99, "s": "08 餐饮", "k": "焼き鳥", "kz": "烤鸡串", "mode": "transit", "dm": 0, "mt": ["居酒屋", "晚餐"], "q": "焼鳥まつ宵 大森本店 大森駅 東京", "u": "", "g": "", "st": "", "pb": "3000+"}, {"n": "王府家宴", "c": "餐饮", "a": "", "d": "220 m", "h": "", "p": "3,000–3,999", "x": "中餐口味", "r": "3.32（115）", "m": 99, "s": "08 餐饮", "k": "餃子・四川", "kz": "饺子", "mode": "transit", "dm": 0, "mt": ["午餐"], "q": "王府家宴 大森駅 東京", "u": "", "g": "", "st": "", "pb": "3000+"}, {"n": "鉄板串 燻製 MOKU", "c": "餐饮", "a": "", "d": "233 m", "h": "", "p": "4,000–4,999", "x": "想吃\"非连锁\"的串烧", "r": "3.43（239）", "m": 99, "s": "08 餐饮", "k": "居酒屋・バル", "kz": "居酒屋、酒吧", "mode": "transit", "dm": 0, "mt": ["居酒屋", "晚餐"], "q": "鉄板串 燻製 MOKU 大森駅 東京", "u": "", "g": "", "st": "", "pb": "3000+"}, {"n": "横浜中華街・江戸清 本店", "c": "目的地餐饮", "a": "中華街・関帝廟通り侧", "d": "元町・中華街駅 徒歩约5分（概算）", "h": "", "p": "昼 ≤1,000 円帯（官网平均単価タグ）", "x": "单源；食べ歩き名店", "r": "", "m": 5, "s": "07 住宿/设施/目的地", "k": "食べ歩き（ブタまん）", "kz": "食べ歩き（ブタまん）", "mode": "transit", "dm": 0, "mt": ["正餐"], "q": "横浜中華街・江戸清 本店 中華街・関帝廟通り侧", "u": "", "g": "", "st": "元町・中華街駅", "pb": "1000-1999"}, {"n": "高尾山・高尾山スミカ", "c": "目的地餐饮", "a": "ケーブルカー「高尾山駅」前", "d": "高尾山口駅→ケーブルカー約6分", "h": "", "p": "未查到", "x": "单源；\"天狗焼\"発祥", "r": "", "m": 6, "s": "07 住宿/设施/目的地", "k": "軽食/土産", "kz": "軽食/土産", "mode": "transit", "dm": 0, "mt": ["正餐"], "q": "高尾山・高尾山スミカ ケーブルカー「高尾山駅」前", "u": "", "g": "", "st": "高尾山口駅", "pb": ""}, {"n": "川越・小川菊", "c": "目的地餐饮", "a": "蔵造りの町並み・時の鐘周辺", "d": "川越駅→バス/徒歩（約20分概算）", "h": "", "p": "未查到", "x": "单源；200 年老铺", "r": "", "m": 20, "s": "07 住宿/设施/目的地", "k": "うなぎ", "kz": "鳗鱼", "mode": "transit", "dm": 0, "mt": ["午餐"], "q": "川越・小川菊 蔵造りの町並み・時の鐘周辺", "u": "", "g": "", "st": "川越駅", "pb": ""}, {"n": "国営ひたち海浜公園・グラスハウス（Sea Side Cafe）", "c": "目的地餐饮", "a": "太平洋望むガラス館", "d": "園内", "h": "", "p": "未查到", "x": "单源；名物ソフトクリーム/ほしいも", "r": "", "m": 99, "s": "07 住宿/设施/目的地", "k": "カフェ", "kz": "咖啡", "mode": "transit", "dm": 0, "mt": ["咖啡"], "q": "国営ひたち海浜公園・グラスハウス（Sea Side Cafe） 太平洋望むガラス館", "u": "", "g": "", "st": "", "pb": ""}, {"n": "国営ひたち海浜公園・レイクサイドカフェ", "c": "目的地餐饮", "a": "池のほとり", "d": "園内", "h": "", "p": "未查到", "x": "单源；外带轻食", "r": "", "m": 99, "s": "07 住宿/设施/目的地", "k": "軽食テイクアウト", "kz": "軽食テイクアウト", "mode": "transit", "dm": 0, "mt": ["正餐"], "q": "国営ひたち海浜公園・レイクサイドカフェ 池のほとり", "u": "", "g": "", "st": "", "pb": ""}, {"n": "国営ひたち海浜公園・記念の森レストハウス", "c": "目的地餐饮", "a": "公園「記念の森」エリア", "d": "園内（みはらしエリア寄り）", "h": "", "p": "未查到（官网未标价）", "x": "单源；隐蔽咖啡露台", "r": "", "m": 99, "s": "07 住宿/设施/目的地", "k": "園内カフェ", "kz": "咖啡", "mode": "transit", "dm": 0, "mt": ["咖啡"], "q": "国営ひたち海浜公園・記念の森レストハウス 公園「記念の森」エリア", "u": "", "g": "", "st": "", "pb": ""}, {"n": "川越・いちのや", "c": "目的地餐饮", "a": "同エリア", "d": "同上", "h": "", "p": "未查到", "x": "单源；天保 3 年创业", "r": "", "m": 99, "s": "07 住宿/设施/目的地", "k": "うなぎ", "kz": "鳗鱼", "mode": "transit", "dm": 0, "mt": ["午餐"], "q": "川越・いちのや 同エリア", "u": "", "g": "", "st": "", "pb": ""}, {"n": "川越・東屋", "c": "目的地餐饮", "a": "同エリア", "d": "同上", "h": "", "p": "未查到", "x": "单源；明治元年创业", "r": "", "m": 99, "s": "07 住宿/设施/目的地", "k": "うなぎ", "kz": "鳗鱼", "mode": "transit", "dm": 0, "mt": ["午餐"], "q": "川越・東屋 同エリア", "u": "", "g": "", "st": "", "pb": ""}, {"n": "日光・日光さかえや（揚げゆばまんじゅう本舗）", "c": "目的地餐饮", "a": "日光市松原町10-1・東武日光駅 徒歩30秒", "d": "9:30–17:00（不定休・几乎无休）", "h": "", "p": "未查到", "x": "单源；车站旁最方便", "r": "", "m": 99, "s": "07 住宿/设施/目的地", "k": "湯波/土産", "kz": "湯波/土産", "mode": "transit", "dm": 0, "mt": ["正餐"], "q": "日光・日光さかえや（揚げゆばまんじゅう本舗） 日光市松原町10-1・東武日光駅 徒歩30秒", "u": "", "g": "", "st": "", "pb": ""}, {"n": "横浜中華街・中華街大飯店", "c": "目的地餐饮", "a": "中華街", "d": "同上", "h": "", "p": "未查到具体（食べ放題）", "x": "单源；想吃饱可选", "r": "", "m": 99, "s": "07 住宿/设施/目的地", "k": "オーダー式食べ放題", "kz": "オーダー式食べ放題", "mode": "transit", "dm": 0, "mt": ["正餐"], "q": "横浜中華街・中華街大飯店 中華街", "u": "", "g": "", "st": "", "pb": ""}, {"n": "横浜中華街・崎陽軒 中華街シウマイBAR店", "c": "目的地餐饮", "a": "中華街", "d": "同上", "h": "", "p": "昼 ≤1,000 円帯", "x": "单源；横浜土産定番", "r": "", "m": 99, "s": "07 住宿/设施/目的地", "k": "シウマイ/土産", "kz": "シウマイ/土産", "mode": "transit", "dm": 0, "mt": ["正餐"], "q": "横浜中華街・崎陽軒 中華街シウマイBAR店 中華街", "u": "", "g": "", "st": "", "pb": "1000-1999"}, {"n": "横浜中華街・慶福楼本店", "c": "目的地餐饮", "a": "中華街・市場通り", "d": "同上", "h": "", "p": "6,600 円（税込）全10品、+2,000 円飲み放題（2026/10–12 予定）", "x": "单源；唯一抓到确切菜价", "r": "", "m": 99, "s": "07 住宿/设施/目的地", "k": "上海蟹コース（季節）", "kz": "上海蟹コース（季節）", "mode": "transit", "dm": 0, "mt": ["正餐"], "q": "横浜中華街・慶福楼本店 中華街・市場通り", "u": "", "g": "", "st": "", "pb": "~999"}, {"n": "足利フラワーパーク（園内食）", "c": "目的地餐饮", "a": "—", "d": "—", "h": "", "p": "未查到", "x": "待确认 同上；园内食以官网/入园时导览图为准", "r": "", "m": 99, "s": "07 住宿/设施/目的地", "k": "—", "kz": "—", "mode": "transit", "dm": 0, "mt": ["正餐"], "q": "足利フラワーパーク（園内食） —", "u": "", "g": "", "st": "", "pb": ""}, {"n": "高尾山ビアマウント", "c": "目的地餐饮", "a": "高尾山", "d": "—", "h": "", "p": "未查到", "x": "单源；仅春夏营业", "r": "", "m": 99, "s": "07 住宿/设施/目的地", "k": "ビアガーデン（季节营业）", "kz": "啤酒吧", "mode": "transit", "dm": 0, "mt": ["居酒屋", "晚餐"], "q": "高尾山ビアマウント 高尾山", "u": "", "g": "", "st": "", "pb": ""}, {"n": "高尾山・天狗黒豆まんじゅう / 天狗焼", "c": "目的地餐饮", "a": "高尾山各売店・オンライン", "d": "—", "h": "", "p": "未查到", "x": "单源", "r": "", "m": 99, "s": "07 住宿/设施/目的地", "k": "土産菓子", "kz": "土産菓子", "mode": "transit", "dm": 0, "mt": ["正餐"], "q": "高尾山・天狗黒豆まんじゅう / 天狗焼 高尾山各売店・オンライン", "u": "", "g": "", "st": "", "pb": ""}, {"n": "まいばすけっと（南大井・公司旁）", "c": "超市", "a": "品川区南大井（OSM 坐标 35.59010,139.73508）", "d": "公司步行约2分（直線115m）", "h": "07:00-24:00（OSM 标签）", "p": "距公司最近的超市候选", "x": "时间仅 OSM 一源，店名全称未查到，需现场确认", "r": "", "m": 2, "s": "05 购物/生活服务", "k": "小型超市", "kz": "小型超市", "mode": "walk", "dm": 160, "mt": [], "q": "まいばすけっと（南大井・公司旁） 品川区南大井（OSM 坐标 35.59010,139.73508）", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "まいばすけっと 大森駅前店", "c": "超市", "a": "大田区大森北1丁目（OSM 坐标 35.58984,139.72949）", "d": "公司步行约9分 / 大森駅 徒步约2分", "h": "未查到（OSM 无 hours）", "p": "小型店、价格低于便利店；官方站按清单不可达", "x": "仅 1 平台可核，营业时间未查到", "r": "", "m": 9, "s": "05 购物/生活服务", "k": "小型超市", "kz": "小型超市", "mode": "walk", "dm": 720, "mt": [], "q": "まいばすけっと 大森駅前店 大田区大森北1丁目（OSM 坐标 35.58984,139.72949）", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "西友 大森店", "c": "超市", "a": "東京都品川区南大井6-27-25", "d": "公司步行约8～9分 / 大森駅東口 徒步4分（官方）", "h": "年中無休・24時間営業（一部売場除く）：1F・B1F 24h、5F 10:00-22:00、4F 10:00-21:00、3F 10:00-22:00、2F 10:00-20:00", "p": "免税 9:00-1:00；现金/信用卡/PayPay/楽天ペイ/d払い/交通系IC；馆内 Seria(4F)・ヤマダ電機・BOOKOFF・リッツクリーニング(2F)", "x": "不矛盾但 OSM 缺时间；食品层 24h 可用（深夜入口是否关闭需现场确认）", "r": "", "m": 9, "s": "05 购物/生活服务", "k": "超市", "kz": "超市", "mode": "walk", "dm": 720, "mt": [], "q": "西友 大森店 東京都品川区南大井6-27-25", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "東急ストア 大森店（アトレ大森 B1F）", "c": "超市", "a": "大森駅ビル アトレ大森 B1F（番地未核对）", "d": "公司步行约10分 / 大森駅 直結（改札から约1分）", "h": "7:00-0:00", "p": "生鮮・弁当・惣菜；JRE POINT 对象外；アトレ大森 2027年春リニューアル予定（实习期 2027/3-5 可能受影响）", "x": "营业时间仅 1 个平台可证；官方页不可达，需现场确认", "r": "", "m": 10, "s": "05 购物/生活服务", "k": "超市", "kz": "超市", "mode": "walk", "dm": 800, "mt": [], "q": "東急ストア 大森店（アトレ大森 B1F） 大森駅ビル アトレ大森 B1F（番地未核对）", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "肉のハナマサ 大森店", "c": "超市", "a": "東京都大田区山王2-1-5 駅ビルRARA B2", "d": "公司步行约11分 / 大森駅 徒步约1分（駅ビル直結）", "h": "9:00-21:00（无 24h）", "p": "大包装肉/蔬菜便宜；VISA/Master/JCB/DISCOVER/Diners/Amex/銀聯；Suica/PASMO/QUICPay/iD/Edy；宅配覆盖南大井2～6丁目（公司所在地），宅配 03-5718-8729", "x": "地址一致；「业务超市 24h」不成立——21:00 关门", "r": "", "m": 11, "s": "05 购物/生活服务", "k": "超市（肉/业务用）", "kz": "超市（肉/业务用）", "mode": "walk", "dm": 880, "mt": [], "q": "肉のハナマサ 大森店 東京都大田区山王2-1-5 駅ビルRARA B2", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "スーパーオオゼキ 大森駅前店", "c": "超市", "a": "東京都大田区山王2-4-1 大森駅前ビル B1", "d": "公司步行约12分 / 大森駅西口 徒步1分", "h": "10:00-21:00", "p": "现金/信用卡/電子マネー/コード決済 全対応；无停车场", "x": "无冲突；此区关门最早（21:00）", "r": "", "m": 12, "s": "05 购物/生活服务", "k": "超市", "kz": "超市", "mode": "walk", "dm": 960, "mt": [], "q": "スーパーオオゼキ 大森駅前店 東京都大田区山王2-4-1 大森駅前ビル B1", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "Luz大森（大森駅ビル）", "c": "商场", "a": "東京都大田区大森北1-10-14（DAISO 官方店页口径）", "d": "公司步行约11分（估算）/ 大森駅東口 徒步约2分（官方徒步数据未取到）", "h": "整馆未查到；2F DAISO 10:00-21:00；2F ドラッグセガミ 9:00-21:00（05 文件 OSM 口径）", "p": "入馆免费；停车・驻轮 未查到", "x": "官网 luz-omori.com 三次抓取均 TypeError 失败 → 整馆营业时间未查到；只能用 2F 租户时间兜底", "r": "", "m": 11, "s": "09 商场", "k": "车站大楼", "kz": "车站大楼", "mode": "walk", "dm": 880, "mt": [], "q": "Luz大森（大森駅ビル） 東京都大田区大森北1-10-14（DAISO 官方店页口径）", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "アトレ大森", "c": "商场", "a": "東京都大田区大森北1-6-16（JR大森駅直結）", "d": "公司步行约11分（估算）/ 大森駅 直結（改札から约1分）", "h": "购物层 10:00-21:00；B1 東急ストア 7:00-24:00；餐厅层 11:00-22:30；アトレ大森2 因店而异", "p": "入馆免费；停车 30分330円、12h最大2,100円，当日购物满3,000円减2小时30分；驻轮2小时免费", "x": "同运营方两页时间不矛盾；2027 春整馆改造，实习期 2027/3–5 可能受影响，去前必查", "r": "", "m": 11, "s": "09 商场", "k": "车站大楼", "kz": "车站大楼", "mode": "walk", "dm": 880, "mt": [], "q": "アトレ大森 東京都大田区大森北1-6-16（JR大森駅直結）", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "アトレ品川", "c": "商场", "a": "東京都港区港南2-18-1", "d": "公司步行约15分（估算）/ 大森駅→品川駅 约7分＋港南口側（官方页只给地址）", "h": "7:00-23:00（整馆，清单内最长）；部分店不同", "p": "入馆免费；停车 128台 30分400円、机械式24h最大1,700円、单店满5,000円120分；驻轮 7:00-24:00 免费", "x": "时间仅官方一源；通勤站内商场，食品层（成城石井等）早开晚关好用", "r": "", "m": 15, "s": "09 商场", "k": "车站大楼", "kz": "车站大楼", "mode": "walk", "dm": 1200, "mt": [], "q": "アトレ品川 東京都港区港南2-18-1", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "ウィング高輪（EAST/WEST）", "c": "商场", "a": "東京都港区高輪4-10-18（WEST・店内 マツモトキヨシ 店址口径；设施主地址未核实）", "d": "公司步行约15分（估算）/ 大森駅→品川駅 约7分＋高輪口側", "h": "设施级未查到；店内マツモトキヨシ 平日 10:00-21:00、土日祝 10:00-20:00、無休", "p": "未查到", "x": "设施级营业时间未查到，只有店铺级可证；品川站高轮口侧，可与アトレ品川串联", "r": "", "m": 15, "s": "09 商场", "k": "车站大楼", "kz": "车站大楼", "mode": "walk", "dm": 1200, "mt": [], "q": "ウィング高輪（EAST/WEST） 東京都港区高輪4-10-18（WEST・店内 マツモトキヨシ 店址口径；设施主地址未核实）", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "アトレ大井町", "c": "商场", "a": "アトレ大井町 品川区大井1-2-1 ／ アトレ大井町2 品川区大井1-1-1", "d": "公司步行约18分（估算约1.4km）/ 大森駅→大井町駅 约3分＋駅前", "h": "购物 10:00-21:00；餐厅 11:00-22:30（部分店不同）", "p": "入馆免费；停车 きゅりあん地下 30分220円、服务券2张1小时、单店满2,000円1h・满4,000円2h（最多2h）", "x": "时间口径一致；官方页未写「駅から徒歩」分钟，距离按 JR 3分＋駅前估算", "r": "", "m": 18, "s": "09 商场", "k": "车站大楼", "kz": "车站大楼", "mode": "walk", "dm": 1440, "mt": [], "q": "アトレ大井町 アトレ大井町 品川区大井1-2-1 ／ アトレ大井町2 品川区大井1-1-1", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "阪急大井町ガーデン", "c": "商场", "a": "東京都品川区大井1-50-5", "d": "公司步行约18分（估算）/ 大井町駅「中央口」改札右→徒歩1分（官方）；りんかい線 A2出口 1分；東急大井町線 3分", "h": "逐店不同：阪急百貨店 大井食品館 10:00-20:00；ファミリーマート 24h；ココカラファイン 10:00-20:00；おふろの王様 9:30-翌8:30；日高屋 10:00-24:00", "p": "入馆免费；停车 220台 300円/30分、24h最大1,600円（特定日除外）；驻轮首90分免费", "x": "两页一致；营业时间因店而异，无统一馆时间；浴室「おふろの王様」到翌朝 8:30", "r": "", "m": 18, "s": "09 商场", "k": "商场（站前复合）", "kz": "商场（站前复合）", "mode": "walk", "dm": 1440, "mt": [], "q": "阪急大井町ガーデン 東京都品川区大井1-50-5", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "グランデュオ蒲田", "c": "商场", "a": "〒144-0051 東京都大田区西蒲田7-68-1", "d": "公司步行约19分（估算）/ 大森駅→蒲田駅 约5分＋JR蒲田駅直結（官方）", "h": "西館1F・2～6F・8F・東館1～5F 全日 10:00-20:30；西館B1F・東館B1F 平日 10:00-21:00、日祝 10:00-20:30；レストラン 全日 11:00-22:00", "p": "入馆免费；驻车 東館立体 30分300円（满2,000円1h・4,000円2h，最多2h）、大田区営アロマ 30分200円（297台）", "x": "两页一致，无冲突；与東急プラザ蒲田 步行约3-5分，可连逛", "r": "", "m": 19, "s": "09 商场", "k": "车站大楼", "kz": "车站大楼", "mode": "walk", "dm": 1520, "mt": [], "q": "グランデュオ蒲田 〒144-0051 東京都大田区西蒲田7-68-1", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "東急プラザ蒲田", "c": "商场", "a": "〒144-0051 東京都大田区西蒲田7-69-1", "d": "公司步行约19分（估算）/ 大森駅→蒲田駅 约5分＋JR蒲田駅 直結（官方）", "h": "全馆 10:00-20:00（本清单最早关门）；特例：タリーズ 7:00-22:00、コクミンドラッグ 7:00-22:00、東急ストア 10:00-21:00（別館 7:00-24:00）、かまたえん RF 10:00-18:00", "p": "入馆免费；停车 タイムズ 500円/30分（平日最大2,500円）、大田区営アロマ 200円/30分（24h最大1,800円）", "x": "两页一致；20:00 闭馆，下班后去要赶早", "r": "", "m": 19, "s": "09 商场", "k": "商场", "kz": "商场", "mode": "walk", "dm": 1520, "mt": [], "q": "東急プラザ蒲田 〒144-0051 東京都大田区西蒲田7-69-1", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "アトレ川崎", "c": "商场", "a": "神奈川県川崎市川崎区駅前本町26-1", "d": "公司步行约23分（估算）/ 大森駅→川崎駅 约9分＋川崎駅東口側（官方页只给地址）", "h": "购物 10:00-21:00；餐厅 11:00-22:30", "p": "入馆免费；停车 155台 30分300円、当日24h最大1,000円（土日祝除く）、单店满2,000円1h・3,000円2h；驻轮2h免费", "x": "一致；与ラゾーナ・ルフロン同站，可一日串三馆", "r": "", "m": 23, "s": "09 商场", "k": "车站大楼", "kz": "车站大楼", "mode": "walk", "dm": 1840, "mt": [], "q": "アトレ川崎 神奈川県川崎市川崎区駅前本町26-1", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "ラゾーナ川崎プラザ", "c": "商场", "a": "〒212-8576 神奈川県川崎市幸区堀川町72-1", "d": "公司步行约23分（估算）/ 大森駅→川崎駅 约9分＋川崎駅西口側（官方 access 页未写徒步分钟）", "h": "専門店 10:00-21:00；飲食店 11:00-22:00；グラン・フード 10:00-21:00；109シネマズ川崎 8:30-24:00", "p": "入馆免费；停车・驻轮 未查到（本次未取 parking 页明细）", "x": "时间取官方首页；停车费未查到；影院到 24:00 是川崎夜里最晚", "r": "", "m": 23, "s": "09 商场", "k": "商场", "kz": "商场", "mode": "walk", "dm": 1840, "mt": [], "q": "ラゾーナ川崎プラザ 〒212-8576 神奈川県川崎市幸区堀川町72-1", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "川崎ルフロン", "c": "商场", "a": "神奈川県川崎市川崎区日進町1-11", "d": "公司步行约23分（估算）/ 大森駅→川崎駅 约9分＋JR川崎駅東口 徒步1分（官方）、京急川崎駅 徒步5分（官方）", "h": "ルフロン 10:00-21:00（一部対象外）；ヨドバシカメラ 9:30-22:00；ライフ 9:00-24:00；パシオス 10:00-20:00", "p": "入馆免费；停车 300台 30分400円、平日当日最大1,700円、满1,000円1h・满3,000円2h", "x": "两页一致；ヨドバシ 9:30-22:00＋ライフ 9-24 是川崎夜里最实用的两个", "r": "", "m": 23, "s": "09 商场", "k": "商场", "kz": "商场", "mode": "walk", "dm": 1840, "mt": [], "q": "川崎ルフロン 神奈川県川崎市川崎区日進町1-11", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "ダイバーシティ東京 プラザ", "c": "商场", "a": "〒135-0064 東京都江東区青海1-1-10", "d": "公司步行约25-30分（含电车，估算）/ 大森駅→大井町駅 约3分→りんかい線 東京テレポート 约13分→B出口 徒步3分（官方）", "h": "ショップ・サービス 平日 11:00-20:00、土日祝 10:00-21:00；フードコート 平日 11:00-21:00、土日祝 10:00-22:00；飲食店 11:00-22:00；1F セブンイレブン 24h", "p": "入馆免费；停车・驻轮 未查到（另行 parking 页）", "x": "两页一致；平日只到 20:00，周末才到 21:00", "r": "", "m": 30, "s": "09 商场", "k": "商场", "kz": "商场", "mode": "walk", "dm": 2400, "mt": [], "q": "ダイバーシティ東京 プラザ 〒135-0064 東京都江東区青海1-1-10", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "アクアシティお台場", "c": "商场", "a": "東京都港区台場1-7-1（通称地址；官方页本次未列，去前请地图确认）", "d": "公司步行约30-35分（含电车，估算）/ 大森駅→新橋駅 约12分→ゆりかもめ 新橋→台場 约15分→徒步1分（官方）", "h": "物販・フードコート・カフェ 平日 11:00-20:00、土日祝 11:00-21:00；レストラン 11:00-23:00；東京ラーメン国技館 舞 11:00-23:00（L.O.22:00）", "p": "入馆免费；停车・驻轮 未查到（另行 parking 页）", "x": "两页一致；餐厅到 23:00（清单内最晚），与ダイバーシティ步行约10分", "r": "", "m": 35, "s": "09 商场", "k": "商场", "kz": "商场", "mode": "walk", "dm": 2800, "mt": [], "q": "アクアシティお台場 東京都港区台場1-7-1（通称地址；官方页本次未列，去前请地图确认）", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "セブン-イレブン 品川南大井3丁目店", "c": "便利店", "a": "品川区南大井3丁目（OSM 坐标 35.58775,139.73455）", "d": "公司步行约3分 / 大森海岸駅 徒步约1分", "h": "24h（OSM 标签）", "p": "同址设 セブン銀行ATM（海外卡可否未在页面确认）；7-11 官网按清单不可达", "x": "店名一致；7-11 官网不可达，营业时间仅 OSM", "r": "", "m": 3, "s": "05 购物/生活服务", "k": "便利店", "kz": "便利店", "mode": "walk", "dm": 240, "mt": [], "q": "セブン-イレブン 品川南大井3丁目店 品川区南大井3丁目（OSM 坐标 35.58775,139.73455）", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "ファミリーマート 南大井三丁目店", "c": "便利店", "a": "品川区南大井3丁目（OSM 坐标 35.58780,139.73617）", "d": "公司步行约3分 / 大森海岸駅 徒步约3分", "h": "未查到", "p": "ATM・免税", "x": "名称一致；营业时间未查到", "r": "", "m": 3, "s": "05 购物/生活服务", "k": "便利店", "kz": "便利店", "mode": "walk", "dm": 240, "mt": [], "q": "ファミリーマート 南大井三丁目店 品川区南大井3丁目（OSM 坐标 35.58780,139.73617）", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "ローソン 大森海岸駅前店", "c": "便利店", "a": "品川区南大井（OSM 坐标 35.58880,139.73386）", "d": "公司步行约3分 / 大森海岸駅 徒步约3分", "h": "未查到（OSM 该点无 hours）", "p": "ATM・免税；可用交通系/信用卡", "x": "两平台名称一致；营业时间未查到（便利店通常 24h，但不写死）", "r": "", "m": 3, "s": "05 购物/生活服务", "k": "便利店", "kz": "便利店", "mode": "walk", "dm": 240, "mt": [], "q": "ローソン 大森海岸駅前店 品川区南大井（OSM 坐标 35.58880,139.73386）", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "NewDays 大森駅", "c": "便利店", "a": "大森駅構内（OSM 坐标 35.58911,139.72822）", "d": "公司步行约11分 / 大森駅 構内", "h": "平日 6:00-23:30、土 6:00-23:00、日祝 7:00-22:00（OSM）", "p": "站内小卖店＋ATM", "x": "仅 1 平台，时间需现场确认", "r": "", "m": 11, "s": "05 购物/生活服务", "k": "便利店（站内）", "kz": "便利店（站内）", "mode": "walk", "dm": 880, "mt": [], "q": "NewDays 大森駅 大森駅構内（OSM 坐标 35.58911,139.72822）", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "ウエルシア薬局 アトレ大井町店", "c": "药妆", "a": "アトレ大井町 2F（大井町駅ビル）", "d": "大井町駅 直結（徒步约1分）", "h": "10:00-21:00", "p": "JRE POINT 対象；税免/支付方式未在页面确认；TEL 店舗03-5709-7289・調剤03-5718-6662", "x": "无冲突；21:00 关门，比大森店晚开门早关门", "r": "", "m": 1, "s": "10 药妆", "k": "药妆・调济", "kz": "药妆・调济", "mode": "transit", "dm": 0, "mt": [], "q": "ウエルシア薬局 アトレ大井町店 アトレ大井町 2F（大井町駅ビル）", "u": "", "g": "", "st": "大井町駅", "pb": ""}, {"n": "サンドラッグ グランデュオ蒲田店", "c": "药妆", "a": "グランデュオ蒲田 東館1F（蒲田駅ビル）", "d": "蒲田駅 直結（徒步约1分）", "h": "9:00-23:00", "p": "免税/支付方式未在页面确认；TEL 03-6715-7927", "x": "无冲突；蒲田侧最晚关门（23:00）", "r": "", "m": 1, "s": "10 药妆", "k": "药妆", "kz": "药妆", "mode": "transit", "dm": 0, "mt": [], "q": "サンドラッグ グランデュオ蒲田店 グランデュオ蒲田 東館1F（蒲田駅ビル）", "u": "", "g": "", "st": "蒲田駅", "pb": ""}, {"n": "マツモトキヨシ 蒲田駅西口店", "c": "药妆", "a": "東京都大田区西蒲田7-66-3 井門蒲田御園ビル", "d": "蒲田駅西口 徒步约2分（估算）", "h": "10:00-22:00（無休）", "p": "免税/支付方式未查到（页未列）；TEL 03-5480-5070", "x": "西口店 1 源官方；东口店与西口店勿混；西口店免税需现场确认", "r": "", "m": 2, "s": "10 药妆", "k": "药妆", "kz": "药妆", "mode": "transit", "dm": 0, "mt": [], "q": "マツモトキヨシ 蒲田駅西口店 東京都大田区西蒲田7-66-3 井門蒲田御園ビル", "u": "", "g": "", "st": "蒲田駅", "pb": ""}, {"n": "スギ薬局 大井町店", "c": "药妆", "a": "東京都品川区二葉1-11-5 メイツ大井町1F", "d": "大井町駅 徒步约5分（估算）", "h": "9:00-22:00（全日・无定休）", "p": "免税○、宅配○、水自販機；信用卡/条码支付/IC/スギPay；TEL 03-6426-2402", "x": "无冲突", "r": "", "m": 5, "s": "10 药妆", "k": "药妆・调济", "kz": "药妆・调济", "mode": "transit", "dm": 0, "mt": [], "q": "スギ薬局 大井町店 東京都品川区二葉1-11-5 メイツ大井町1F", "u": "", "g": "", "st": "大井町駅", "pb": ""}, {"n": "ツルハドラッグ 川崎駅前大通り店", "c": "药妆", "a": "神奈川県川崎市川崎区砂子2-6-26", "d": "川崎駅東口 徒步约5分（估算）", "h": "物販 9:00-22:00（无定休）；調剤 平日10:00-19:00（中休14-15）、土10:00-14:00、日祝休", "p": "免税店○、宅配○、収納代行；銀聯/WeChat Pay/Alipay+/PayPay/楽天ペイ等全対応；TEL 044-276-9571", "x": "无冲突；唯一确认可用银联+支付宝的店", "r": "", "m": 5, "s": "10 药妆", "k": "药妆・调济", "kz": "药妆・调济", "mode": "transit", "dm": 0, "mt": [], "q": "ツルハドラッグ 川崎駅前大通り店 神奈川県川崎市川崎区砂子2-6-26", "u": "", "g": "", "st": "川崎駅", "pb": ""}, {"n": "くすりの福太郎 大森店", "c": "药妆", "a": "大田区大森北（OSM 坐标 35.58491,139.73073）", "d": "公司步行约10分 / 大森駅 徒步约8分", "h": "未查到", "p": "未查到", "x": "仅 1 平台，时间未查到", "r": "", "m": 10, "s": "05 购物/生活服务", "k": "药妆", "kz": "药妆", "mode": "walk", "dm": 800, "mt": [], "q": "くすりの福太郎 大森店 大田区大森北（OSM 坐标 35.58491,139.73073）", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "スギ薬局 大森駅前店", "c": "药妆", "a": "東京都大田区大森北1-1-10 大森シティビル1F", "d": "公司步行约12分 / 大森駅前 徒步约2分", "h": "9:00-23:00 全日（无定休）", "p": "免税、处方、化妆品、日配食品、酒；信用卡/条码支付/IC/スギPay；电话 03-5763-5745", "x": "无冲突；本区最晚关门的药妆（23:00）", "r": "", "m": 12, "s": "05 购物/生活服务", "k": "药妆", "kz": "药妆", "mode": "walk", "dm": 960, "mt": [], "q": "スギ薬局 大森駅前店 東京都大田区大森北1-1-10 大森シティビル1F", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "ドラッグセガミ Luz大森店", "c": "药妆", "a": "東京都大田区大森北1-10-14 Luz大森（2F 与 DAISO 同楼）", "d": "公司步行约12分 / 大森駅 徒步约2分", "h": "9:00-21:00（OSM 标签）", "p": "药妆＋調剤；电话 03-5767-7045", "x": "仅 1 平台；营业时间需现场确认", "r": "", "m": 12, "s": "05 购物/生活服务", "k": "药妆", "kz": "药妆", "mode": "walk", "dm": 960, "mt": [], "q": "ドラッグセガミ Luz大森店 東京都大田区大森北1-10-14 Luz大森（2F 与 DAISO 同楼）", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "ドラッグセガミ 大森店", "c": "药妆", "a": "東京都大田区山王2-8-26", "d": "公司步行约12分 / 大森駅 徒步约1分", "h": "10:00-22:00（OSM 标签）", "p": "药妆（无調剤）；电话 03-3776-3234", "x": "仅 1 平台；与「Luz大森店」不是同一店，勿混", "r": "", "m": 12, "s": "05 购物/生活服务", "k": "药妆", "kz": "药妆", "mode": "walk", "dm": 960, "mt": [], "q": "ドラッグセガミ 大森店 東京都大田区山王2-8-26", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "Seria イトーヨーカドー大森店", "c": "百元/折扣", "a": "大田区大森北2-13-1 イトーヨーカドー大森店内", "d": "公司步行约6分（馆内）", "h": "未查到（设施 10:00-22:00）", "p": "100 円为主（部分 300/500 円）", "x": "店名 2 平台一致；营业时间未查到", "r": "", "m": 6, "s": "05 购物/生活服务", "k": "百元店", "kz": "百元店", "mode": "walk", "dm": 480, "mt": [], "q": "Seria イトーヨーカドー大森店 大田区大森北2-13-1 イトーヨーカドー大森店内", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "Seria 西友大森店（4F）", "c": "百元/折扣", "a": "品川区南大井6-27-25 西友大森店 4F", "d": "公司步行约8分（馆内）", "h": "4F 10:00-21:00（西友馆内时间）", "p": "100 円为主；电话 03-6423-0226", "x": "1 平台确认；营业时间绑西友 4F 时间，需现场确认", "r": "", "m": 8, "s": "05 购物/生活服务", "k": "百元店", "kz": "百元店", "mode": "walk", "dm": 640, "mt": [], "q": "Seria 西友大森店（4F） 品川区南大井6-27-25 西友大森店 4F", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "DAISO Luz大森店", "c": "百元/折扣", "a": "東京都大田区大森北1-10-14 Luz大森 2階", "d": "公司步行约12分 / 大森駅 徒步约2分", "h": "10:00-21:00", "p": "100 円为主；信用卡/電子マネー/PayPay/auPay/メルペイ/楽天ペイ/Alipay/WeChat Pay/d払い；5円コピー・写真プリント", "x": "名称/地址一致；另见「ダイソー大森駅前店」快照，是否同一店未确认", "r": "", "m": 12, "s": "05 购物/生活服务", "k": "百元店", "kz": "百元店", "mode": "walk", "dm": 960, "mt": [], "q": "DAISO Luz大森店 東京都大田区大森北1-10-14 Luz大森 2階", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "MEGAドン・キホーテ 大森山王店", "c": "百元/折扣", "a": "東京都大田区山王3-6-3", "d": "公司步行约15分（按大森駅10分+绕行估算）/ 大森駅西口 徒步10分（官方）", "h": "8:00-3:00（定休なし）", "p": "食品/日用品/家电折扣、免税、銀聯/信用卡/電子マネー；楼内 ニトリ・ガスト・バーガーキング；电话 0570-071-411", "x": "无冲突；不是 24h，凌晨 3:00-8:00 关门", "r": "", "m": 15, "s": "05 购物/生活服务", "k": "折扣店", "kz": "折扣店", "mode": "walk", "dm": 1200, "mt": [], "q": "MEGAドン・キホーテ 大森山王店 東京都大田区山王3-6-3", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "セブン銀行ATM（セブン-イレブン 品川南大井3丁目店）", "c": "邮局/银行", "a": "品川区南大井3丁目（公司旁 7-11 内）", "d": "公司步行约3分", "h": "24h（便利店同营业）", "p": "海外発行卡取现（Visa/Master 常见，具体费率/可否未查到）", "x": "位置 2 源一致；海外卡手续费未查到", "r": "", "m": 3, "s": "05 购物/生活服务", "k": "ATM", "kz": "ATM", "mode": "walk", "dm": 240, "mt": [], "q": "セブン銀行ATM（セブン-イレブン 品川南大井3丁目店） 品川区南大井3丁目（公司旁 7-11 内）", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "みずほ銀行 大森支店", "c": "邮局/银行", "a": "東京都大田区山王2-5-13", "d": "公司步行约12分 / 大森駅 徒步约2分", "h": "窓口 平日9:00-15:00；ATM 平日6:00-26:00・土8:00-22:00・日祝8:00-21:00", "p": "外国送金仅电视电话预约；2021年起停止外貨両替", "x": "窗口时间一致；ATM 时间以官方页为准", "r": "", "m": 12, "s": "05 购物/生活服务", "k": "银行", "kz": "银行", "mode": "walk", "dm": 960, "mt": [], "q": "みずほ銀行 大森支店 東京都大田区山王2-5-13", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "りそな銀行 大森支店", "c": "邮局/银行", "a": "大田区大森北1-3-3", "d": "公司步行约12分 / 大森駅 徒步约5分", "h": "平日9:00-17:00（OSM）", "p": "ATM", "x": "官方不可达，营业时间仅 OSM", "r": "", "m": 12, "s": "05 购物/生活服务", "k": "银行", "kz": "银行", "mode": "walk", "dm": 960, "mt": [], "q": "りそな銀行 大森支店 大田区大森北1-3-3", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "大森駅前郵便局", "c": "邮局/银行", "a": "東京都大田区大森北1-29-11", "d": "公司步行约12分 / 大森駅 徒步约5分", "h": "郵便窓口 平日9:00-17:00；貯金 9:00-16:00；ATM 平日8:00-21:00・土8:00-20:00・日祝9:00-19:00", "p": "ゆうちょ ATM；国際郵便可；周六日窗口不办", "x": "无冲突；海外卡取现是否可用未查到（ゆうちょ ATM 对外卡有限制，需现场试）", "r": "", "m": 12, "s": "05 购物/生活服务", "k": "邮局", "kz": "邮局", "mode": "walk", "dm": 960, "mt": [], "q": "大森駅前郵便局 東京都大田区大森北1-29-11", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "BOOKOFF SUPER BAZAAR 西友大森店（3F）", "c": "生活服务", "a": "品川区南大井6-27-25 西友大森店 3F", "d": "公司步行约8分", "h": "3F 10:00-22:00（西友馆内）", "p": "二手书/影音/游戏；电话 03-5753-4472", "x": "存在性 1 平台；文具/新书专门店未查到", "r": "", "m": 8, "s": "05 购物/生活服务", "k": "书店/二手", "kz": "书店/二手", "mode": "walk", "dm": 640, "mt": [], "q": "BOOKOFF SUPER BAZAAR 西友大森店（3F） 品川区南大井6-27-25 西友大森店 3F", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "リッツクリーニング 西友大森店（2F）", "c": "生活服务", "a": "品川区南大井6-27-25 西友大森店 2F", "d": "公司步行约8分", "h": "未查到（西友 2F 10:00-20:00）", "p": "干洗/取次；电话 03-3761-0616", "x": "存在性 1 平台，营业时间未查到", "r": "", "m": 8, "s": "05 购物/生活服务", "k": "干洗", "kz": "干洗", "mode": "walk", "dm": 640, "mt": [], "q": "リッツクリーニング 西友大森店（2F） 品川区南大井6-27-25 西友大森店 2F", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "3COINS アトレ大森店", "c": "生活服务", "a": "アトレ大森内（大森駅ビル、番地未核对）", "d": "公司步行约10分 / 大森駅 直結", "h": "未查到（アトレ营业时间内）", "p": "300 円均一杂货", "x": "店名 1 源，营业时间/楼层未查到", "r": "", "m": 10, "s": "05 购物/生活服务", "k": "生活杂货", "kz": "生活杂货", "mode": "walk", "dm": 800, "mt": [], "q": "3COINS アトレ大森店 アトレ大森内（大森駅ビル、番地未核对）", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "すえひろ湯", "c": "钱汤", "a": "品川区大井 1-42-4", "d": "JR 大井町駅 徒步 4 分（大森→大井町 JR 2 站≈3 分）", "h": "15:00–25:00；土・日・祝 10:00–25:00", "p": "600 円（按东京都公衆浴場统一料金；1010 未列价→待确认 ）", "x": "时间/休日两页一致；价格未取得官方数字，标待确认 （钱汤为都内统一定价，600 円高度可能但未核实）", "r": "", "m": 4, "s": "06 洗浴/医疗", "k": "銭湯（サウナ・水風呂・薬湯・クラフトビール）", "kz": "銭湯（サウナ・水風呂・薬湯・クラフトビール）", "mode": "transit", "dm": 0, "mt": [], "q": "すえひろ湯 品川区大井 1-42-4", "u": "", "g": "", "st": "大井町駅", "pb": ""}, {"n": "水神湯（すいじんゆ）", "c": "钱汤", "a": "品川区南大井 6-9-10", "d": "JR 大森駅 徒步 6 分（1010）；到公司约 1.2km≈15 分（估算）", "h": "15:00–22:00，最终入店 21:30", "p": "大人（12 歳以上）600 円／中人 200／小人 100／回数券 10 枚 5,400 円", "x": "休馆日＝月曜休（两权威一致，定为结论；「土曜休」无任何可访问来源支持，判为误传）。价格冲突：日帰り温泉记 550 円（旧价未同步）→ 用 600 円；另官网提到 10 月有「5 日〜15 日换锅炉临时休」类公告，属临时事项", "r": "", "m": 6, "s": "06 洗浴/医疗", "k": "銭湯（フロント・投币洗衣・ジェット）", "kz": "銭湯（フロント・投币洗衣・ジェット）", "mode": "walk", "dm": 480, "mt": [], "q": "水神湯（すいじんゆ） 品川区南大井 6-9-10", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "天狗湯（てんぐゆ）", "c": "钱汤", "a": "大田区（京急平和島駅 徒步 6 分）", "d": "平和島＝大森海岸 邻站（1 站）", "h": "14:30–22:30", "p": "待确认 未查到", "x": "单平台，仅作备选", "r": "", "m": 99, "s": "06 洗浴/医疗", "k": "銭湯（天然温泉・サウナ）", "kz": "銭湯（天然温泉・サウナ）", "mode": "transit", "dm": 0, "mt": [], "q": "天狗湯（てんぐゆ） 大田区（京急平和島駅 徒步 6 分）", "u": "", "g": "", "st": "", "pb": ""}, {"n": "ゆ～シティー蒲田", "c": "温浴", "a": "大田区（JR 蒲田駅 徒步 5 分）", "d": "大森→蒲田 JR 2 站≈4 分", "h": "11:00–24:00", "p": "待确认 未查到", "x": "大森出发最方便的「大型温浴」之一；价格需查官网", "r": "", "m": 4, "s": "06 洗浴/医疗", "k": "スーパー銭湯（天然黒湯・露天・サウナ・カラオケ）", "kz": "スーパー銭湯（天然黒湯・露天・サウナ・カラオケ）", "mode": "transit", "dm": 0, "mt": [], "q": "ゆ～シティー蒲田 大田区（JR 蒲田駅 徒步 5 分）", "u": "", "g": "", "st": "", "pb": ""}, {"n": "COCOFURO ますの湯", "c": "温浴", "a": "大田区（東急池上線 久が原駅 徒步 1 分）", "d": "需换乘", "h": "6:00–24:00", "p": "待确认", "x": "早 6 点开，适合周末早汤；交通偏", "r": "", "m": 99, "s": "06 洗浴/医疗", "k": "デザイナーズ銭湯（黒湯かけ流し・炭酸泉・サウナ）", "kz": "デザイナーズ銭湯（黒湯かけ流し・炭酸泉・サウナ）", "mode": "transit", "dm": 0, "mt": [], "q": "COCOFURO ますの湯 大田区（東急池上線 久が原駅 徒步 1 分）", "u": "", "g": "", "st": "", "pb": ""}, {"n": "おふろの王様 大井町店", "c": "温浴", "a": "品川区", "d": "大井町", "h": "待确认", "p": "1,500 円（大人，2026-10-01 确认）", "x": "平台冲突：日帰り温泉 列为品川区高价位温浴，1010 品川区钱汤表无此名 → 视为非公衆浴場的温浴设施，价格按 1,500 円参考", "r": "", "m": 99, "s": "06 洗浴/医疗", "k": "スーパー銭湯", "kz": "スーパー銭湯", "mode": "transit", "dm": 0, "mt": [], "q": "おふろの王様 大井町店 品川区", "u": "", "g": "", "st": "", "pb": ""}, {"n": "QBハウス 西友大森店", "c": "理发", "a": "大森（西友大森店内）", "d": "大森駅東口 徒步 2 分", "h": "待确认", "p": "待确认 未取得官方价", "x": "店确实存在，价格不臆写：按全国统一价水平，去前看店内公示", "r": "", "m": 2, "s": "06 洗浴/医疗", "k": "1000 円カット系", "kz": "1000 円カット系", "mode": "transit", "dm": 0, "mt": [], "q": "QBハウス 西友大森店 大森（西友大森店内）", "u": "", "g": "", "st": "大森駅", "pb": ""}, {"n": "スマイルヘアー 大森店（現 barber shop Sourire）", "c": "理发", "a": "大田区山王 3-1-6", "d": "JR 大森駅西口 徒步 4–5 分", "h": "平日 11:00–21:00（最終受付 20:00）／土日祝 9:00–19:00", "p": "カット ¥4,900〜；平均预约额 ¥6,000–6,999", "x": "价位与ダイナイチ差 3.5 倍→赶时间/要指定发型才用；需预约", "r": "", "m": 5, "s": "06 洗浴/医疗", "k": "理容/美容（メンズ中心）", "kz": "理容/美容（メンズ中心）", "mode": "transit", "dm": 0, "mt": [], "q": "スマイルヘアー 大森店（現 barber shop Sourire） 大田区山王 3-1-6", "u": "", "g": "", "st": "大森駅", "pb": ""}, {"n": "ファミリーカット ダイナイチ", "c": "理发", "a": "大田区大森北 1-30-5", "d": "大森駅東口（Milpa 商圈内）", "h": "9:00–19:00", "p": "剪发 1,400 円", "x": "经济型首选；价格以店内为准", "r": "", "m": 99, "s": "06 洗浴/医疗", "k": "理容（剪发专门）", "kz": "理容（剪发专门）", "mode": "transit", "dm": 0, "mt": [], "q": "ファミリーカット ダイナイチ 大田区大森北 1-30-5", "u": "", "g": "", "st": "大森駅", "pb": ""}, {"n": "Milpa 内健身房（原设「セントラル ウエルネスクラブ」）", "c": "健身", "a": "大田区大森北 1-15-12 Milpa 内", "d": "大森駅東口 徒步 2 分", "h": "待确认", "p": "待确认", "x": "无法确认 Milpa 内现役健身租户（milpa.jp 仅取到商店街概况）→ 到现场看馆内导览", "r": "", "m": 2, "s": "06 洗浴/医疗", "k": "健身房", "kz": "健身房", "mode": "transit", "dm": 0, "mt": [], "q": "Milpa 内健身房（原设「セントラル ウエルネスクラブ」） 大田区大森北 1-15-12 Milpa 内", "u": "", "g": "", "st": "大森駅", "pb": ""}, {"n": "セントラルウェルネスクラブ24 大森", "c": "健身", "a": "大森駅前（具体楼层待确认 ）", "d": "大森駅前", "h": "24 小时制（待确认 细则未取）", "p": "待确认 月会费/都度利用未取得", "x": "存在性两平台一致；价格全部待确认 （官网 price 页未取到，勿按印象报价）", "r": "", "m": 99, "s": "06 洗浴/医疗", "k": "24 小时健身房", "kz": "24 小时健身房", "mode": "transit", "dm": 0, "mt": [], "q": "セントラルウェルネスクラブ24 大森 大森駅前（具体楼层待确认 ）", "u": "", "g": "", "st": "大森駅", "pb": ""}, {"n": "大森海岸駅前歯科", "c": "医疗", "a": "品川区南大井 2-12-1 大森パークハイツ 109", "d": "京急大森海岸駅 徒步 1 分", "h": "月火水金 8:30–12:00／14:00–17:30；土 9:00–12:30／13:30–17:00；休 木・日・祝", "p": "待确认", "x": "离公司/海岸站最近；周四休", "r": "", "m": 1, "s": "06 洗浴/医疗", "k": "歯科・矯正・小児歯科・口腔外科", "kz": "歯科・矯正・小児歯科・口腔外科", "mode": "transit", "dm": 0, "mt": [], "q": "大森海岸駅前歯科 品川区南大井 2-12-1 大森パークハイツ 109", "u": "", "g": "", "st": "京急大森海岸駅", "pb": ""}, {"n": "大森耳鼻咽喉科", "c": "医疗", "a": "品川区南大井 6-28-12 ヒューリック大森ビル 5F", "d": "JR 大森駅東口 徒步 2 分", "h": "月〜土 9:00–13:00／月火木金 15:00–18:00（全部完全予約制）；休 日・祝・年末年始", "p": "待确认", "x": "花粉症第一选择（有アレルギー科）；3 月必预约，且完全预约制", "r": "", "m": 2, "s": "06 洗浴/医疗", "k": "耳鼻咽喉科・アレルギー科（花粉症）", "kz": "耳鼻咽喉科・アレルギー科（花粉症）", "mode": "transit", "dm": 0, "mt": [], "q": "大森耳鼻咽喉科 品川区南大井 6-28-12 ヒューリック大森ビル 5F", "u": "", "g": "", "st": "大森駅", "pb": ""}, {"n": "大森皮膚科クリニック", "c": "医疗", "a": "大田区大森北 1-16-7 ビラ・コンフォール 1F", "d": "JR 大森駅東口 徒步 4 分", "h": "月火水金土 9:00–12:30／月火水金 14:30–18:30；休 木・日・祝", "p": "待确认", "x": "花粉期皮肤痒/湿疹；周三下午与周四休", "r": "", "m": 4, "s": "06 洗浴/医疗", "k": "皮膚科・小児皮膚科・美容皮膚科", "kz": "皮膚科・小児皮膚科・美容皮膚科", "mode": "transit", "dm": 0, "mt": [], "q": "大森皮膚科クリニック 大田区大森北 1-16-7 ビラ・コンフォール 1F", "u": "", "g": "", "st": "大森駅", "pb": ""}, {"n": "南大井クリニック", "c": "医疗", "a": "大田区大森北 1-1-10 大森シティビル 3F", "d": "京急大森海岸駅直近", "h": "月水金 9:00–22:00（完全予約制）／火木 9:00–22:00（予約制）／土祝 9:00–18:00；休 日・年末年始", "p": "待确认 （保险诊疗，自付 30%）", "x": "适合下班后（开到 22 时）；完全预约制，先电话", "r": "", "m": 99, "s": "06 洗浴/医疗", "k": "内科・腎臓内科・人工透析内科", "kz": "内科・腎臓内科・人工透析内科", "mode": "transit", "dm": 0, "mt": [], "q": "南大井クリニック 大田区大森北 1-1-10 大森シティビル 3F", "u": "", "g": "", "st": "京急大森海岸駅", "pb": ""}, {"n": "大森ふかの整形外科クリニック", "c": "医疗", "a": "大田区中央 1-17-4 CASADELSUR-1F", "d": "JR 大森駅", "h": "月〜土 9:00–12:30／月火水金 15:00–18:30；休 日・祝・年末年始", "p": "待确认", "x": "搬重物扭伤、久坐腰痛用", "r": "", "m": 99, "s": "06 洗浴/医疗", "k": "整形外科・リウマチ科・リハビリ科", "kz": "整形外科・リウマチ科・リハビリ科", "mode": "transit", "dm": 0, "mt": [], "q": "大森ふかの整形外科クリニック 大田区中央 1-17-4 CASADELSUR-1F", "u": "", "g": "", "st": "大森駅", "pb": ""}, {"n": "コクミンドラッグ 大森駅前店", "c": "药局", "a": "大田区大森北 1-2-2 福和ビル", "d": "大森駅 徒步 约 1 分", "h": "待确认 （详情页 JS 空壳）", "p": "市售药价待确认", "x": "离站最近，OTC（花粉症药）补给首选", "r": "", "m": 1, "s": "06 洗浴/医疗", "k": "ドラッグストア（ウエルシア集团）", "kz": "ドラッグストア（ウエルシア集团）", "mode": "transit", "dm": 0, "mt": [], "q": "コクミンドラッグ 大森駅前店 大田区大森北 1-2-2 福和ビル", "u": "", "g": "", "st": "大森駅", "pb": ""}, {"n": "ウエルシア アトレ大森店", "c": "药局", "a": "大田区大森北 1-6-16 アトレ大森 2 1F", "d": "大森駅 徒步 约 2 分", "h": "待确认", "p": "待确认", "x": "下雨不淋雨，适合下班顺路", "r": "", "m": 2, "s": "06 洗浴/医疗", "k": "ドラッグストア（駅ビル内）", "kz": "ドラッグストア（駅ビル内）", "mode": "transit", "dm": 0, "mt": [], "q": "ウエルシア アトレ大森店 大田区大森北 1-6-16 アトレ大森 2 1F", "u": "", "g": "", "st": "大森駅", "pb": ""}, {"n": "ミネ薬局", "c": "药局", "a": "大田区大森北（OSM 坐标 35.58684,139.72642）", "d": "公司步行约12分 / 大森駅 徒步约7分", "h": "未查到", "p": "未查到", "x": "仅 1 平台；备选", "r": "", "m": 12, "s": "10 药妆", "k": "调济药局", "kz": "调济药局", "mode": "walk", "dm": 960, "mt": [], "q": "ミネ薬局 大田区大森北（OSM 坐标 35.58684,139.72642）", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "山王あおい薬局", "c": "药局", "a": "大田区山王（OSM 坐标 35.59090,139.72783）", "d": "公司步行约12分 / 大森駅 徒步约2分", "h": "未查到", "p": "未查到", "x": "仅 1 平台；备选", "r": "", "m": 12, "s": "10 药妆", "k": "调济药局", "kz": "调济药局", "mode": "walk", "dm": 960, "mt": [], "q": "山王あおい薬局 大田区山王（OSM 坐标 35.59090,139.72783）", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "日本調剤（大森）", "c": "药局", "a": "大田区山王（OSM 坐标 35.59083,139.72823）", "d": "公司步行约12分 / 大森駅 徒步约2分", "h": "未查到", "p": "未查到", "x": "仅 1 平台；仅为拿处方备选", "r": "", "m": 12, "s": "10 药妆", "k": "调济药局", "kz": "调济药局", "mode": "walk", "dm": 960, "mt": [], "q": "日本調剤（大森） 大田区山王（OSM 坐标 35.59083,139.72823）", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "山王プライマリー薬局", "c": "药局", "a": "大田区山王（OSM 坐标 35.58565,139.72546）", "d": "公司步行约13分 / 大森駅西口 徒步约7分", "h": "未查到", "p": "未查到", "x": "仅 1 平台；备选", "r": "", "m": 13, "s": "10 药妆", "k": "调济药局", "kz": "调济药局", "mode": "walk", "dm": 1040, "mt": [], "q": "山王プライマリー薬局 大田区山王（OSM 坐标 35.58565,139.72546）", "u": "", "g": "", "st": "步行圈", "pb": ""}, {"n": "ウエルシア 大田大森西店", "c": "药局", "a": "大田区大森西 5-25-21", "d": "東邦大学病院方向（大森西 5 丁目）", "h": "待确认", "p": "待确认", "x": "去東邦病院看完病后取药的实际候选；是否调济专门待确认 需电话", "r": "", "m": 99, "s": "06 洗浴/医疗", "k": "ドラッグストア＋調剤", "kz": "ドラッグストア＋調剤", "mode": "transit", "dm": 0, "mt": [], "q": "ウエルシア 大田大森西店 大田区大森西 5-25-21", "u": "", "g": "", "st": "", "pb": ""}, {"n": "RマンスリーNo.42 大森海岸駅前", "c": "住宿", "a": "品川区南大井3丁目", "d": "大森海岸駅 徒歩1分", "h": "", "p": "210日以上 197,400／90–210日 203,400／初期 22,000〜／水电未明示", "x": "单源；新築溢价明显", "r": "", "m": 1, "s": "07 住宿/设施/目的地", "k": "マンスリー 1DK 26㎡（2025/5築）", "kz": "マンスリー 1DK 26㎡（2025/5築）", "mode": "transit", "dm": 0, "mt": [], "q": "RマンスリーNo.42 大森海岸駅前 品川区南大井3丁目", "u": "", "g": "", "st": "大森海岸駅", "pb": ""}, {"n": "RマンスリーNo.43 大森海岸駅前", "c": "住宿", "a": "品川区南大井3丁目", "d": "大森海岸駅 徒歩1分", "h": "", "p": "210日以上 206,400／90–210日 212,400／初期 22,000〜", "x": "单源", "r": "", "m": 1, "s": "07 住宿/设施/目的地", "k": "マンスリー 1DK 28.23㎡（2025/5築）", "kz": "マンスリー 1DK 28.23㎡（2025/5築）", "mode": "transit", "dm": 0, "mt": [], "q": "RマンスリーNo.43 大森海岸駅前 品川区南大井3丁目", "u": "", "g": "", "st": "大森海岸駅", "pb": ""}, {"n": "Tマークシティホテル東京大森", "c": "住宿", "a": "大森海岸駅侧", "d": "大森海岸駅 徒歩1分／大森駅 徒歩10分", "h": "", "p": "4,950〜52,030", "x": "离公司最近；配 4K TV/工作桌", "r": "", "m": 1, "s": "07 住宿/设施/目的地", "k": "商务酒店", "kz": "商务酒店", "mode": "transit", "dm": 0, "mt": [], "q": "Tマークシティホテル東京大森 大森海岸駅侧", "u": "", "g": "", "st": "大森海岸駅", "pb": ""}, {"n": "アパホテル〈大森駅前〉", "c": "住宿", "a": "大森駅北口", "d": "大森駅北口 徒歩1分／大森海岸 徒歩10分", "h": "", "p": "4,230〜45,450", "x": "有露天大浴场；2020 年开业", "r": "", "m": 1, "s": "07 住宿/设施/目的地", "k": "商务酒店（全室禁烟）", "kz": "商务酒店（全室禁烟）", "mode": "transit", "dm": 0, "mt": [], "q": "アパホテル〈大森駅前〉 大森駅北口", "u": "", "g": "", "st": "大森駅", "pb": ""}, {"n": "Axis Patio 大森海岸", "c": "住宿", "a": "品川区南大井3丁目", "d": "大森海岸駅 徒歩2分", "h": "", "p": "30–90日 163,200／初期 10,890〜", "x": "单源；同駅稀有便宜新築", "r": "", "m": 2, "s": "07 住宿/设施/目的地", "k": "マンスリー 1LDK 38㎡（2025/2築）", "kz": "マンスリー 1LDK 38㎡（2025/2築）", "mode": "transit", "dm": 0, "mt": [], "q": "Axis Patio 大森海岸 品川区南大井3丁目", "u": "", "g": "", "st": "大森海岸駅", "pb": ""}, {"n": "OneLife大森クラウド6th", "c": "住宿", "a": "品川区南大井3丁目", "d": "大森海岸駅 徒歩2分", "h": "", "p": "全プラン 195,000／初期 ショート16,500・ミドル22,000・ロング44,000", "x": "单源；同价不分长短", "r": "", "m": 2, "s": "07 住宿/设施/目的地", "k": "マンスリー 1K 20.12㎡（2005築）", "kz": "マンスリー 1K 20.12㎡（2005築）", "mode": "transit", "dm": 0, "mt": [], "q": "OneLife大森クラウド6th 品川区南大井3丁目", "u": "", "g": "", "st": "大森海岸駅", "pb": ""}, {"n": "アパホテル〈大森駅前東〉", "c": "住宿", "a": "大森駅東口", "d": "大森駅東口 徒歩4分／大森海岸 徒歩9分", "h": "", "p": "4,230〜48,870", "x": "与\"大森駅前\"是两家，别搞混", "r": "", "m": 4, "s": "07 住宿/设施/目的地", "k": "商务酒店", "kz": "商务酒店", "mode": "transit", "dm": 0, "mt": [], "q": "アパホテル〈大森駅前東〉 大森駅東口", "u": "", "g": "", "st": "大森駅", "pb": ""}, {"n": "コンシェル大森6", "c": "住宿", "a": "大田区大森北1丁目", "d": "大森駅 徒歩4分／大森海岸 徒歩8分", "h": "", "p": "116,700（1–12 个月同价，Wi-Fi 免费）／初期 33,000", "x": "单源；本次抓到的最便宜マンスリー", "r": "", "m": 4, "s": "07 住宿/设施/目的地", "k": "マンスリー 1K 20.6㎡（2001築）", "kz": "マンスリー 1K 20.6㎡（2001築）", "mode": "transit", "dm": 0, "mt": [], "q": "コンシェル大森6 大田区大森北1丁目", "u": "", "g": "", "st": "大森駅", "pb": ""}, {"n": "ホテルマイステイズプレミア大森", "c": "住宿", "a": "大森駅北口侧", "d": "大森駅北口 徒歩4分／大森海岸 徒歩5分", "h": "", "p": "3,800〜90,400（KNT 掲載プラン幅）", "x": "最低档约 3,800/泊；羽田免费接驳", "r": "", "m": 4, "s": "07 住宿/设施/目的地", "k": "商务酒店", "kz": "商务酒店", "mode": "transit", "dm": 0, "mt": [], "q": "ホテルマイステイズプレミア大森 大森駅北口侧", "u": "", "g": "", "st": "大森駅", "pb": ""}, {"n": "マイナビSTAY大森北 406", "c": "住宿", "a": "大田区大森北1丁目", "d": "大森駅 徒歩4分／大森海岸 徒歩8分", "h": "", "p": "全プラン 152,400／初期 27,500（寝具租赁免费等特典）", "x": "单源", "r": "", "m": 4, "s": "07 住宿/设施/目的地", "k": "マンスリー 1K 20.46㎡（2001築）", "kz": "マンスリー 1K 20.46㎡（2001築）", "mode": "transit", "dm": 0, "mt": [], "q": "マイナビSTAY大森北 406 大田区大森北1丁目", "u": "", "g": "", "st": "大森駅", "pb": ""}, {"n": "BraTTo品川南メイツ", "c": "住宿", "a": "品川区南大井3丁目", "d": "大森海岸駅 徒歩5分", "h": "", "p": "ロング 120,000／ミドル 124,500／ショート 129,000／初期 44,000・33,000・22,000；活动：30日−3万〜120日−12万", "x": "冲突：同楼价差近 1 倍，因プラン/期间/含む费用不同 → 必须问清\"含不含水电+清洁\"", "r": "", "m": 5, "s": "07 住宿/设施/目的地", "k": "マンスリー 1K 21.12㎡（1992築）", "kz": "マンスリー 1K 21.12㎡（1992築）", "mode": "transit", "dm": 0, "mt": [], "q": "BraTTo品川南メイツ 品川区南大井3丁目", "u": "", "g": "", "st": "大森海岸駅", "pb": ""}, {"n": "エール大森", "c": "住宿", "a": "大田区大森北1丁目", "d": "大森駅 徒歩5分／大森海岸 徒歩10分", "h": "", "p": "冬キャンペーン 126,000／通常 141,000／初期 22,000", "x": "单源；キャンペーン价随时变", "r": "", "m": 5, "s": "07 住宿/设施/目的地", "k": "マンスリー 1K 21.71㎡（2006築）", "kz": "マンスリー 1K 21.71㎡（2006築）", "mode": "transit", "dm": 0, "mt": [], "q": "エール大森 大田区大森北1丁目", "u": "", "g": "", "st": "大森駅", "pb": ""}, {"n": "メイツ品川南（オークハウス）", "c": "住宿", "a": "品川区南大井（大森海岸駅侧）", "d": "大森海岸駅 徒歩5分（概算）", "h": "", "p": "64,000〜100,000／礼金なし", "x": "冲突（见上表 1.2）：长期月租 vs 短期マンスリー口径不同", "r": "", "m": 5, "s": "07 住宿/设施/目的地", "k": "家具付アパートメント 21.00㎡", "kz": "家具付アパートメント 21.00㎡", "mode": "transit", "dm": 0, "mt": [], "q": "メイツ品川南（オークハウス） 品川区南大井（大森海岸駅侧）", "u": "", "g": "", "st": "大森海岸駅", "pb": ""}, {"n": "ユニオンマンスリー大森4", "c": "住宿", "a": "品川区南大井（同丁目）", "d": "大森海岸駅 徒歩5分", "h": "", "p": "ロング 115,200／ミドル 121,200／ショート 127,200／初期 14,300〜18,150", "x": "单源；低于 12 万的最便宜档之一", "r": "", "m": 5, "s": "07 住宿/设施/目的地", "k": "マンスリー 1R 21㎡（1991築）", "kz": "マンスリー 1R 21㎡（1991築）", "mode": "transit", "dm": 0, "mt": [], "q": "ユニオンマンスリー大森4 品川区南大井（同丁目）", "u": "", "g": "", "st": "大森海岸駅", "pb": ""}, {"n": "J'sコート南大井Ⅰ 202", "c": "住宿", "a": "品川区南大井3丁目", "d": "大森海岸駅 徒歩6分", "h": "", "p": "全プラン 128,400／初期 44,000・49,500・60,500", "x": "单源", "r": "", "m": 6, "s": "07 住宿/设施/目的地", "k": "マンスリー 1R 20㎡（2011築）", "kz": "マンスリー 1R 20㎡（2011築）", "mode": "transit", "dm": 0, "mt": [], "q": "J'sコート南大井Ⅰ 202 品川区南大井3丁目", "u": "", "g": "", "st": "大森海岸駅", "pb": ""}, {"n": "J'sコート南大井Ⅱ 101", "c": "住宿", "a": "品川区南大井3丁目", "d": "大森海岸駅 徒歩6分", "h": "", "p": "全プラン 129,900／初期 44,000・49,500・60,500", "x": "单源；初期费偏高", "r": "", "m": 6, "s": "07 住宿/设施/目的地", "k": "マンスリー 1K 20㎡（2012築）", "kz": "マンスリー 1K 20㎡（2012築）", "mode": "transit", "dm": 0, "mt": [], "q": "J'sコート南大井Ⅱ 101 品川区南大井3丁目", "u": "", "g": "", "st": "大森海岸駅", "pb": ""}, {"n": "アリカ大森2", "c": "住宿", "a": "大森駅周边", "d": "大森駅周边", "h": "", "p": "107,000〜132,000／敷金・礼金なし", "x": "单源", "r": "", "m": 99, "s": "07 住宿/设施/目的地", "k": "家具付アパートメント 20.85㎡〜", "kz": "家具付アパートメント 20.85㎡〜", "mode": "transit", "dm": 0, "mt": [], "q": "アリカ大森2 大森駅周边", "u": "", "g": "", "st": "大森駅", "pb": ""}, {"n": "グランドラインⅢ", "c": "住宿", "a": "京急蒲田", "d": "京急蒲田駅周边", "h": "", "p": "91,000〜118,000", "x": "单源；面积大、价格低", "r": "", "m": 99, "s": "07 住宿/设施/目的地", "k": "家具付アパートメント 24.00㎡〜", "kz": "家具付アパートメント 24.00㎡〜", "mode": "transit", "dm": 0, "mt": [], "q": "グランドラインⅢ 京急蒲田", "u": "", "g": "", "st": "京急蒲田駅", "pb": ""}, {"n": "スカイコート蒲田第6", "c": "住宿", "a": "蒲田", "d": "蒲田駅周边", "h": "", "p": "76,000〜199,500／礼金なし", "x": "单源；下限便宜", "r": "", "m": 99, "s": "07 住宿/设施/目的地", "k": "家具付アパートメント 20.72㎡〜", "kz": "家具付アパートメント 20.72㎡〜", "mode": "transit", "dm": 0, "mt": [], "q": "スカイコート蒲田第6 蒲田", "u": "", "g": "", "st": "蒲田駅", "pb": ""}, {"n": "ソラシアレジデンス大森", "c": "住宿", "a": "大森駅周边", "d": "大森駅周边", "h": "", "p": "114,000〜193,000／敷金・礼金なし", "x": "单源；价格带偏高一档", "r": "", "m": 99, "s": "07 住宿/设施/目的地", "k": "家具付アパートメント 20.95㎡〜", "kz": "家具付アパートメント 20.95㎡〜", "mode": "transit", "dm": 0, "mt": [], "q": "ソラシアレジデンス大森 大森駅周边", "u": "", "g": "", "st": "大森駅", "pb": ""}, {"n": "ブルーノコート蒲田", "c": "住宿", "a": "蒲田", "d": "蒲田駅周边", "h": "", "p": "110,000〜132,000／敷金なし", "x": "单源", "r": "", "m": 99, "s": "07 住宿/设施/目的地", "k": "家具家电付 21.06㎡〜", "kz": "家具家电付 21.06㎡〜", "mode": "transit", "dm": 0, "mt": [], "q": "ブルーノコート蒲田 蒲田", "u": "", "g": "", "st": "蒲田駅", "pb": ""}, {"n": "Milpa（大森銀座商店街）", "c": "设施", "a": "大田区大森北1-15-12", "d": "JR大森駅東口 徒歩2分／大森海岸駅 徒歩9分", "h": "", "p": "免费", "x": "一致", "r": "", "m": 2, "s": "07 住宿/设施/目的地", "k": "商店街", "kz": "商店街", "mode": "transit", "dm": 0, "mt": [], "q": "Milpa（大森銀座商店街） 大田区大森北1-15-12", "u": "", "g": "", "st": "JR大森駅", "pb": ""}, {"n": "入新井図書館（Luz大森内）", "c": "设施", "a": "大森駅东口 Luz大森", "d": "大森駅東口 徒歩3分", "h": "", "p": "免费", "x": "位置双源一致；开馆时间本次未抓到（大田区官网不可达）", "r": "", "m": 3, "s": "07 住宿/设施/目的地", "k": "图书馆", "kz": "图书馆", "mode": "transit", "dm": 0, "mt": [], "q": "入新井図書館（Luz大森内） 大森駅东口 Luz大森", "u": "", "g": "", "st": "大森駅", "pb": ""}, {"n": "大森ベルポート", "c": "设施", "a": "大森駅东口侧", "d": "大森駅 徒歩3分", "h": "", "p": "免费入场", "x": "官网未查到；营业内容需现场确认", "r": "", "m": 3, "s": "07 住宿/设施/目的地", "k": "复合设施（办公+商店+餐饮）", "kz": "复合设施（办公+商店+餐饮）", "mode": "transit", "dm": 0, "mt": [], "q": "大森ベルポート 大森駅东口侧", "u": "", "g": "", "st": "大森駅", "pb": ""}, {"n": "しながわ水族館", "c": "设施", "a": "品川区勝島3-2-1", "d": "大森海岸駅 徒歩約8分／JR大森駅北口 徒歩約15分", "h": "", "p": "大人 1,350／中小学生 600／幼儿 300／シルバー 1,200", "x": "价格/时间为单一权威源；ショー时刻每日不同，须当天查官网日历", "r": "", "m": 8, "s": "07 住宿/设施/目的地", "k": "水族館", "kz": "水族館", "mode": "transit", "dm": 0, "mt": [], "q": "しながわ水族館 品川区勝島3-2-1", "u": "", "g": "", "st": "大森海岸駅", "pb": ""}, {"n": "しながわ区民公園", "c": "设施", "a": "水族館邻接（勝島）", "d": "水族館旁 徒步即到", "h": "", "p": "免费", "x": "位置/免费一致；跑步路线单圈距离未核", "r": "", "m": 99, "s": "07 住宿/设施/目的地", "k": "公园", "kz": "公园", "mode": "transit", "dm": 0, "mt": [], "q": "しながわ区民公園 水族館邻接（勝島）", "u": "", "g": "", "st": "", "pb": ""}];
+  var KEY = "omori-shop-fav";
+  var fav = {};
+  try { JSON.parse(localStorage.getItem(KEY) || "[]").forEach(function (k) { fav[k] = 1; }); } catch (e) {}
+  var cats = ["全部"];
+  D.forEach(function (s) { if (cats.indexOf(s.c) < 0) cats.push(s.c); });
+  var q = "", cat = "全部", favOnly = false;
+  var band = null;          // null 或 {lo, hi}（分钟，lo 不含、hi 含）
+  var mtSel = "全部";        // 餐型：全部/午餐/晚餐/咖啡/居酒屋
+  var pbSel = "全部";        // 预算档
+  var stSel = "";           // 方位图选中的车站
+  var LIMIT = 24, max = LIMIT;
+  var more = document.getElementById("shopMore");
+  var list = document.getElementById("shopList");
+  var chips = document.getElementById("shopChips");
+  var count = document.getElementById("shopCount");
+  var empty = document.getElementById("shopEmpty");
+  var total = document.getElementById("shopTotal");
+  var statsEl = document.getElementById("shopStats");
+  if (!list) return;
+  total.textContent = D.length;
+  var CATCOLOR = { "餐饮": "#bf3b28", "超市": "#4a7657", "商场": "#a9791f", "便利店": "#c2703f", "药妆": "#c05a7c",
+    "百元/折扣": "#8a5cae", "邮局/银行": "#3f7395", "生活服务": "#4e8a86", "钱汤": "#3f7395",
+    "温浴": "#6a5aa8", "理发": "#b06a8a", "健身": "#5b8a3f", "医疗": "#b33c3c", "药局": "#c05a7c",
+    "住宿": "#6a5aa8", "设施": "#a9791f", "目的地餐饮": "#2f8f8a", "其他": "#8a8f99" };
+  if (statsEl) {
+    var near = 0, food = 0, openNow = 0;
+    D.forEach(function (s) {
+      if (s.m <= 10) near++;
+      if (s.c === "餐饮" || s.c === "目的地餐饮") food++;
+      var st = statusOf(s);
+      if (st && st.open) openNow++;
+    });
+    var t0 = jst();
+    statsEl.innerHTML = "<span>共 <b>" + D.length + "</b> 家</span><span><b>" + cats.length +
+      "</b> 类</span><span>10 分钟内 <b>" + near + "</b> 家</span><span>餐饮 <b>" + food +
+      "</b> 家</span><span>东京时间 <b>" + pad(t0.hh) + ":" + pad(t0.mm) +
+      "</b></span><span>此刻营业 <b>" + openNow + "</b> 家</span>";
+  }
+  chips.innerHTML = cats.map(function (c, i) {
+    return '<button data-c="' + c + '" class="' + (i === 0 ? "on" : "") + '">' + c + "</button>";
+  }).join("");
+
+  var SYN = { "拉面": "ラーメン", "拉麵": "ラーメン", "荞麦": "そば", "蕎麦": "そば", "咖啡": "カフェ",
+    "猪排": "とんかつ", "咖喱": "カレー", "中餐": "中華", "烤肉": "焼肉", "居酒屋": "居酒屋",
+    "超市": "スーパー", "便利店": "コンビニ", "药妆": "薬", "钱汤": "銭湯", "医院": "クリニック",
+    "牙科": "歯科", "住宿": "マンスリー" };
+  function esc(v) {    return String(v == null ? "" : v).replace(/[&<>"]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    });
+  }
+  function cut(s, n) { s = String(s || ""); return s.length > n ? s.slice(0, n) + "…" : s; }
+
+  /* ---- 东京时间 / 营业状态 ---- */
+  function jst() {
+    var now = new Date();
+    var f = new Intl.DateTimeFormat("en-GB", {
+      timeZone: "Asia/Tokyo", weekday: "short", hour: "2-digit", minute: "2-digit",
+      hour12: false, hourCycle: "h23"
+    });
+    var o = {};
+    f.formatToParts(now).forEach(function (p) { o[p.type] = p.value; });
+    var map = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+    var hh = parseInt(o.hour, 10), mm = parseInt(o.minute, 10);
+    return { dow: map[o.weekday], min: hh * 60 + mm, hh: hh, mm: mm };
+  }
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
+  function statusOf(s) {
+    var h = s.h || "";
+    if (!h) return null;
+    if (/24\s*(時間|小时|h)/i.test(h)) return { open: true, label: "24h 营业" };
+    var t = jst();
+    var dowChar = ["日", "月", "火", "水", "木", "金", "土"][t.dow];
+    var closedM = /休\s*([月火水木金土日・祝\s]{1,14})/.exec(h);
+    if (closedM && closedM[1].indexOf(dowChar) >= 0) return { open: false, label: "今日休" };
+    var re = /(\d{1,2}):(\d{2})\s*[–\-~〜]\s*(\d{1,2}):(\d{2})/g, m, ranges = [];
+    while ((m = re.exec(h))) ranges.push([+m[1] * 60 + +m[2], +m[3] * 60 + +m[4]]);
+    if (!ranges.length) return null;
+    for (var i = 0; i < ranges.length; i++) {
+      var a = ranges[i][0], b = ranges[i][1];
+      if (b <= a) b += 1440;
+      if ((t.min >= a && t.min <= b) || (t.min + 1440 >= a && t.min + 1440 <= b))
+        return { open: true, label: "营业中" };
+    }
+    return { open: false, label: "已打烊" };
+  }
+
+  /* ---- CSV 导出 ---- */
+  function exportCsv() {
+    var head = ["名称", "类别", "步行分钟", "地址", "距离", "时间", "费用", "评分", "备注", "地图", "路线"];
+    var lines = [head.join(",")];
+    function q(v) { v = String(v == null ? "" : v).replace(/"/g, '""'); return '"' + v + '"'; }
+    D.forEach(function (s) {
+      var map = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(s.q || s.n);
+      var dir = "https://www.google.com/maps/dir/?api=1&origin=" + encodeURIComponent("東京都品川区南大井3-20-5 SU大森ビル") +
+        "&destination=" + encodeURIComponent(s.q || s.n) + "&travelmode=transit";
+      lines.push([s.n, s.c, s.m <= 10 ? s.m : "", s.a, s.d, s.h, s.p, s.r, s.x, map, dir].map(q).join(","));
+    });
+    var blob = new Blob(["\ufeff" + lines.join("\r\n")], { type: "text/csv;charset=utf-8" });
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "omori-shops.csv";
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1500);
+  }
+
+  function render() {
+    var hits = [];
+    for (var i = 0; i < D.length; i++) {
+      var t = D[i];
+      var hay = (t.n + " " + t.c + " " + (t.a || "") + " " + (t.h || "") + " " + (t.p || "") + " " + (t.x || "")).toLowerCase();
+      var alt = "";
+      if (q) { for (var sk in SYN) { if (q.indexOf(sk) >= 0) { alt = SYN[sk]; break; } } }
+      if (q && hay.indexOf(q.toLowerCase()) < 0 && !(alt && hay.indexOf(alt.toLowerCase()) >= 0)) continue;
+      if (cat !== "全部" && t.c !== cat) continue;
+      if (favOnly && !fav[i]) continue;
+      if (band && !(t.m > band.lo && t.m <= band.hi)) continue;
+      if (mtSel !== "全部" && (t.mt || []).indexOf(mtSel) < 0) continue;
+      if (pbSel !== "全部" && t.pb !== pbSel) continue;
+      if (stSel && t.st !== stSel) continue;
+      hits.push(i);
+    }
+    var slice = hits.slice(0, max), out = [];
+    for (var k = 0; k < slice.length; k++) {
+      var idx = slice[k], s = D[idx];
+      var st = statusOf(s);
+      out.push(
+        '<div class="shop-card" style="--catc:' + (CATCOLOR[s.c] || "#e7e1d6") + '">' +
+          '<div class="sc-top"><div class="sc-name">' + esc(s.n) + '</div>' +
+          '<button class="sc-heart' + (fav[idx] ? " on" : "") + '" data-i="' + idx + '" aria-label="收藏">' +
+          (fav[idx] ? "♥" : "♡") + "</button></div>" +
+          '<div class="sc-meta"><span class="pill2 cat">' + esc(s.c) + "</span>" +
+          (s.kz ? '<span class="pill2 gen">' + esc(cut(s.kz, 24)) + "</span>" : "") +
+          (s.m <= 99 ? '<span class="pill2 min">距公司 ' + (s.mode === "walk" ? "步行 " : "") + s.m + " 分</span>" : "") +
+          (st ? '<span class="pill2 ' + (st.open ? "st-on" : "st-off") +
+            '" title="按店铺营业时间粗略判断（东京时间），出发前请再确认">' +
+            (st.open ? "● " : "○ ") + st.label + "</span>" : "") +
+          (s.r ? '<span class="pill2">食べログ ' + esc(s.r) + "</span>" : "") + "</div>" +
+          (s.k ? '<div class="sc-line"><b>吃什么 / 类型</b> ' + esc(cut(s.k, 60)) +
+            (s.kz && s.kz !== s.k ? "（" + esc(cut(s.kz, 30)) + "）" : "") + "</div>" : "") +
+          (s.m <= 99 ? '<div class="sc-line"><b>距公司</b> ' +
+            (s.mode === "walk" ? "步行约 " + s.m + " 分" : "电车 + 步行约 " + s.m + " 分") +
+            (s.dm ? "，" + (s.dm >= 1000 ? "直线约 " + (s.dm / 1000).toFixed(1) + " km" : "直线约 " + s.dm + " m") : "") +
+            "（估算，以 Google 路线为准）</div>" : "") +
+          (s.a && s.a !== "-" ? '<div class="sc-line"><b>地址</b> ' + esc(s.a) + "</div>" : "") +
+          (s.d && s.d !== "-" ? '<div class="sc-line"><b>车站距离</b> ' + esc(cut(s.d, 60)) + "</div>" : "") +
+          (s.h && s.h !== "-" && s.h !== "—" ? '<div class="sc-line"><b>时间</b> ' + esc(cut(s.h, 90)) + "</div>" : "") +
+          (s.p && s.p !== "-" && s.p !== "—" ? '<div class="sc-line"><b>费用</b> ' + esc(cut(s.p, 60)) + "</div>" : "") +
+          (s.x && s.x !== "-" ? '<div class="sc-line"><b>备注</b> ' + esc(cut(s.x, 110)) + "</div>" : "") +
+          '<div class="sc-links">' +
+            '<a href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(s.q || s.n) + '" target="_blank" rel="noopener">📍 地图</a>' +
+            '<a href="https://www.google.com/maps/dir/?api=1&origin=' + encodeURIComponent("東京都品川区南大井3-20-5 SU大森ビル") + "&destination=" + encodeURIComponent(s.q || s.n) + "&travelmode=transit" + '" target="_blank" rel="noopener">🧭 路线</a>' +
+            (s.u ? '<a href="' + esc(s.u) + '" target="_blank" rel="noopener">食べログ</a>' : "") +
+          "</div>" +
+          '<div class="sc-src">来源：' + esc(s.s) + "</div></div>"
+      );
+    }
+    list.innerHTML = out.join("");
+    count.textContent = "共 " + D.length + " 家 · 匹配 " + hits.length + " 家 · 显示 " + slice.length + " 家";
+    empty.classList.toggle("show", hits.length === 0);
+    more.textContent = "显示更多（还有 " + Math.max(0, hits.length - slice.length) + " 家）";
+    more.classList.toggle("show", hits.length > slice.length);
+  }
+
+  chips.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-c]");
+    if (!b) return;
+    [].forEach.call(chips.querySelectorAll("button"), function (x) { x.classList.toggle("on", x === b); });
+    cat = b.dataset.c;
+    var isFood = cat === "餐饮" || cat === "目的地餐饮";
+    mealBar.style.display = isFood ? "flex" : "none";
+    budgetBar.style.display = isFood ? "flex" : "none";
+    mtSel = "全部"; pbSel = "全部";
+    [].forEach.call(mealBar.querySelectorAll("button"), function (x) { x.classList.toggle("on", x.textContent === "全部"); });
+    [].forEach.call(budgetBar.querySelectorAll("button"), function (x) { x.classList.toggle("on", x.textContent === "全部"); });
+    max = LIMIT;
+    render();
+  });
+  list.addEventListener("click", function (e) {
+    var hb = e.target.closest(".sc-heart");
+    if (!hb) return;
+    var i = hb.dataset.i;
+    if (fav[i]) { delete fav[i]; } else { fav[i] = 1; }
+    try { localStorage.setItem(KEY, JSON.stringify(Object.keys(fav))); } catch (err) {}
+    hb.classList.toggle("on", !!fav[i]);
+    hb.textContent = fav[i] ? "♥" : "♡";
+    if (favOnly) render();
+  });
+  document.getElementById("shopQ").addEventListener("input", function (e) { q = e.target.value.trim(); max = LIMIT; render(); });
+  var fb = document.getElementById("shopFavBtn");
+  fb.addEventListener("click", function () { favOnly = !favOnly; fb.classList.toggle("on", favOnly); max = LIMIT; render(); });
+  /* ---- 方位地图（按真实经纬度投影，点站点只看该站） ---- */
+  var mapEl = document.getElementById("shopMap");
+  var stChipsEl = document.getElementById("shopStChips");
+  var CO = [35.589104, 139.735428];
+  var STC = {"大森駅": [35.589765, 139.728024], "大森海岸駅": [35.587385, 139.734297], "大井町駅": [35.607215, 139.736076], "立会川駅": [35.598699, 139.73898], "平和島駅": [35.577664, 139.735791], "大森町駅": [35.572503, 139.732068], "蒲田駅": [35.562831, 139.717891], "京急蒲田駅": [35.559479, 139.723036], "梅屋敷駅": [35.566966, 139.728368], "青物横丁駅": [35.608872, 139.743077], "鮫洲駅": [35.605024, 139.742264], "昭和島駅": [35.572188, 139.749613]};
+  var PXKM = 118 / 4.8;
+  function kmOf(p) {
+    var dLat = (p[0] - CO[0]) * 111.32;
+    var dLon = (p[1] - CO[1]) * 111.32 * Math.cos(CO[0] * Math.PI / 180);
+    return Math.sqrt(dLat * dLat + dLon * dLon);
+  }
+  function bearingOf(p) {
+    return Math.atan2((p[1] - CO[1]) * Math.cos(CO[0] * Math.PI / 180), p[0] - CO[0]);
+  }
+  function stCount(n) { var k = 0; D.forEach(function (s) { if (s.st === n) k++; }); return k; }
+  function paintMap() {
+    var s = '<circle cx="160" cy="160" r="104" fill="none" stroke="#f0e6e2"/>' +
+      '<circle cx="160" cy="160" r="72" fill="none" stroke="#f3ded9"/>' +
+      '<circle cx="160" cy="160" r="51" fill="none" stroke="#eec2bc" stroke-dasharray="3 3"/>' +
+      '<text x="12" y="60" text-anchor="start" font-size="9" fill="#a9a29a" paint-order="stroke" stroke="#fff" stroke-width="3">4 km</text>' +
+      '<text x="12" y="92" text-anchor="start" font-size="9" fill="#a9a29a" paint-order="stroke" stroke="#fff" stroke-width="3">2 km</text>' +
+      '<text x="12" y="113" text-anchor="start" font-size="9" fill="#a9a29a" paint-order="stroke" stroke="#fff" stroke-width="3">1 km</text>' +
+      '<circle cx="160" cy="160" r="5" fill="#bf3b28"/>' +
+      '<text x="160" y="150" text-anchor="middle" font-size="9" fill="#bf3b28" font-weight="700" paint-order="stroke" stroke="#fff" stroke-width="3">公司</text>';
+    var ord = Object.keys(STC).filter(function (nm) { return stCount(nm) > 0; });
+    ord.sort(function (a, b) { return bearingOf(STC[a]) - bearingOf(STC[b]); });
+    var placed = [];
+    function clash(cx, cy, w) {
+      for (var k = 0; k < placed.length; k++) {
+        var b = placed[k];
+        if (Math.abs(b.cx - cx) < (b.w + w) / 2 + 2 && Math.abs(b.cy - cy) < 10) return true;
+      }
+      return false;
+    }
+    ord.forEach(function (name, i) {
+      var n = stCount(name);
+      var p = STC[name], r = Math.min(104 * Math.sqrt(kmOf(p) / 4.8), 104), br = bearingOf(p);
+      var x = 160 + r * Math.sin(br), y = 160 - r * Math.cos(br);
+      var rad = 3.5 + Math.min(n, 40) * 0.16;
+      var extra = stSel === name ? ' stroke="#bf3b28" stroke-width="2.5"' : ' stroke="#fff" stroke-width="1.2"';
+      var label = name.replace("駅", "") + " " + n;
+      var w = label.length * 5.4 + 2;
+      var cands = [
+        { x: x, y: y - rad - 5, a: "middle" },
+        { x: x, y: y + rad + 12, a: "middle" },
+        { x: x + rad + 5, y: y + 3, a: "start" },
+        { x: x - rad - 5, y: y + 3, a: "end" }
+      ];
+      var pick = cands[0], cx = x;
+      for (var ci = 0; ci < cands.length; ci++) {
+        var c = cands[ci];
+        var ccx = c.a === "middle" ? c.x : (c.a === "start" ? c.x + w / 2 : c.x - w / 2);
+        if (ccx - w / 2 < 8 || ccx + w / 2 > 312) continue;
+        if (!clash(ccx, c.y, w)) { pick = c; cx = ccx; break; }
+      }
+      placed.push({ cx: cx, cy: pick.y, w: w });
+      s += '<circle class="stdot" data-st="' + name + '" cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) +
+        '" r="' + rad.toFixed(1) + '" fill="#3d4f80" opacity=".9"' + extra + "/>" +
+        '<text x="' + pick.x.toFixed(1) + '" y="' + pick.y.toFixed(1) + '" text-anchor="' + pick.a +
+        '" font-size="9" fill="#3d4f80" paint-order="stroke" stroke="#fff" stroke-width="3">' + label + "</text>";
+    });
+    mapEl.innerHTML = s;
+  }
+  function paintStChips() {
+    var arr = Object.keys(STC).map(function (n) { return { n: n, c: stCount(n) }; })
+      .filter(function (o) { return o.c > 0; });
+    arr.sort(function (a, b) { return b.c - a.c; });
+    stChipsEl.innerHTML = '<button data-st="" class="' + (stSel === "" ? "on" : "") + '">全部站点</button>' +
+      arr.map(function (o) {
+        return '<button data-st="' + o.n + '" class="' + (stSel === o.n ? "on" : "") + '">' +
+          o.n.replace("駅", "") + " " + o.c + "</button>";
+      }).join("");
+  }
+  mapEl.addEventListener("click", function (e) {
+    var c = e.target.closest(".stdot");
+    if (!c) return;
+    stSel = stSel === c.dataset.st ? "" : c.dataset.st;
+    paintMap(); paintStChips(); max = LIMIT; render();
+  });
+  stChipsEl.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-st]");
+    if (!b) return;
+    stSel = b.dataset.st; paintMap(); paintStChips(); max = LIMIT; render();
+  });
+  paintMap(); paintStChips();
+
+  /* ---- 范围圈：5 / 10 / 15 分钟（可点） ---- */
+  var ringsEl = document.getElementById("shopRings");
+  var BANDS = [{ lo: 0, hi: 5, label: "≤5 分" }, { lo: 5, hi: 10, label: "5–10 分" }, { lo: 10, hi: 15, label: "10–15 分" }];
+  function paintRings() {
+    ringsEl.innerHTML = BANDS.map(function (b, i) {
+      var n = D.filter(function (s) { return s.m > b.lo && s.m <= b.hi; }).length;
+      var on = band && band.lo === b.lo ? " on" : "";
+      return '<button data-band="' + i + '" class="' + on.trim() + '">' + b.label + " · " + n + " 家</button>";
+    }).join("");
+  }
+  ringsEl.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-band]");
+    if (!b) return;
+    var bi = BANDS[+b.dataset.band];
+    band = (band && band.lo === bi.lo) ? null : bi;
+    paintRings();
+    max = LIMIT;
+    render();
+  });
+
+  /* ---- 餐型二级筛选（仅餐饮类显示） ---- */
+  var mealBar = document.getElementById("shopMeal");
+  var MT = ["全部", "午餐", "晚餐", "咖啡", "居酒屋"];
+  mealBar.innerHTML = MT.map(function (m, i) {
+    return '<button data-mt="' + m + '" class="' + (i === 0 ? "on" : "") + '">' + m + "</button>";
+  }).join("");
+  mealBar.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-mt]");
+    if (!b) return;
+    mtSel = b.dataset.mt;
+    [].forEach.call(mealBar.querySelectorAll("button"), function (x) { x.classList.toggle("on", x === b); });
+    max = LIMIT;
+    render();
+  });
+
+  /* ---- 预算档（仅餐饮类显示） ---- */
+  var budgetBar = document.getElementById("shopBudget");
+  var BUDS = [["全部", "全部"], ["~999", "～999 円"], ["1000-1999", "1,000–1,999"], ["2000-2999", "2,000–2,999"], ["3000+", "3,000+"]];
+  budgetBar.innerHTML = BUDS.map(function (b, i) {
+    return '<button data-pb="' + b[0] + '" class="' + (i === 0 ? "on" : "") + '">' + b[1] + "</button>";
+  }).join("");
+  budgetBar.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-pb]");
+    if (!b) return;
+    pbSel = b.dataset.pb;
+    [].forEach.call(budgetBar.querySelectorAll("button"), function (x) { x.classList.toggle("on", x === b); });
+    max = LIMIT;
+    render();
+  });
+  paintRings();
+  more.addEventListener("click", function () { max += LIMIT; render(); });
+  var cb = document.getElementById("shopCsvBtn");
+  if (cb) cb.addEventListener("click", exportCsv);
+  render();
+})();
+/* /SHOPLIB-JS */
+</script>
+</body>
+</html>
